@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
+		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
+		5A1C292F278C90A60015B245 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292D278C90A60015B245 /* .gitattributes */; };
 		5A44503B2784AA6B000DC0ED /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A44503A2784AA6B000DC0ED /* Authentication.storyboard */; };
 		5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87860F2783E19F005048D4 /* AppDelegate.swift */; };
 		5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8786112783E19F005048D4 /* SceneDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A1C292C278C90A60015B245 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5A1C292D278C90A60015B245 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		5A44503A2784AA6B000DC0ED /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		5A87860C2783E19F005048D4 /* SJS+ Employee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SJS+ Employee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A87860F2783E19F005048D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		5A8786032783E19F005048D4 = {
 			isa = PBXGroup;
 			children = (
+				5A1C292D278C90A60015B245 /* .gitattributes */,
+				5A1C292C278C90A60015B245 /* .gitignore */,
 				5A87860E2783E19F005048D4 /* SJS+ Employee */,
 				5A87860D2783E19F005048D4 /* Products */,
 			);
@@ -128,6 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1C292E278C90A60015B245 /* .gitignore in Resources */,
+				5A1C292F278C90A60015B245 /* .gitattributes in Resources */,
 				5A1C2929278C8D990015B245 /* Main.storyboard in Resources */,
 				5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */,
 				5A44503B2784AA6B000DC0ED /* Authentication.storyboard in Resources */,

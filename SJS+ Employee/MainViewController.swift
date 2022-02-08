@@ -12,6 +12,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let authenticationStoryboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let signInViewController = authenticationStoryboard.instantiateViewController(withIdentifier: "SignInViewController")
+        navigationController?.pushViewController(signInViewController, animated: true)
     }
 
 

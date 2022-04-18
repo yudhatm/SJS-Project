@@ -158,19 +158,19 @@
 		5AC08F9927B2DE3A0036F940 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				5AC08F9C27B2DE570036F940 /* SignIn */,
+				5AC08F9C27B2DE570036F940 /* Sign In */,
 				5AD30E7E280DBF61002A1D20 /* Register */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		5AC08F9C27B2DE570036F940 /* SignIn */ = {
+		5AC08F9C27B2DE570036F940 /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
 				5AD30E77280DB6E8002A1D20 /* ViewModel */,
 				5AD30E76280DB6E4002A1D20 /* Views */,
 			);
-			path = SignIn;
+			path = "Sign In";
 			sourceTree = "<group>";
 		};
 		5AC08F9D27B2E1CB0036F940 /* Common UI */ = {

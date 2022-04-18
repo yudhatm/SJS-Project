@@ -12,7 +12,6 @@
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
 		5A1C292F278C90A60015B245 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292D278C90A60015B245 /* .gitattributes */; };
 		5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26D6C827B2E2E600AD6423 /* SJSButton.swift */; };
-		5A44503B2784AA6B000DC0ED /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A44503A2784AA6B000DC0ED /* Authentication.storyboard */; };
 		5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87860F2783E19F005048D4 /* AppDelegate.swift */; };
 		5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8786112783E19F005048D4 /* SceneDelegate.swift */; };
 		5A8786142783E19F005048D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8786132783E19F005048D4 /* MainViewController.swift */; };
@@ -35,7 +34,8 @@
 		5A8AD01C278CA0FA003937C2 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AD009278CA0FA003937C2 /* Poppins-SemiBold.ttf */; };
 		5A8AD01D278CA0FA003937C2 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AD00A278CA0FA003937C2 /* Poppins-Italic.ttf */; };
 		5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AD00B278CA0FA003937C2 /* Poppins-MediumItalic.ttf */; };
-		5AC08F9B27B2DE4F0036F940 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC08F9A27B2DE4F0036F940 /* SignInViewController.swift */; };
+		5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */; };
+		5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		5A1C292C278C90A60015B245 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5A1C292D278C90A60015B245 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		5A26D6C827B2E2E600AD6423 /* SJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSButton.swift; sourceTree = "<group>"; };
-		5A44503A2784AA6B000DC0ED /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		5A87860C2783E19F005048D4 /* SJS+ Employee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SJS+ Employee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A87860F2783E19F005048D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8786112783E19F005048D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +68,8 @@
 		5A8AD009278CA0FA003937C2 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		5A8AD00A278CA0FA003937C2 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		5A8AD00B278CA0FA003937C2 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		5AC08F9A27B2DE4F0036F940 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSignInViewController.swift; sourceTree = "<group>"; };
+		5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationSignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		5A87860E2783E19F005048D4 /* SJS+ Employee */ = {
 			isa = PBXGroup;
 			children = (
+				5AD30E75280DB606002A1D20 /* Features */,
 				5AC08F9D27B2E1CB0036F940 /* Common UI */,
-				5AC08F9927B2DE3A0036F940 /* Authentication */,
 				5A8ACFF7278CA0E7003937C2 /* Font */,
 				5A87860F2783E19F005048D4 /* AppDelegate.swift */,
 				5A8786112783E19F005048D4 /* SceneDelegate.swift */,
@@ -155,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				5AC08F9C27B2DE570036F940 /* SignIn */,
-				5A44503A2784AA6B000DC0ED /* Authentication.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -163,7 +162,8 @@
 		5AC08F9C27B2DE570036F940 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				5AC08F9A27B2DE4F0036F940 /* SignInViewController.swift */,
+				5AD30E77280DB6E8002A1D20 /* ViewModel */,
+				5AD30E76280DB6E4002A1D20 /* Views */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -174,6 +174,30 @@
 				5A26D6C827B2E2E600AD6423 /* SJSButton.swift */,
 			);
 			path = "Common UI";
+			sourceTree = "<group>";
+		};
+		5AD30E75280DB606002A1D20 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5AC08F9927B2DE3A0036F940 /* Authentication */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		5AD30E76280DB6E4002A1D20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */,
+				5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AD30E77280DB6E8002A1D20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +270,9 @@
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
 				5A8AD012278CA0FA003937C2 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				5A8AD00E278CA0FA003937C2 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */,
 				5A1C2929278C8D990015B245 /* Main.storyboard in Resources */,
 				5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */,
-				5A44503B2784AA6B000DC0ED /* Authentication.storyboard in Resources */,
 				5A8786192783E1A1005048D4 /* Assets.xcassets in Resources */,
 				5A8AD00C278CA0FA003937C2 /* Poppins-ExtraLight.ttf in Resources */,
 				5A8AD013278CA0FA003937C2 /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -268,8 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC08F9B27B2DE4F0036F940 /* SignInViewController.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
+				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,

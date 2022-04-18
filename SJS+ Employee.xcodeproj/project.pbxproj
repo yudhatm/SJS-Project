@@ -36,6 +36,8 @@
 		5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AD00B278CA0FA003937C2 /* Poppins-MediumItalic.ttf */; };
 		5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */; };
 		5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */; };
+		5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */; };
+		5AD30E84280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		5A8AD00B278CA0FA003937C2 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSignInViewController.swift; sourceTree = "<group>"; };
 		5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationSignInViewController.xib; sourceTree = "<group>"; };
+		5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegistrationViewController.swift; sourceTree = "<group>"; };
+		5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationRegistrationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC08F9C27B2DE570036F940 /* SignIn */,
+				5AD30E7E280DBF61002A1D20 /* Register */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -194,6 +199,31 @@
 			sourceTree = "<group>";
 		};
 		5AD30E77280DB6E8002A1D20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AD30E7E280DBF61002A1D20 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E80280DBF88002A1D20 /* ViewModel */,
+				5AD30E7F280DBF81002A1D20 /* Views */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5AD30E7F280DBF81002A1D20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */,
+				5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AD30E80280DBF88002A1D20 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -263,6 +293,7 @@
 				5A8AD01A278CA0FA003937C2 /* Poppins-Black.ttf in Resources */,
 				5A8AD017278CA0FA003937C2 /* Poppins-Regular.ttf in Resources */,
 				5A8AD00D278CA0FA003937C2 /* Poppins-ThinItalic.ttf in Resources */,
+				5AD30E84280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib in Resources */,
 				5A8AD018278CA0FA003937C2 /* Poppins-LightItalic.ttf in Resources */,
 				5A1C292F278C90A60015B245 /* .gitattributes in Resources */,
 				5A8AD019278CA0FA003937C2 /* Poppins-Bold.ttf in Resources */,
@@ -297,6 +328,7 @@
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
+				5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,22 +8,42 @@
 import UIKit
 
 class AuthenticationSignInViewController: UIViewController {
-
+    @IBOutlet weak var nipTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var forgotButton: UIButton!
+    @IBOutlet weak var loginButton: SJSButton!
+    @IBOutlet weak var bigRegisterButton: SJSButton!
+    @IBOutlet weak var smallRegisterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initNavigationBar()
+        initButtons()
+    }
+
+    //MARK: - Init View
+    private func initNavigationBar(){
         navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func initButtons(){
+        forgotButton.addTarget(self, action: #selector(navigateToRequestPassword), for: .touchUpInside)
+        smallRegisterButton.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
+        bigRegisterButton.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
     }
-    */
+    
+    //MARK: - Navigation
+    @objc
+    private func navigateToRequestPassword(){
+        let requestPasswordViewController = AuthenticationForgotRequestViewController()
+        navigationController?.pushViewController(requestPasswordViewController, animated: true)
+    }
+    
+    @objc
+    private func navigateToRegister(){
+        let registerViewController = AuthenticationRegistrationViewController()
+        navigationController?.pushViewController(registerViewController, animated: true)
+    }
 
 }

@@ -35,7 +35,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Io3-ma-VyU">
-                    <rect key="frame" x="20" y="64" width="374" height="473"/>
+                    <rect key="frame" x="20" y="64" width="374" height="410"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dXx-h6-5gW">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="98"/>
@@ -60,7 +60,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="efe-B4-vIl">
-                            <rect key="frame" x="0.0" y="118" width="374" height="80"/>
+                            <rect key="frame" x="0.0" y="118" width="374" height="59"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email/NIP/Nomor Telepon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-2e-Yo1">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
@@ -69,17 +69,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan NIP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52R-uB-vEh">
-                                    <rect key="frame" x="0.0" y="25" width="374" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="di3-zy-qlt"/>
-                                    </constraints>
+                                    <rect key="frame" x="0.0" y="25" width="374" height="34"/>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bUD-Cf-x3Z">
-                            <rect key="frame" x="0.0" y="218" width="374" height="80"/>
+                            <rect key="frame" x="0.0" y="197" width="374" height="59"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKN-qF-QmH">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
@@ -88,17 +85,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXF-0a-4wQ">
-                                    <rect key="frame" x="0.0" y="25" width="374" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="sAZ-Cq-Yxc"/>
-                                    </constraints>
+                                    <rect key="frame" x="0.0" y="25" width="374" height="34"/>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-Jw-pvT">
-                            <rect key="frame" x="0.0" y="318" width="374" height="80"/>
+                            <rect key="frame" x="0.0" y="276" width="374" height="59"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konfirmasi Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-D6-OEA">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
@@ -107,17 +101,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Konfirmasi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oq6-Ap-RCF">
-                                    <rect key="frame" x="0.0" y="25" width="374" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="gKP-Gr-jRW"/>
-                                    </constraints>
+                                    <rect key="frame" x="0.0" y="25" width="374" height="34"/>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QCN-f9-5bn">
-                            <rect key="frame" x="0.0" y="418" width="374" height="55"/>
+                            <rect key="frame" x="0.0" y="355" width="374" height="55"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tap-Bh-yNb" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>

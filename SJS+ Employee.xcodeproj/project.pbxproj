@@ -38,6 +38,12 @@
 		5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */; };
 		5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */; };
 		5AD30E84280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */; };
+		5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E88280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift */; };
+		5AD30E8B280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E89280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib */; };
+		5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD30E8F280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift */; };
+		5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */; };
+		5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */; };
+		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +80,12 @@
 		5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationSignInViewController.xib; sourceTree = "<group>"; };
 		5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegistrationViewController.swift; sourceTree = "<group>"; };
 		5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationRegistrationViewController.xib; sourceTree = "<group>"; };
+		5AD30E88280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgotRequestViewController.swift; sourceTree = "<group>"; };
+		5AD30E89280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotRequestViewController.xib; sourceTree = "<group>"; };
+		5AD30E8F280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgotSuccessViewController.swift; sourceTree = "<group>"; };
+		5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotSuccessViewController.xib; sourceTree = "<group>"; };
+		5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOTPViewController.swift; sourceTree = "<group>"; };
+		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				5AC08F9C27B2DE570036F940 /* Sign In */,
+				5AE677FF280F092600882520 /* OTP */,
 				5AD30E7E280DBF61002A1D20 /* Register */,
+				5AD30E85280DC2E2002A1D20 /* Forgot */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -224,6 +238,82 @@
 			sourceTree = "<group>";
 		};
 		5AD30E80280DBF88002A1D20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AD30E85280DC2E2002A1D20 /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E8C280DC44A002A1D20 /* Request */,
+				5AD30E8D280DC456002A1D20 /* Success */,
+			);
+			path = Forgot;
+			sourceTree = "<group>";
+		};
+		5AD30E86280DC2EC002A1D20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E88280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift */,
+				5AD30E89280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AD30E87280DC2F1002A1D20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AD30E8C280DC44A002A1D20 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E87280DC2F1002A1D20 /* ViewModel */,
+				5AD30E86280DC2EC002A1D20 /* Views */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5AD30E8D280DC456002A1D20 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E8E280DC462002A1D20 /* Views */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		5AD30E8E280DC462002A1D20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E8F280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift */,
+				5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AE677FF280F092600882520 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				5AE67801280F094000882520 /* ViewModel */,
+				5AE67800280F093800882520 /* Views */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		5AE67800280F093800882520 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */,
+				5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AE67801280F094000882520 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -301,6 +391,8 @@
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
 				5A8AD012278CA0FA003937C2 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				5A8AD00E278CA0FA003937C2 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */,
+				5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */,
 				5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */,
 				5A1C2929278C8D990015B245 /* Main.storyboard in Resources */,
 				5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */,
@@ -313,6 +405,7 @@
 				5A8AD010278CA0FA003937C2 /* Poppins-Light.ttf in Resources */,
 				5A8AD01C278CA0FA003937C2 /* Poppins-SemiBold.ttf in Resources */,
 				5A8AD00F278CA0FA003937C2 /* Poppins-BoldItalic.ttf in Resources */,
+				5AD30E8B280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +417,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
+				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
+				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
+				5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */,
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,

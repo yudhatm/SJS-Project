@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationForgotSuccessViewController" customModule="SJS__Employee" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thank-you-1" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-HO-Ejh">
+                    <rect key="frame" x="75.5" y="104" width="263" height="263"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="263" id="35x-zz-7hS"/>
+                        <constraint firstAttribute="width" constant="263" id="IPv-k3-WAV"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZAi-xQ-4Nn">
+                    <rect key="frame" x="20" y="387" width="374" height="150.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengajuan Ganti Password Telah Dikirim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0t-5z-rMb">
+                            <rect key="frame" x="32" y="0.0" width="310" height="62"/>
+                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
+                            <color key="textColor" name="SJSAccentColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-WX-2DG">
+                            <rect key="frame" x="4" y="72" width="366" height="78.5"/>
+                            <string key="text">Hai SJSquad, silahkan cek folder kotak masuk atau cek email spam kamu jika password baru tidak ditemukan, lalu klik link tautan ganti password yang telah dikirimkan.</string>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e2B-li-Znu">
+                    <rect key="frame" x="20" y="787" width="374" height="55"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-dT-S2d" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="pbv-nV-fu1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Kembali"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" name="SJSAccentColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZAi-xQ-4Nn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-20" id="Fra-d4-sFI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="e2B-li-Znu" secondAttribute="bottom" constant="20" id="Kch-1l-uOT"/>
+                <constraint firstItem="ZAi-xQ-4Nn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RlF-xU-kJs"/>
+                <constraint firstItem="ZAi-xQ-4Nn" firstAttribute="top" secondItem="9wE-HO-Ejh" secondAttribute="bottom" constant="20" id="TUr-O6-wKm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e2B-li-Znu" secondAttribute="trailing" constant="20" id="UcU-6n-Lvm"/>
+                <constraint firstItem="e2B-li-Znu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="XQ4-Ow-qyB"/>
+                <constraint firstItem="9wE-HO-Ejh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hvc-BZ-XgP"/>
+                <constraint firstItem="e2B-li-Znu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZAi-xQ-4Nn" secondAttribute="bottom" constant="10" id="inU-bu-3Eg"/>
+                <constraint firstItem="9wE-HO-Ejh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="lwc-0V-Dpx"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2d1-dT-S2d">
+            <size key="intrinsicContentSize" width="77" height="26"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="thank-you-1" width="263" height="263"/>
+        <namedColor name="SJSAccentColor">
+            <color red="0.94901960784313721" green="0.6588235294117647" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

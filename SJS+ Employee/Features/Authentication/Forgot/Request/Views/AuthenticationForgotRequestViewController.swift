@@ -9,21 +9,27 @@ import UIKit
 
 class AuthenticationForgotRequestViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var resetButton: SJSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initButtons()
     }
 
-
-    /*
+    // MARK: - Init View
+    private func initButtons(){
+        resetButton.addTarget(self, action: #selector(navigateToSuccessReset), for: .touchUpInside)
+    }
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    private func navigateToSuccessReset(){
+        let successResetViewController = AuthenticationForgotSuccessViewController()
+        navigationController?.pushViewController(successResetViewController, animated: true)
     }
-    */
+    
 
 }

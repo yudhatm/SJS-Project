@@ -197,10 +197,10 @@
     </objects>
     <designables>
         <designable name="2qy-4P-qjc">
-            <size key="intrinsicContentSize" width="58" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="tsg-Uw-Chh">
-            <size key="intrinsicContentSize" width="49" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
     </designables>
     <resources>

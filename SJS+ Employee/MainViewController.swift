@@ -13,7 +13,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let signInViewController = AuthenticationSignInViewController()
-        navigationController?.pushViewController(signInViewController, animated: true)
+        let authenticationRootViewController = UINavigationController(rootViewController: signInViewController)
+        authenticationRootViewController.modalTransitionStyle = .crossDissolve
+        authenticationRootViewController.modalPresentationStyle = .fullScreen
+        present(authenticationRootViewController, animated: true)
     }
 
 

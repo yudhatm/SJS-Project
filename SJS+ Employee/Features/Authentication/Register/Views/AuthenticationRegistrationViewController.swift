@@ -9,21 +9,37 @@ import UIKit
 
 class AuthenticationRegistrationViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var newPasswordTextField: UILabel!
+    @IBOutlet weak var confirmationPasswordTextField: UITextField!
+    @IBOutlet weak var registerButton: SJSButton!
+    @IBOutlet weak var signInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initButtons()
     }
 
-
-    /*
+    // MARK: - Init View
+    private func initButtons(){
+        registerButton.addTarget(self, action: #selector(navigateToOTP), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(navigateToSignIn), for: .touchUpInside)
+    }
+    
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    private func navigateToOTP(){
+        let otpViewController = AuthenticationOTPViewController()
+        navigationController?.pushViewController(otpViewController, animated: true)
     }
-    */
+    
+    @objc
+    private func navigateToSignIn(){
+        let signInViewController = AuthenticationSignInViewController()
+        navigationController?.pushViewController(signInViewController, animated: true)
+    }
+    
 
 }

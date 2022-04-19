@@ -23,6 +23,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationOTPViewController" customModule="SJS__Employee" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="vib-Fk-E4q" id="F8U-xB-HrR"/>
+                <outlet property="fifthOTPTextField" destination="eBR-sW-uZE" id="Vyv-FZ-4bZ"/>
+                <outlet property="firstOTPTextField" destination="ZMr-ob-mEz" id="dNd-b3-c7k"/>
+                <outlet property="fourthOTPTextField" destination="p6N-1g-tU6" id="5Zf-3E-5eW"/>
+                <outlet property="secondOTPTextField" destination="PHP-9F-bPv" id="DIB-CT-Pok"/>
+                <outlet property="sixthOTPTextField" destination="jSo-U3-15X" id="tOZ-8n-g6L"/>
+                <outlet property="thirdOTPTextField" destination="hXx-xL-LxM" id="lfQ-Ww-Vcq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,16 +45,16 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-En-35e">
-                    <rect key="frame" x="20" y="370" width="374" height="69"/>
+                    <rect key="frame" x="20" y="370" width="374" height="80.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP Berhasil Dikirim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-xA-HlV">
-                            <rect key="frame" x="85.5" y="0.0" width="203" height="26"/>
+                            <rect key="frame" x="73" y="0.0" width="228" height="31"/>
                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
                             <color key="textColor" name="SJSAccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-Rd-grd">
-                            <rect key="frame" x="67.5" y="36" width="239" height="33"/>
+                            <rect key="frame" x="58.5" y="41" width="257" height="39.5"/>
                             <string key="text">Hai SJSsquad kode OTP akan masuk 
 secara otomatis</string>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -57,7 +64,7 @@ secara otomatis</string>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-FJ-Fql">
-                    <rect key="frame" x="23" y="469" width="368" height="53"/>
+                    <rect key="frame" x="23" y="480.5" width="368" height="53"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMr-ob-mEz">
                             <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
@@ -159,7 +166,7 @@ secara otomatis</string>
     </objects>
     <designables>
         <designable name="vib-Fk-E4q">
-            <size key="intrinsicContentSize" width="66" height="21"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
     </designables>
     <resources>

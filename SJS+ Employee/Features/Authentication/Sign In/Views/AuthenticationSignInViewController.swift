@@ -15,18 +15,23 @@ class AuthenticationSignInViewController: UIViewController {
     @IBOutlet weak var bigRegisterButton: SJSButton!
     @IBOutlet weak var smallRegisterButton: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initNavigationBar()
         initButtons()
     }
 
     //MARK: - Init View
-    private func initNavigationBar(){
-        navigationController?.navigationBar.isHidden = true
-    }
-    
     private func initButtons(){
         forgotButton.addTarget(self, action: #selector(navigateToRequestPassword), for: .touchUpInside)
         smallRegisterButton.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)

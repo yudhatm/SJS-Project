@@ -9,21 +9,23 @@ import UIKit
 
 class AuthenticationForgotSuccessViewController: UIViewController {
 
+    @IBOutlet weak var backButton: SJSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initButtons()
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Init View
+    private func initButtons(){
+        backButton.addTarget(self, action: #selector(navigateToSignIn), for: .touchUpInside)
     }
-    */
+    
+    // MARK: - Navigation
+    @objc
+    private func navigateToSignIn(){
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }

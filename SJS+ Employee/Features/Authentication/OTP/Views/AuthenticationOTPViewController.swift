@@ -8,22 +8,27 @@
 import UIKit
 
 class AuthenticationOTPViewController: UIViewController {
-
+    @IBOutlet weak var firstOTPTextField: UITextField!
+    @IBOutlet weak var secondOTPTextField: UITextField!
+    @IBOutlet weak var thirdOTPTextField: UITextField!
+    @IBOutlet weak var fourthOTPTextField: UITextField!
+    @IBOutlet weak var fifthOTPTextField: UITextField!
+    @IBOutlet weak var sixthOTPTextField: UITextField!
+    @IBOutlet weak var backButton: SJSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initButton()
     }
 
-
-    /*
+    private func initButton(){
+        backButton.addTarget(self, action: #selector(navigateToSignIn), for: .touchUpInside)
+    }
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    private func navigateToSignIn() {
+        navigationController?.popToRootViewController(animated: true)
     }
-    */
 
 }

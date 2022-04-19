@@ -26,6 +26,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationRegistrationViewController" customModule="SJS__Employee" customModuleProvider="target">
             <connections>
+                <outlet property="confirmationPasswordTextField" destination="Oq6-Ap-RCF" id="3fm-om-s7d"/>
+                <outlet property="newPasswordTextField" destination="PKN-qF-QmH" id="Z4Z-iV-VJT"/>
+                <outlet property="registerButton" destination="tap-Bh-yNb" id="FIw-fh-Z3g"/>
+                <outlet property="signInButton" destination="pEq-y3-KJE" id="5rN-Mf-uYE"/>
+                <outlet property="usernameTextField" destination="52R-uB-vEh" id="3V1-tR-T2G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -132,7 +137,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-uv-Aqp">
-                    <rect key="frame" x="98.5" y="813" width="217.5" height="29"/>
+                    <rect key="frame" x="103.5" y="813" width="207.5" height="29"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudah mempunyai akun?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aj-yX-yJK">
                             <rect key="frame" x="0.0" y="0.0" width="156.5" height="29"/>
@@ -141,10 +146,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEq-y3-KJE">
-                            <rect key="frame" x="166.5" y="0.0" width="51" height="29"/>
+                            <rect key="frame" x="166.5" y="0.0" width="41" height="29"/>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Register">
+                            <state key="normal" title="Masuk">
                                 <color key="titleColor" name="SJSAccentColor"/>
                             </state>
                         </button>
@@ -166,7 +171,7 @@
     </objects>
     <designables>
         <designable name="tap-Bh-yNb">
-            <size key="intrinsicContentSize" width="58" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
     </designables>
     <resources>

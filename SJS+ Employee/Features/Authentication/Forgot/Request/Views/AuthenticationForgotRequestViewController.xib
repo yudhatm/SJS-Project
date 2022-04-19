@@ -26,6 +26,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationForgotRequestViewController" customModule="SJS__Employee" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="lMQ-3W-Fh8" id="Jax-yU-kc1"/>
+                <outlet property="resetButton" destination="4SA-ah-UcI" id="Ozr-PJ-IUp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -113,7 +115,7 @@
     </objects>
     <designables>
         <designable name="4SA-ah-UcI">
-            <size key="intrinsicContentSize" width="144" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
     </designables>
     <resources>

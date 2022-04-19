@@ -64,58 +64,58 @@ secara otomatis</string>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-FJ-Fql">
-                    <rect key="frame" x="23" y="480.5" width="368" height="53"/>
+                    <rect key="frame" x="47" y="480.5" width="320" height="45"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMr-ob-mEz">
-                            <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="dVU-md-ykD"/>
-                                <constraint firstAttribute="width" constant="53" id="evM-6z-Ahu"/>
+                                <constraint firstAttribute="height" constant="45" id="dVU-md-ykD"/>
+                                <constraint firstAttribute="width" constant="45" id="evM-6z-Ahu"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-9F-bPv">
-                            <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="55" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="3Fn-SK-BbS"/>
-                                <constraint firstAttribute="width" constant="53" id="Bw4-kl-KWx"/>
+                                <constraint firstAttribute="height" constant="45" id="3Fn-SK-BbS"/>
+                                <constraint firstAttribute="width" constant="45" id="Bw4-kl-KWx"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-xL-LxM">
-                            <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="110" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="9f9-IN-yJa"/>
-                                <constraint firstAttribute="width" constant="53" id="EGh-32-GZ4"/>
+                                <constraint firstAttribute="height" constant="45" id="9f9-IN-yJa"/>
+                                <constraint firstAttribute="width" constant="45" id="EGh-32-GZ4"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6N-1g-tU6">
-                            <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="165" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="Tck-tC-dzy"/>
-                                <constraint firstAttribute="width" constant="53" id="kcI-NQ-4cI"/>
+                                <constraint firstAttribute="height" constant="45" id="Tck-tC-dzy"/>
+                                <constraint firstAttribute="width" constant="45" id="kcI-NQ-4cI"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBR-sW-uZE">
-                            <rect key="frame" x="252" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="220" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="U36-vX-k96"/>
-                                <constraint firstAttribute="width" constant="53" id="tNz-Aw-1Sx"/>
+                                <constraint firstAttribute="height" constant="45" id="U36-vX-k96"/>
+                                <constraint firstAttribute="width" constant="45" id="tNz-Aw-1Sx"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSo-U3-15X">
-                            <rect key="frame" x="315" y="0.0" width="53" height="53"/>
+                            <rect key="frame" x="275" y="0.0" width="45" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="53" id="jB8-xC-RBI"/>
-                                <constraint firstAttribute="height" constant="53" id="vM4-YF-Dev"/>
+                                <constraint firstAttribute="width" constant="45" id="jB8-xC-RBI"/>
+                                <constraint firstAttribute="height" constant="45" id="vM4-YF-Dev"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>

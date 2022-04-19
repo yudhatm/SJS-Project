@@ -16,6 +16,9 @@
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationOTPViewController" customModule="SJS__Employee" customModuleProvider="target">
@@ -28,45 +31,137 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="files-sent" translatesAutoresizingMaskIntoConstraints="NO" id="ype-2F-ary">
-                    <rect key="frame" x="20" y="64" width="971" height="296"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="files-sent" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-Tc-pjl">
+                    <rect key="frame" x="20" y="64" width="374" height="296"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="296" id="XxS-Eb-djx"/>
-                        <constraint firstAttribute="height" constant="296" id="weA-rl-mFp"/>
+                        <constraint firstAttribute="height" constant="296" id="zsv-jg-Rj7"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-En-35e">
-                    <rect key="frame" x="-20" y="370" width="1051" height="52.5"/>
+                    <rect key="frame" x="20" y="370" width="374" height="69"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengajuan Ganti Password Telah Dikirim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-xA-HlV">
-                            <rect key="frame" x="327" y="0.0" width="397" height="26"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP Berhasil Dikirim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-xA-HlV">
+                            <rect key="frame" x="85.5" y="0.0" width="203" height="26"/>
                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
                             <color key="textColor" name="SJSAccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-Rd-grd">
-                            <rect key="frame" x="0.0" y="36" width="1051" height="16.5"/>
-                            <string key="text">Hai SJSquad, silahkan cek folder kotak masuk atau cek email spam kamu jika password baru tidak ditemukan, lalu klik link tautan ganti password yang telah dikirimkan.</string>
+                            <rect key="frame" x="67.5" y="36" width="239" height="33"/>
+                            <string key="text">Hai SJSsquad kode OTP akan masuk 
+secara otomatis</string>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-FJ-Fql">
+                    <rect key="frame" x="23" y="469" width="368" height="53"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMr-ob-mEz">
+                            <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="dVU-md-ykD"/>
+                                <constraint firstAttribute="width" constant="53" id="evM-6z-Ahu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-9F-bPv">
+                            <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="3Fn-SK-BbS"/>
+                                <constraint firstAttribute="width" constant="53" id="Bw4-kl-KWx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-xL-LxM">
+                            <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="9f9-IN-yJa"/>
+                                <constraint firstAttribute="width" constant="53" id="EGh-32-GZ4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6N-1g-tU6">
+                            <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="Tck-tC-dzy"/>
+                                <constraint firstAttribute="width" constant="53" id="kcI-NQ-4cI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBR-sW-uZE">
+                            <rect key="frame" x="252" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="U36-vX-k96"/>
+                                <constraint firstAttribute="width" constant="53" id="tNz-Aw-1Sx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSo-U3-15X">
+                            <rect key="frame" x="315" y="0.0" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="53" id="jB8-xC-RBI"/>
+                                <constraint firstAttribute="height" constant="53" id="vM4-YF-Dev"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uoE-7k-Kwo">
+                    <rect key="frame" x="20" y="787" width="374" height="55"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vib-Fk-E4q" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="jdi-j3-RPZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Kembali"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" name="SJSAccentColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="gcz-En-35e" secondAttribute="leading" constant="20" id="906-Hv-ab9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ype-2F-ary" secondAttribute="trailing" constant="20" id="O3M-JB-dFU"/>
-                <constraint firstItem="ype-2F-ary" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Pyh-25-zXG"/>
-                <constraint firstItem="gcz-En-35e" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="20" id="UNf-65-Rko"/>
-                <constraint firstItem="gcz-En-35e" firstAttribute="top" secondItem="ype-2F-ary" secondAttribute="bottom" constant="10" id="pxI-Bd-UKo"/>
-                <constraint firstItem="ype-2F-ary" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uDi-Yp-dg7"/>
+                <constraint firstItem="4UE-FJ-Fql" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7Yl-Zp-xrE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="gcz-En-35e" secondAttribute="leading" constant="-20" id="906-Hv-ab9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qC4-Tc-pjl" secondAttribute="trailing" constant="20" id="NZ5-cN-8TD"/>
+                <constraint firstItem="4UE-FJ-Fql" firstAttribute="top" secondItem="NTp-Rd-grd" secondAttribute="bottom" constant="30" id="PzO-7c-eH2"/>
+                <constraint firstItem="uoE-7k-Kwo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TSz-Rh-yqe"/>
+                <constraint firstItem="gcz-En-35e" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-20" id="UNf-65-Rko"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uoE-7k-Kwo" secondAttribute="trailing" constant="20" id="bJf-PH-0p5"/>
+                <constraint firstItem="qC4-Tc-pjl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="jpO-yO-rXA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uoE-7k-Kwo" secondAttribute="bottom" constant="20" id="kWi-Lw-rvB"/>
+                <constraint firstItem="gcz-En-35e" firstAttribute="top" secondItem="qC4-Tc-pjl" secondAttribute="bottom" constant="10" id="mLw-Ib-GY9"/>
+                <constraint firstItem="qC4-Tc-pjl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nLr-bR-Hjn"/>
+                <constraint firstItem="uoE-7k-Kwo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4UE-FJ-Fql" secondAttribute="bottom" constant="10" id="zf4-Hz-NI4"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
+    <designables>
+        <designable name="vib-Fk-E4q">
+            <size key="intrinsicContentSize" width="66" height="21"/>
+        </designable>
+    </designables>
     <resources>
         <image name="files-sent" width="296" height="296"/>
         <namedColor name="SJSAccentColor">

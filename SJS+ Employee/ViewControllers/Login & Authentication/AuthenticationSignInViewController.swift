@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationSignInViewController: UIViewController {
+class AuthenticationSignInViewController: UIViewController, Storyboarded {
     @IBOutlet weak var nipTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotButton: UIButton!

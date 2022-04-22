@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27F928127D8F00B06463 /* Coordinator.swift */; };
+		05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27FB28127DC200B06463 /* Storyboarded.swift */; };
+		05BD280528127FFE00B06463 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD280428127FFE00B06463 /* Login.storyboard */; };
+		05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD28082812906800B06463 /* LoginCoordinator.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
@@ -47,6 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05BD27F928127D8F00B06463 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		05BD27FB28127DC200B06463 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		05BD280428127FFE00B06463 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		05BD28082812906800B06463 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A1C292C278C90A60015B245 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -99,6 +107,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05BD27F828127D7D00B06463 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				05BD28072812904C00B06463 /* Base Class */,
+				05BD28082812906800B06463 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		05BD280128127FAE00B06463 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05BD280328127FEB00B06463 /* Login & Authentication */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05BD280228127FC800B06463 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A8786132783E19F005048D4 /* MainViewController.swift */,
+				05BD2806281283E100B06463 /* Login & Authentication */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		05BD280328127FEB00B06463 /* Login & Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				05BD280428127FFE00B06463 /* Login.storyboard */,
+			);
+			path = "Login & Authentication";
+			sourceTree = "<group>";
+		};
+		05BD2806281283E100B06463 /* Login & Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */,
+				5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */,
+				5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */,
+				5AD30E88280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift */,
+				5AD30E8F280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift */,
+			);
+			path = "Login & Authentication";
+			sourceTree = "<group>";
+		};
+		05BD28072812904C00B06463 /* Base Class */ = {
+			isa = PBXGroup;
+			children = (
+				05BD27F928127D8F00B06463 /* Coordinator.swift */,
+				05BD27FB28127DC200B06463 /* Storyboarded.swift */,
+			);
+			path = "Base Class";
+			sourceTree = "<group>";
+		};
 		5A8786032783E19F005048D4 = {
 			isa = PBXGroup;
 			children = (
@@ -120,12 +183,14 @@
 		5A87860E2783E19F005048D4 /* SJS+ Employee */ = {
 			isa = PBXGroup;
 			children = (
+				05BD27F828127D7D00B06463 /* Coordinator */,
+				05BD280128127FAE00B06463 /* Views */,
+				05BD280228127FC800B06463 /* ViewControllers */,
 				5AD30E75280DB606002A1D20 /* Features */,
 				5AC08F9D27B2E1CB0036F940 /* Common UI */,
 				5A8ACFF7278CA0E7003937C2 /* Font */,
 				5A87860F2783E19F005048D4 /* AppDelegate.swift */,
 				5A8786112783E19F005048D4 /* SceneDelegate.swift */,
-				5A8786132783E19F005048D4 /* MainViewController.swift */,
 				5A8786182783E1A1005048D4 /* Assets.xcassets */,
 				5A87861D2783E1A1005048D4 /* Info.plist */,
 				5A1C2928278C8D990015B245 /* Main.storyboard */,
@@ -206,7 +271,6 @@
 		5AD30E76280DB6E4002A1D20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AD30E78280DB700002A1D20 /* AuthenticationSignInViewController.swift */,
 				5AD30E79280DB700002A1D20 /* AuthenticationSignInViewController.xib */,
 			);
 			path = Views;
@@ -231,7 +295,6 @@
 		5AD30E7F280DBF81002A1D20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AD30E81280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift */,
 				5AD30E82280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib */,
 			);
 			path = Views;
@@ -256,7 +319,6 @@
 		5AD30E86280DC2EC002A1D20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AD30E88280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift */,
 				5AD30E89280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib */,
 			);
 			path = Views;
@@ -289,7 +351,6 @@
 		5AD30E8E280DC462002A1D20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AD30E8F280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift */,
 				5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */,
 			);
 			path = Views;
@@ -307,7 +368,6 @@
 		5AE67800280F093800882520 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */,
 				5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */,
 			);
 			path = Views;
@@ -402,6 +462,7 @@
 				5A8AD01D278CA0FA003937C2 /* Poppins-Italic.ttf in Resources */,
 				5A8AD015278CA0FA003937C2 /* Poppins-BlackItalic.ttf in Resources */,
 				5A8AD011278CA0FA003937C2 /* Poppins-Medium.ttf in Resources */,
+				05BD280528127FFE00B06463 /* Login.storyboard in Resources */,
 				5A8AD010278CA0FA003937C2 /* Poppins-Light.ttf in Resources */,
 				5A8AD01C278CA0FA003937C2 /* Poppins-SemiBold.ttf in Resources */,
 				5A8AD00F278CA0FA003937C2 /* Poppins-BoldItalic.ttf in Resources */,
@@ -418,10 +479,13 @@
 			files = (
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
+				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
 				5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */,
+				05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */,
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
+				05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
 				5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */,

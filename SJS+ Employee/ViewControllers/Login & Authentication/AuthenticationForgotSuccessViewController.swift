@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationForgotSuccessViewController: UIViewController {
+class AuthenticationForgotSuccessViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var backButton: SJSButton!
     

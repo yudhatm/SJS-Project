@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AuthenticationRegistrationViewController: UIViewController {
+class AuthenticationRegistrationViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var newPasswordTextField: UILabel!
+    @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmationPasswordTextField: UITextField!
     @IBOutlet weak var registerButton: SJSButton!
     @IBOutlet weak var signInButton: UIButton!

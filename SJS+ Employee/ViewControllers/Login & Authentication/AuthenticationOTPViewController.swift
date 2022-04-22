@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationOTPViewController: UIViewController {
+class AuthenticationOTPViewController: UIViewController, Storyboarded {
     @IBOutlet weak var firstOTPTextField: UITextField!
     @IBOutlet weak var secondOTPTextField: UITextField!
     @IBOutlet weak var thirdOTPTextField: UITextField!

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -440,7 +440,7 @@
         <!--Authentication Forgot Success View Controller-->
         <scene sceneID="dnm-oU-ALZ">
             <objects>
-                <viewController id="MJD-t6-uq8" customClass="AuthenticationForgotSuccessViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationForgotSuccessViewController" id="MJD-t6-uq8" customClass="AuthenticationForgotSuccessViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eH6-Na-xxR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +518,7 @@
         <!--AuthenticationOTP View Controller-->
         <scene sceneID="uiH-w7-XdE">
             <objects>
-                <viewController id="wCd-Hc-oLU" customClass="AuthenticationOTPViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationOTPViewController" id="wCd-Hc-oLU" customClass="AuthenticationOTPViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRy-EX-kHg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -658,22 +658,22 @@ secara otomatis</string>
     </scenes>
     <designables>
         <designable name="0XX-1D-x5T">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="77" height="26"/>
         </designable>
         <designable name="5lE-Xa-qks">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="77" height="26"/>
         </designable>
         <designable name="6li-5M-a5H">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="58" height="26"/>
         </designable>
         <designable name="Sqf-Bf-0zT">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="144" height="26"/>
         </designable>
         <designable name="tAM-kH-Meh">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="49" height="26"/>
         </designable>
         <designable name="ukK-0P-Qer">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="58" height="26"/>
         </designable>
     </designables>
     <resources>

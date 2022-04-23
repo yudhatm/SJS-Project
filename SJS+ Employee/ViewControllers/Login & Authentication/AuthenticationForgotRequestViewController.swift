@@ -9,6 +9,8 @@ import UIKit
 
 class AuthenticationForgotRequestViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: LoginCoordinator?
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var resetButton: SJSButton!
     

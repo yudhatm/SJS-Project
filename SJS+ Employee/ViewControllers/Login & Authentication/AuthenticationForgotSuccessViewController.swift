@@ -9,6 +9,8 @@ import UIKit
 
 class AuthenticationForgotSuccessViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: LoginCoordinator?
+    
     @IBOutlet weak var backButton: SJSButton!
     
     override func viewDidLoad() {

@@ -8,6 +8,8 @@
 import UIKit
 
 class AuthenticationSignInViewController: UIViewController, Storyboarded {
+    weak var coordinator: LoginCoordinator?
+    
     @IBOutlet weak var nipTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotButton: UIButton!
@@ -46,9 +48,8 @@ class AuthenticationSignInViewController: UIViewController, Storyboarded {
     }
     
     @objc
-    private func navigateToRegister(){
-        let registerViewController = AuthenticationRegistrationViewController()
-        navigationController?.pushViewController(registerViewController, animated: true)
+    private func navigateToRegister() {
+        coordinator?.goToRegister()
     }
 
 }

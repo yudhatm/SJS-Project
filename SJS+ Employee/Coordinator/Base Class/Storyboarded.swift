@@ -10,6 +10,7 @@ import UIKit
 //Collection of our storyboard
 enum Storyboards: String {
     case login = "Login"
+    case onboarding = "Onboarding"
 }
 
 protocol Storyboarded {

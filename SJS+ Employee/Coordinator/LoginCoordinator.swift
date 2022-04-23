@@ -16,7 +16,35 @@ class LoginCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = AuthenticationSignInViewController.instantiate(.login)
+//        let vc = AuthenticationSignInViewController.instantiate(.login)
+        let vc = OnboardingViewController.instantiate(.onboarding)
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func goToSignUp() {
+        let vc = AuthenticationSignInViewController.instantiate(.login)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func goToRegister() {
+        let vc = AuthenticationRegistrationViewController.instantiate(.login)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToOTP() {
+        let vc = AuthenticationOTPViewController.instantiate(.login)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func backToLogin() {
+        for vc in navigationController.viewControllers {
+            if vc is AuthenticationSignInViewController {
+                navigationController.popToViewController(vc, animated: true)
+            }
+        }
     }
 }

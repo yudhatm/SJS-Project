@@ -11,6 +11,12 @@
 		05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27FB28127DC200B06463 /* Storyboarded.swift */; };
 		05BD280528127FFE00B06463 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD280428127FFE00B06463 /* Login.storyboard */; };
 		05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD28082812906800B06463 /* LoginCoordinator.swift */; };
+		158D95282813E23700C72218 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158D95272813E23700C72218 /* Onboarding.storyboard */; };
+		158D952A2813E56100C72218 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */; };
+		158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D952D2813E6A600C72218 /* OnboardingCollectionViewCell.swift */; };
+		158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95302813E7C400C72218 /* OnboardingSlide.swift */; };
+		158D95332813E8C300C72218 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95322813E8C300C72218 /* OnboardingViewController.swift */; };
+		158D95362813FF1F00C72218 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95352813FF1F00C72218 /* Extensions.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
@@ -48,6 +54,7 @@
 		5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */; };
 		5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */; };
 		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
+		A700356D82F16A3BF28C9149 /* Pods_SJS__Employee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +62,14 @@
 		05BD27FB28127DC200B06463 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		05BD280428127FFE00B06463 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		05BD28082812906800B06463 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		158D95272813E23700C72218 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		158D952D2813E6A600C72218 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		158D95302813E7C400C72218 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		158D95322813E8C300C72218 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		158D95352813FF1F00C72218 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
+		3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.release.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.release.xcconfig"; sourceTree = "<group>"; };
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A1C292C278C90A60015B245 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -94,6 +109,7 @@
 		5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotSuccessViewController.xib; sourceTree = "<group>"; };
 		5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOTPViewController.swift; sourceTree = "<group>"; };
 		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
+		D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJS__Employee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A700356D82F16A3BF28C9149 /* Pods_SJS__Employee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +136,7 @@
 		05BD280128127FAE00B06463 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				158D95262813E22600C72218 /* Onboarding */,
 				05BD280328127FEB00B06463 /* Login & Authentication */,
 			);
 			path = Views;
@@ -127,8 +145,9 @@
 		05BD280228127FC800B06463 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A8786132783E19F005048D4 /* MainViewController.swift */,
+				158D952B2813E68E00C72218 /* Onboarding */,
 				05BD2806281283E100B06463 /* Login & Authentication */,
+				5A8786132783E19F005048D4 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +181,56 @@
 			path = "Base Class";
 			sourceTree = "<group>";
 		};
+		158D95262813E22600C72218 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				158D95272813E23700C72218 /* Onboarding.storyboard */,
+				158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		158D952B2813E68E00C72218 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				158D952C2813E69400C72218 /* Cells */,
+				158D95322813E8C300C72218 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		158D952C2813E69400C72218 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				158D952D2813E6A600C72218 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		158D952F2813E7B500C72218 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				158D95302813E7C400C72218 /* OnboardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		158D95342813FF0800C72218 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				158D95352813FF1F00C72218 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		270FC24FC56342678C4102EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A8786032783E19F005048D4 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +238,8 @@
 				5A1C292C278C90A60015B245 /* .gitignore */,
 				5A87860E2783E19F005048D4 /* SJS+ Employee */,
 				5A87860D2783E19F005048D4 /* Products */,
+				E1FD45C312F10F9048FFFFCE /* Pods */,
+				270FC24FC56342678C4102EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,12 +254,14 @@
 		5A87860E2783E19F005048D4 /* SJS+ Employee */ = {
 			isa = PBXGroup;
 			children = (
+				158D952F2813E7B500C72218 /* Models */,
 				05BD27F828127D7D00B06463 /* Coordinator */,
 				05BD280128127FAE00B06463 /* Views */,
 				05BD280228127FC800B06463 /* ViewControllers */,
 				5AD30E75280DB606002A1D20 /* Features */,
 				5AC08F9D27B2E1CB0036F940 /* Common UI */,
 				5A8ACFF7278CA0E7003937C2 /* Font */,
+				158D95342813FF0800C72218 /* Helpers */,
 				5A87860F2783E19F005048D4 /* AppDelegate.swift */,
 				5A8786112783E19F005048D4 /* SceneDelegate.swift */,
 				5A8786182783E1A1005048D4 /* Assets.xcassets */,
@@ -380,6 +453,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E1FD45C312F10F9048FFFFCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */,
+				3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,9 +469,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A8786202783E1A1005048D4 /* Build configuration list for PBXNativeTarget "SJS+ Employee" */;
 			buildPhases = (
+				2D2838DDA5CCA61369B5C4B6 /* [CP] Check Pods Manifest.lock */,
 				5A8786082783E19F005048D4 /* Sources */,
 				5A8786092783E19F005048D4 /* Frameworks */,
 				5A87860A2783E19F005048D4 /* Resources */,
+				3A3327EC88A78A40352CDB3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -459,6 +543,7 @@
 				5A8786192783E1A1005048D4 /* Assets.xcassets in Resources */,
 				5A8AD00C278CA0FA003937C2 /* Poppins-ExtraLight.ttf in Resources */,
 				5A8AD013278CA0FA003937C2 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				158D95282813E23700C72218 /* Onboarding.storyboard in Resources */,
 				5A8AD01D278CA0FA003937C2 /* Poppins-Italic.ttf in Resources */,
 				5A8AD015278CA0FA003937C2 /* Poppins-BlackItalic.ttf in Resources */,
 				5A8AD011278CA0FA003937C2 /* Poppins-Medium.ttf in Resources */,
@@ -466,25 +551,72 @@
 				5A8AD010278CA0FA003937C2 /* Poppins-Light.ttf in Resources */,
 				5A8AD01C278CA0FA003937C2 /* Poppins-SemiBold.ttf in Resources */,
 				5A8AD00F278CA0FA003937C2 /* Poppins-BoldItalic.ttf in Resources */,
+				158D952A2813E56100C72218 /* OnboardingCollectionViewCell.xib in Resources */,
 				5AD30E8B280DC308002A1D20 /* AuthenticationForgotRequestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D2838DDA5CCA61369B5C4B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SJS+ Employee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A3327EC88A78A40352CDB3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A8786082783E19F005048D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
+				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
+				158D95332813E8C300C72218 /* OnboardingViewController.swift in Sources */,
 				5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */,
 				05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */,
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
+				158D95362813FF1F00C72218 /* Extensions.swift in Sources */,
 				05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
@@ -613,6 +745,7 @@
 		};
 		5A8786212783E1A1005048D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -642,6 +775,7 @@
 		};
 		5A8786222783E1A1005048D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

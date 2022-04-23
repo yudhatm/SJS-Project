@@ -8,6 +8,8 @@
 import UIKit
 
 class AuthenticationOTPViewController: UIViewController, Storyboarded {
+    weak var coordinator: LoginCoordinator?
+    
     @IBOutlet weak var firstOTPTextField: UITextField!
     @IBOutlet weak var secondOTPTextField: UITextField!
     @IBOutlet weak var thirdOTPTextField: UITextField!
@@ -28,7 +30,7 @@ class AuthenticationOTPViewController: UIViewController, Storyboarded {
     // MARK: - Navigation
     @objc
     private func navigateToSignIn() {
-        navigationController?.popToRootViewController(animated: true)
+        coordinator?.backToLogin()
     }
 
 }

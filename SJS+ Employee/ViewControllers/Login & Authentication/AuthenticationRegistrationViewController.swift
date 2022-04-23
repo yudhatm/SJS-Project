@@ -9,6 +9,8 @@ import UIKit
 
 class AuthenticationRegistrationViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: LoginCoordinator?
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmationPasswordTextField: UITextField!
@@ -31,8 +33,7 @@ class AuthenticationRegistrationViewController: UIViewController, Storyboarded {
     // MARK: - Navigation
     @objc
     private func navigateToOTP(){
-        let otpViewController = AuthenticationOTPViewController()
-        navigationController?.pushViewController(otpViewController, animated: true)
+        coordinator?.goToOTP()
     }
     
     @objc

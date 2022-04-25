@@ -16,8 +16,8 @@ class LoginCoordinator: Coordinator {
     }
 
     func start() {
-//        let vc = AuthenticationSignInViewController.instantiate(.login)
-        let vc = OnboardingViewController.instantiate(.onboarding)
+//        let vc = OnboardingViewController.instantiate(.onboarding)
+        let vc = HomeMainViewController.instantiate(.home)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }

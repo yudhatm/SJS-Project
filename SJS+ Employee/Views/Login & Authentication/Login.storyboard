@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -658,22 +658,22 @@ secara otomatis</string>
     </scenes>
     <designables>
         <designable name="0XX-1D-x5T">
-            <size key="intrinsicContentSize" width="77" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="5lE-Xa-qks">
-            <size key="intrinsicContentSize" width="77" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="6li-5M-a5H">
-            <size key="intrinsicContentSize" width="58" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="Sqf-Bf-0zT">
-            <size key="intrinsicContentSize" width="144" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="tAM-kH-Meh">
-            <size key="intrinsicContentSize" width="49" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
         <designable name="ukK-0P-Qer">
-            <size key="intrinsicContentSize" width="58" height="26"/>
+            <size key="intrinsicContentSize" width="30" height="38"/>
         </designable>
     </designables>
     <resources>

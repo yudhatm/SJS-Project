@@ -18,7 +18,5 @@ class MainViewController: UIViewController, Storyboarded {
         authenticationRootViewController.modalPresentationStyle = .fullScreen
         present(authenticationRootViewController, animated: true)
     }
-
-
 }
 

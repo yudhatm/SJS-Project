@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A6B9F12816789300EEFBF4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A6B9F02816789300EEFBF4 /* Home.storyboard */; };
+		05A6B9F528167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A6B9F428167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib */; };
+		05A6B9F828167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9F728167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift */; };
+		05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9F928167CA600EEFBF4 /* MainMenu.swift */; };
+		05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9FB28167D3100EEFBF4 /* HomeMainViewController.swift */; };
 		05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27F928127D8F00B06463 /* Coordinator.swift */; };
 		05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27FB28127DC200B06463 /* Storyboarded.swift */; };
 		05BD280528127FFE00B06463 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD280428127FFE00B06463 /* Login.storyboard */; };
@@ -58,6 +63,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05A6B9F02816789300EEFBF4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		05A6B9F428167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMainMenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		05A6B9F728167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		05A6B9F928167CA600EEFBF4 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		05A6B9FB28167D3100EEFBF4 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
 		05BD27F928127D8F00B06463 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05BD27FB28127DC200B06463 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		05BD280428127FFE00B06463 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -124,6 +134,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A6B9EF2816788500EEFBF4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				05A6B9F328167BB800EEFBF4 /* Cells */,
+				05A6B9F02816789300EEFBF4 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		05A6B9F2281678B400EEFBF4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				05A6B9F628167C3400EEFBF4 /* Cells */,
+				05A6B9FB28167D3100EEFBF4 /* HomeMainViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		05A6B9F328167BB800EEFBF4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05A6B9F428167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		05A6B9F628167C3400EEFBF4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05A6B9F728167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		05BD27F828127D7D00B06463 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +182,7 @@
 			children = (
 				158D95262813E22600C72218 /* Onboarding */,
 				05BD280328127FEB00B06463 /* Login & Authentication */,
+				05A6B9EF2816788500EEFBF4 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +192,7 @@
 			children = (
 				158D952B2813E68E00C72218 /* Onboarding */,
 				05BD2806281283E100B06463 /* Login & Authentication */,
+				05A6B9F2281678B400EEFBF4 /* Home */,
 				5A8786132783E19F005048D4 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
@@ -211,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				158D95302813E7C400C72218 /* OnboardingSlide.swift */,
+				05A6B9F928167CA600EEFBF4 /* MainMenu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -531,12 +578,14 @@
 				5A8AD018278CA0FA003937C2 /* Poppins-LightItalic.ttf in Resources */,
 				5A1C292F278C90A60015B245 /* .gitattributes in Resources */,
 				5A8AD019278CA0FA003937C2 /* Poppins-Bold.ttf in Resources */,
+				05A6B9F528167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib in Resources */,
 				5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */,
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
 				5A8AD012278CA0FA003937C2 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				5A8AD00E278CA0FA003937C2 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */,
 				5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */,
+				05A6B9F12816789300EEFBF4 /* Home.storyboard in Resources */,
 				5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */,
 				5A1C2929278C8D990015B245 /* Main.storyboard in Resources */,
 				5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */,
@@ -606,7 +655,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
+				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
+				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
@@ -616,6 +667,7 @@
 				5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */,
 				05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */,
 				5A26D6C927B2E2E600AD6423 /* SJSButton.swift in Sources */,
+				05A6B9F828167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift in Sources */,
 				158D95362813FF1F00C72218 /* Extensions.swift in Sources */,
 				05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
@@ -751,7 +803,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 38BCD2JQ3H;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -781,7 +833,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 38BCD2JQ3H;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

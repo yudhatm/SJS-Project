@@ -1,16 +1,24 @@
 PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - PureLayout (3.1.9)
   - Sevruk-PageControl (1.0.0)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
+  - PureLayout
   - Sevruk-PageControl
 
 SPEC REPOS:
   trunk:
+    - DZNEmptyDataSet
+    - PureLayout
     - Sevruk-PageControl
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
 
-PODFILE CHECKSUM: e4b16a4d4f4ab4209f5226c3a5a6035f2dc2bbde
+PODFILE CHECKSUM: 93a8fbe4f3510e11a26cbef8d2d645e7cccc6d22
 
 COCOAPODS: 1.11.2

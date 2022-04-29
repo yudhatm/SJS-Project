@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeMainViewController: UIViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
+    weak var coordinator: HomeCoordinator?
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var userCompanyLabel: UILabel!
@@ -18,7 +18,6 @@ class HomeMainViewController: UIViewController, Storyboarded {
     @IBOutlet weak var absensiNotifView: UIView!
     @IBOutlet weak var absensiNotifLabel: UILabel!
     @IBOutlet weak var absensiButton: SJSButton!
-    
     
     @IBOutlet weak var mainMenuCollectionView: UICollectionView! {
         didSet {

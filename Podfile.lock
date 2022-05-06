@@ -1,24 +1,28 @@
 PODS:
+  - Cosmos (23.0.0)
   - DZNEmptyDataSet (1.8.1)
   - PureLayout (3.1.9)
   - Sevruk-PageControl (1.0.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 23.0)
   - DZNEmptyDataSet
   - PureLayout
   - Sevruk-PageControl
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - DZNEmptyDataSet
     - PureLayout
     - Sevruk-PageControl
 
 SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
 
-PODFILE CHECKSUM: 93a8fbe4f3510e11a26cbef8d2d645e7cccc6d22
+PODFILE CHECKSUM: 2edfc263661fb61c5079a59f83e69cf05239bec9
 
 COCOAPODS: 1.11.2

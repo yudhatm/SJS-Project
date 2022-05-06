@@ -9,6 +9,8 @@ import UIKit
 
 class PromoListViewController: UIViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
+    
+    var isMyPromo: Bool = false
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {

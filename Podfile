@@ -6,6 +6,7 @@ target 'SJS+ Employee' do
   use_frameworks!
 
   # Pods for SJS+ Employee
+  pod 'Cosmos', '~> 23.0'
   pod 'DZNEmptyDataSet'
   pod 'PureLayout'
   pod 'Sevruk-PageControl'

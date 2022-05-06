@@ -12,6 +12,16 @@
 		05A6B9F828167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9F728167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift */; };
 		05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9F928167CA600EEFBF4 /* MainMenu.swift */; };
 		05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6B9FB28167D3100EEFBF4 /* HomeMainViewController.swift */; };
+		05AB04252825006700FC523E /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB04242825006700FC523E /* NewsListViewController.swift */; };
+		05AB0428282500B600FC523E /* NewsImageStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AB0427282500B600FC523E /* NewsImageStatusTableViewCell.xib */; };
+		05AB042A282507ED00FC523E /* NewsTextStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AB0429282507ED00FC523E /* NewsTextStatusTableViewCell.xib */; };
+		05AB042C2825083E00FC523E /* NewsVideoStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AB042B2825083E00FC523E /* NewsVideoStatusTableViewCell.xib */; };
+		05AB042F2825089600FC523E /* NewsImageStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB042E2825089600FC523E /* NewsImageStatusTableViewCell.swift */; };
+		05AB0431282508A100FC523E /* NewsTextStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB0430282508A100FC523E /* NewsTextStatusTableViewCell.swift */; };
+		05AB0433282508AC00FC523E /* NewsVideoStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB0432282508AC00FC523E /* NewsVideoStatusTableViewCell.swift */; };
+		05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB043428250A0700FC523E /* NewsDetailViewController.swift */; };
+		05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB043628250FA700FC523E /* CreatePostViewController.swift */; };
+		05AB04392825138800FC523E /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB04382825138800FC523E /* RatingViewController.swift */; };
 		05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27F928127D8F00B06463 /* Coordinator.swift */; };
 		05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27FB28127DC200B06463 /* Storyboarded.swift */; };
 		05BD280528127FFE00B06463 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD280428127FFE00B06463 /* Login.storyboard */; };
@@ -89,6 +99,16 @@
 		05A6B9F728167C4B00EEFBF4 /* HomeMainMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		05A6B9F928167CA600EEFBF4 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		05A6B9FB28167D3100EEFBF4 /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
+		05AB04242825006700FC523E /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		05AB0427282500B600FC523E /* NewsImageStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsImageStatusTableViewCell.xib; sourceTree = "<group>"; };
+		05AB0429282507ED00FC523E /* NewsTextStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTextStatusTableViewCell.xib; sourceTree = "<group>"; };
+		05AB042B2825083E00FC523E /* NewsVideoStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsVideoStatusTableViewCell.xib; sourceTree = "<group>"; };
+		05AB042E2825089600FC523E /* NewsImageStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsImageStatusTableViewCell.swift; sourceTree = "<group>"; };
+		05AB0430282508A100FC523E /* NewsTextStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTextStatusTableViewCell.swift; sourceTree = "<group>"; };
+		05AB0432282508AC00FC523E /* NewsVideoStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVideoStatusTableViewCell.swift; sourceTree = "<group>"; };
+		05AB043428250A0700FC523E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		05AB043628250FA700FC523E /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		05AB04382825138800FC523E /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		05BD27F928127D8F00B06463 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05BD27FB28127DC200B06463 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		05BD280428127FFE00B06463 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -195,6 +215,10 @@
 				05BDCBD9281BD42D0092A8A3 /* HomeDetailNotificationViewController.swift */,
 				05BDCBDB281BDDE60092A8A3 /* PromoListViewController.swift */,
 				05BDCBE4281BED5B0092A8A3 /* PromoDetailViewController.swift */,
+				05AB04242825006700FC523E /* NewsListViewController.swift */,
+				05AB043428250A0700FC523E /* NewsDetailViewController.swift */,
+				05AB043628250FA700FC523E /* CreatePostViewController.swift */,
+				05AB04382825138800FC523E /* RatingViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -202,6 +226,7 @@
 		05A6B9F328167BB800EEFBF4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				05AB04262825008200FC523E /* News */,
 				05BDCBDD281BDDFB0092A8A3 /* Promo */,
 				158D954A2819457800C72218 /* Notification */,
 				158D95492819456A00C72218 /* Home */,
@@ -212,11 +237,32 @@
 		05A6B9F628167C3400EEFBF4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				05AB042D2825087F00FC523E /* News */,
 				05BDCBE1281BE0F80092A8A3 /* Promo */,
 				158D954E281945A600C72218 /* Notification */,
 				158D954D2819459500C72218 /* Home */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		05AB04262825008200FC523E /* News */ = {
+			isa = PBXGroup;
+			children = (
+				05AB0427282500B600FC523E /* NewsImageStatusTableViewCell.xib */,
+				05AB0429282507ED00FC523E /* NewsTextStatusTableViewCell.xib */,
+				05AB042B2825083E00FC523E /* NewsVideoStatusTableViewCell.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		05AB042D2825087F00FC523E /* News */ = {
+			isa = PBXGroup;
+			children = (
+				05AB042E2825089600FC523E /* NewsImageStatusTableViewCell.swift */,
+				05AB0430282508A100FC523E /* NewsTextStatusTableViewCell.swift */,
+				05AB0432282508AC00FC523E /* NewsVideoStatusTableViewCell.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		05BD27F828127D7D00B06463 /* Coordinator */ = {
@@ -708,6 +754,7 @@
 				05BDCBE0281BDE100092A8A3 /* PromoListTableViewCell.xib in Resources */,
 				5A8AD00D278CA0FA003937C2 /* Poppins-ThinItalic.ttf in Resources */,
 				5AD30E84280DBFA5002A1D20 /* AuthenticationRegistrationViewController.xib in Resources */,
+				05AB042A282507ED00FC523E /* NewsTextStatusTableViewCell.xib in Resources */,
 				158D953828190F0A00C72218 /* HomeContentReuseableHeader.xib in Resources */,
 				5A8AD018278CA0FA003937C2 /* Poppins-LightItalic.ttf in Resources */,
 				5A1C292F278C90A60015B245 /* .gitattributes in Resources */,
@@ -715,6 +762,7 @@
 				05A6B9F528167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib in Resources */,
 				5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */,
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
+				05AB0428282500B600FC523E /* NewsImageStatusTableViewCell.xib in Resources */,
 				5A8AD012278CA0FA003937C2 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				5A8AD00E278CA0FA003937C2 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */,
@@ -731,6 +779,7 @@
 				158D95282813E23700C72218 /* Onboarding.storyboard in Resources */,
 				5A8AD01D278CA0FA003937C2 /* Poppins-Italic.ttf in Resources */,
 				5A8AD015278CA0FA003937C2 /* Poppins-BlackItalic.ttf in Resources */,
+				05AB042C2825083E00FC523E /* NewsVideoStatusTableViewCell.xib in Resources */,
 				5A8AD011278CA0FA003937C2 /* Poppins-Medium.ttf in Resources */,
 				05BD280528127FFE00B06463 /* Login.storyboard in Resources */,
 				5A8AD010278CA0FA003937C2 /* Poppins-Light.ttf in Resources */,
@@ -792,14 +841,20 @@
 			files = (
 				05BDCBDC281BDDE60092A8A3 /* PromoListViewController.swift in Sources */,
 				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
+				05AB04392825138800FC523E /* RatingViewController.swift in Sources */,
 				158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */,
 				05BDCBD1281BC2070092A8A3 /* OverlayPickerViewController.swift in Sources */,
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
+				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
 				05BDCBE3281BE10A0092A8A3 /* PromoListTableViewCell.swift in Sources */,
 				05BDCBD6281BC6FB0092A8A3 /* Constants.swift in Sources */,
 				05BDCBDA281BD42D0092A8A3 /* HomeDetailNotificationViewController.swift in Sources */,
+				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
+				05AB04252825006700FC523E /* NewsListViewController.swift in Sources */,
+				05AB0431282508A100FC523E /* NewsTextStatusTableViewCell.swift in Sources */,
+				05AB0433282508AC00FC523E /* NewsVideoStatusTableViewCell.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BDCBE5281BED5B0092A8A3 /* PromoDetailViewController.swift in Sources */,
@@ -821,6 +876,7 @@
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
+				05AB042F2825089600FC523E /* NewsImageStatusTableViewCell.swift in Sources */,
 				05BDCBD8281BD0C90092A8A3 /* Builder.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
 				5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */,

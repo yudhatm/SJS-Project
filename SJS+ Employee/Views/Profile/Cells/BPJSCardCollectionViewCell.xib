@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Eee-PF-s71" customClass="BPJSCardCollectionViewCell" customModule="SJS__Employee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QYi-AT-TFk">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-pL-d8z">
+                        <rect key="frame" x="12" y="12" width="356" height="178"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gbD-0X-pJu">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="178"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPJS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07J-Ds-h09">
+                                <rect key="frame" x="16" y="16" width="32.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nomor BPJS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLd-FC-5T1">
+                                <rect key="frame" x="16" y="44" width="60" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPB-1d-ye3">
+                                <rect key="frame" x="16" y="62" width="105" height="26"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-hH-vdf">
+                                <rect key="frame" x="16" y="136" width="105" height="26"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nomor BPJS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGQ-6g-iVG">
+                                <rect key="frame" x="16" y="118" width="60" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gbD-0X-pJu" secondAttribute="bottom" id="2bR-nG-ug4"/>
+                            <constraint firstItem="SGQ-6g-iVG" firstAttribute="top" secondItem="CPB-1d-ye3" secondAttribute="bottom" constant="30" id="88d-iN-s2I"/>
+                            <constraint firstItem="nGz-hH-vdf" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" constant="16" id="F7d-BY-4wN"/>
+                            <constraint firstItem="iLd-FC-5T1" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" constant="16" id="Ffd-Pc-9oh"/>
+                            <constraint firstItem="07J-Ds-h09" firstAttribute="top" secondItem="y0z-pL-d8z" secondAttribute="top" constant="16" id="GdR-59-gi8"/>
+                            <constraint firstAttribute="trailing" secondItem="gbD-0X-pJu" secondAttribute="trailing" id="NtJ-c7-ALh"/>
+                            <constraint firstItem="nGz-hH-vdf" firstAttribute="top" secondItem="SGQ-6g-iVG" secondAttribute="bottom" constant="4" id="SDS-7y-leg"/>
+                            <constraint firstItem="CPB-1d-ye3" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" constant="16" id="Scj-qZ-6UE"/>
+                            <constraint firstItem="07J-Ds-h09" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" constant="16" id="TnD-3K-8Ac"/>
+                            <constraint firstItem="gbD-0X-pJu" firstAttribute="top" secondItem="y0z-pL-d8z" secondAttribute="top" id="dnR-zK-DN9"/>
+                            <constraint firstAttribute="bottom" secondItem="nGz-hH-vdf" secondAttribute="bottom" constant="16" id="iYS-GF-pt0"/>
+                            <constraint firstItem="gbD-0X-pJu" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" id="r0G-Yp-2Ry"/>
+                            <constraint firstItem="CPB-1d-ye3" firstAttribute="top" secondItem="iLd-FC-5T1" secondAttribute="bottom" constant="4" id="uif-Uy-HQb"/>
+                            <constraint firstItem="iLd-FC-5T1" firstAttribute="top" secondItem="07J-Ds-h09" secondAttribute="bottom" constant="8" id="xyp-AI-EkW"/>
+                            <constraint firstItem="SGQ-6g-iVG" firstAttribute="leading" secondItem="y0z-pL-d8z" secondAttribute="leading" constant="16" id="yDx-nb-lsq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="y0z-pL-d8z" firstAttribute="leading" secondItem="QYi-AT-TFk" secondAttribute="leading" constant="12" id="6fs-xT-XH0"/>
+                    <constraint firstAttribute="trailing" secondItem="y0z-pL-d8z" secondAttribute="trailing" constant="12" id="Fui-kZ-E0V"/>
+                    <constraint firstAttribute="bottom" secondItem="y0z-pL-d8z" secondAttribute="bottom" constant="12" id="GYg-9V-HGn"/>
+                    <constraint firstItem="y0z-pL-d8z" firstAttribute="top" secondItem="QYi-AT-TFk" secondAttribute="top" constant="12" id="kqT-Yo-c1L"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="380" height="202"/>
+            <point key="canvasLocation" x="167" y="80"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

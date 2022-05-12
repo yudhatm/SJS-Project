@@ -23,5 +23,26 @@
 	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-MediumItalic</string>
+		<string>Poppins-Italic</string>
+		<string>Poppins-SemiBold</string>
+		<string>Poppins-Thin</string>
+		<string>Poppins-Black</string>
+		<string>Poppins-Bold</string>
+		<string>Poppins-LightItalic</string>
+		<string>Poppins-Regular</string>
+		<string>Poppins-BlackItalic</string>
+		<string>Poppins-ExtraBold</string>
+		<string>Poppins-ExtraBoldItalic</string>
+		<string>Poppins-SemiBoldItalic</string>
+		<string>Poppins-Medium</string>
+		<string>Poppins-Light</string>
+		<string>Poppins-BoldItalic</string>
+		<string>Poppins-ExtraLightItalic</string>
+		<string>Poppins-ExtraLight</string>
+		<string>Poppins-ThinItalic</string>
+	</array>
 </dict>
 </plist>

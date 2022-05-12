@@ -12,6 +12,8 @@ enum Storyboards: String {
     case login = "Login"
     case onboarding = "Onboarding"
     case home = "Home"
+    case penggajian = "Penggajian"
+    case document = "Document"
 }
 
 protocol Storyboarded {

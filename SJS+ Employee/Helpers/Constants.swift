@@ -10,6 +10,7 @@ import Foundation
 public typealias ViewSize = Constants.ViewSize
 public typealias Constraints = Constants.Constraints
 public typealias CornerRadius = Constants.CornerRadius
+public typealias InfoPlistKeys = Constants.InfoPlistKeys
 
 public struct Constants {
     public struct ViewSize {
@@ -30,5 +31,9 @@ public struct Constants {
         static let radius8: CGFloat = 8
         static let radius12: CGFloat = 12
         static let radius24: CGFloat = 24
+    }
+    
+    public struct InfoPlistKeys {
+        static let gmapAPIKey = "GMAP_API_KEY"
     }
 }

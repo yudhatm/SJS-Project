@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi</string>
+	<key>GMAP_API_KEY</key>
+	<string>AIzaSyBMbOqttO7WzGD_X9dc_X5E8btviIS6nhE</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

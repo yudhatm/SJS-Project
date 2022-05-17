@@ -8,6 +8,8 @@ target 'SJS+ Employee' do
   # Pods for SJS+ Employee
   pod 'Cosmos', '~> 23.0'
   pod 'DZNEmptyDataSet'
+  pod 'GoogleMaps', '6.2.1'
+  pod 'GooglePlaces', '6.2.1'
   pod 'PureLayout'
   pod 'Sevruk-PageControl'
 

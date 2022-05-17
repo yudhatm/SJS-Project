@@ -52,6 +52,12 @@
 		05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8BFB4282BCCDF005DB1E4 /* PenggajianMainViewController.swift */; };
 		05C8BFB8282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C8BFB7282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib */; };
 		05C8BFBB282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8BFBA282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift */; };
+		05CB89F328339AAA00E917D4 /* InfoPlistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */; };
+		05CB89F628339CA000E917D4 /* Absensi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB89F528339CA000E917D4 /* Absensi.storyboard */; };
+		05CB89F928339F2A00E917D4 /* AbsensiMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */; };
+		05CB89FB2833A84800E917D4 /* WorkplaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */; };
+		05CB89FD2833A9E500E917D4 /* RegularInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */; };
+		05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */; };
 		05DD819C282CCCD2006CC967 /* SlipGajiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD819B282CCCD2006CC967 /* SlipGajiViewController.swift */; };
 		05DD819F282CCD78006CC967 /* Document.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DD819E282CCD78006CC967 /* Document.storyboard */; };
 		05DD81A2282CCE32006CC967 /* DocumentMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD81A1282CCE32006CC967 /* DocumentMainViewController.swift */; };
@@ -169,6 +175,12 @@
 		05C8BFB4282BCCDF005DB1E4 /* PenggajianMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianMainViewController.swift; sourceTree = "<group>"; };
 		05C8BFB7282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenggajianItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		05C8BFBA282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistParser.swift; sourceTree = "<group>"; };
+		05CB89F528339CA000E917D4 /* Absensi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Absensi.storyboard; sourceTree = "<group>"; };
+		05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiMainViewController.swift; sourceTree = "<group>"; };
+		05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceListViewController.swift; sourceTree = "<group>"; };
+		05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularInViewController.swift; sourceTree = "<group>"; };
+		05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiKunjunganViewController.swift; sourceTree = "<group>"; };
 		05DD819B282CCCD2006CC967 /* SlipGajiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipGajiViewController.swift; sourceTree = "<group>"; };
 		05DD819E282CCD78006CC967 /* Document.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Document.storyboard; sourceTree = "<group>"; };
 		05DD81A1282CCE32006CC967 /* DocumentMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMainViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +348,7 @@
 		05BD280128127FAE00B06463 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				05CB89F428339C9500E917D4 /* Absensi */,
 				05DD819D282CCD5C006CC967 /* Document */,
 				158D95262813E22600C72218 /* Onboarding */,
 				05BD280328127FEB00B06463 /* Login & Authentication */,
@@ -349,6 +362,7 @@
 		05BD280228127FC800B06463 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				05CB89F728339EFA00E917D4 /* Absensi */,
 				05DD81A0282CCE1E006CC967 /* Document */,
 				05BDCBCF281BC1AD0092A8A3 /* Overlays */,
 				158D952B2813E68E00C72218 /* Onboarding */,
@@ -500,6 +514,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		05CB89F428339C9500E917D4 /* Absensi */ = {
+			isa = PBXGroup;
+			children = (
+				05CB89F528339CA000E917D4 /* Absensi.storyboard */,
+			);
+			path = Absensi;
+			sourceTree = "<group>";
+		};
+		05CB89F728339EFA00E917D4 /* Absensi */ = {
+			isa = PBXGroup;
+			children = (
+				05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */,
+				05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */,
+				05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */,
+				05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */,
+			);
+			path = Absensi;
+			sourceTree = "<group>";
+		};
 		05DD819D282CCD5C006CC967 /* Document */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +624,7 @@
 				158D95352813FF1F00C72218 /* Extensions.swift */,
 				05BDCBD5281BC6FB0092A8A3 /* Constants.swift */,
 				05BDCBD7281BD0C90092A8A3 /* Builder.swift */,
+				05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -887,6 +921,7 @@
 				5A8786092783E19F005048D4 /* Frameworks */,
 				5A87860A2783E19F005048D4 /* Resources */,
 				3A3327EC88A78A40352CDB3D /* [CP] Embed Pods Frameworks */,
+				2494AC6A97E2153184EEB6E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -956,6 +991,7 @@
 				5A8AD019278CA0FA003937C2 /* Poppins-Bold.ttf in Resources */,
 				05C8BFB2282BC526005DB1E4 /* Penggajian.storyboard in Resources */,
 				05A6B9F528167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib in Resources */,
+				05CB89F628339CA000E917D4 /* Absensi.storyboard in Resources */,
 				5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */,
 				05C67766282A4E4C0060C87B /* ProfileListTableViewCell.xib in Resources */,
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
@@ -995,6 +1031,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2494AC6A97E2153184EEB6E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D2838DDA5CCA61369B5C4B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1043,6 +1096,7 @@
 			files = (
 				05BDCBDC281BDDE60092A8A3 /* PromoListViewController.swift in Sources */,
 				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
+				05CB89FD2833A9E500E917D4 /* RegularInViewController.swift in Sources */,
 				05AB04392825138800FC523E /* RatingViewController.swift in Sources */,
 				05DD819C282CCCD2006CC967 /* SlipGajiViewController.swift in Sources */,
 				158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */,
@@ -1050,6 +1104,7 @@
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
+				05CB89F328339AAA00E917D4 /* InfoPlistParser.swift in Sources */,
 				05C8BFA5282BAECC005DB1E4 /* EditProfileViewController.swift in Sources */,
 				05BDCBE3281BE10A0092A8A3 /* PromoListTableViewCell.swift in Sources */,
 				05DD81B0282D04B1006CC967 /* LeaveRequestListTableViewCell.swift in Sources */,
@@ -1073,6 +1128,7 @@
 				158D95462819390000C72218 /* HomePromoCollectionViewCell.swift in Sources */,
 				05C8BFBB282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift in Sources */,
 				05C6776E282A50120060C87B /* ProfileVerificationCollectionViewCell.swift in Sources */,
+				05CB89F928339F2A00E917D4 /* AbsensiMainViewController.swift in Sources */,
 				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
@@ -1090,12 +1146,14 @@
 				05BDCBCA281BBC010092A8A3 /* HomeCoordinator.swift in Sources */,
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
+				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
 				05C8BFAB282BB256005DB1E4 /* ChangePasswordViewController.swift in Sources */,
 				05AB042F2825089600FC523E /* NewsImageStatusTableViewCell.swift in Sources */,
+				05CB89FB2833A84800E917D4 /* WorkplaceListViewController.swift in Sources */,
 				05DD81A8282CF3F6006CC967 /* DocumentListTableViewCell.swift in Sources */,
 				05BDCBD8281BD0C90092A8A3 /* Builder.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,

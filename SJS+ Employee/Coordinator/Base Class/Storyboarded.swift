@@ -14,6 +14,7 @@ enum Storyboards: String {
     case home = "Home"
     case penggajian = "Penggajian"
     case document = "Document"
+    case absensi = "Absensi"
 }
 
 protocol Storyboarded {

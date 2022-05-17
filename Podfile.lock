@@ -1,12 +1,20 @@
 PODS:
   - Cosmos (23.0.0)
   - DZNEmptyDataSet (1.8.1)
+  - GoogleMaps (6.2.1):
+    - GoogleMaps/Maps (= 6.2.1)
+  - GoogleMaps/Base (6.2.1)
+  - GoogleMaps/Maps (6.2.1):
+    - GoogleMaps/Base
+  - GooglePlaces (6.2.1)
   - PureLayout (3.1.9)
   - Sevruk-PageControl (1.0.0)
 
 DEPENDENCIES:
   - Cosmos (~> 23.0)
   - DZNEmptyDataSet
+  - GoogleMaps (= 6.2.1)
+  - GooglePlaces (= 6.2.1)
   - PureLayout
   - Sevruk-PageControl
 
@@ -14,15 +22,19 @@ SPEC REPOS:
   trunk:
     - Cosmos
     - DZNEmptyDataSet
+    - GoogleMaps
+    - GooglePlaces
     - PureLayout
     - Sevruk-PageControl
 
 SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
+  GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
 
-PODFILE CHECKSUM: 2edfc263661fb61c5079a59f83e69cf05239bec9
+PODFILE CHECKSUM: 6a0d9316db39ffccca2457dda9befe801868092c
 
 COCOAPODS: 1.11.2

@@ -10,6 +10,8 @@ target 'SJS+ Employee' do
   pod 'DZNEmptyDataSet'
   pod 'GoogleMaps', '6.2.1'
   pod 'GooglePlaces', '6.2.1'
+  pod 'JTAppleCalendar', '~> 7.1'
+  pod 'MagicPie'
   pod 'PureLayout'
   pod 'Sevruk-PageControl'
 

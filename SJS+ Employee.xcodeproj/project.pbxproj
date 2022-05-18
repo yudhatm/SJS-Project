@@ -52,6 +52,11 @@
 		05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8BFB4282BCCDF005DB1E4 /* PenggajianMainViewController.swift */; };
 		05C8BFB8282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C8BFB7282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib */; };
 		05C8BFBB282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8BFBA282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift */; };
+		05C9C80A2834F2300077F71D /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C9C8092834F2300077F71D /* DateCell.xib */; };
+		05C9C80D2834F29A0077F71D /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C9C80C2834F29A0077F71D /* DateCell.swift */; };
+		05C9C80F2834F3B20077F71D /* ReportAbsensiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C9C80E2834F3B20077F71D /* ReportAbsensiViewController.swift */; };
+		05C9C8112835201B0077F71D /* StatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C9C8102835201B0077F71D /* StatsCell.xib */; };
+		05C9C813283522640077F71D /* StatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C9C812283522640077F71D /* StatsCell.swift */; };
 		05CB89F328339AAA00E917D4 /* InfoPlistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */; };
 		05CB89F628339CA000E917D4 /* Absensi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB89F528339CA000E917D4 /* Absensi.storyboard */; };
 		05CB89F928339F2A00E917D4 /* AbsensiMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */; };
@@ -175,6 +180,11 @@
 		05C8BFB4282BCCDF005DB1E4 /* PenggajianMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianMainViewController.swift; sourceTree = "<group>"; };
 		05C8BFB7282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenggajianItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		05C8BFBA282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		05C9C8092834F2300077F71D /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		05C9C80C2834F29A0077F71D /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		05C9C80E2834F3B20077F71D /* ReportAbsensiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportAbsensiViewController.swift; sourceTree = "<group>"; };
+		05C9C8102835201B0077F71D /* StatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsCell.xib; sourceTree = "<group>"; };
+		05C9C812283522640077F71D /* StatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCell.swift; sourceTree = "<group>"; };
 		05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistParser.swift; sourceTree = "<group>"; };
 		05CB89F528339CA000E917D4 /* Absensi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Absensi.storyboard; sourceTree = "<group>"; };
 		05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiMainViewController.swift; sourceTree = "<group>"; };
@@ -514,9 +524,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		05C9C8082834F21C0077F71D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05C9C8092834F2300077F71D /* DateCell.xib */,
+				05C9C8102835201B0077F71D /* StatsCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		05C9C80B2834F2870077F71D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05C9C80C2834F29A0077F71D /* DateCell.swift */,
+				05C9C812283522640077F71D /* StatsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		05CB89F428339C9500E917D4 /* Absensi */ = {
 			isa = PBXGroup;
 			children = (
+				05C9C8082834F21C0077F71D /* Cells */,
 				05CB89F528339CA000E917D4 /* Absensi.storyboard */,
 			);
 			path = Absensi;
@@ -525,10 +554,12 @@
 		05CB89F728339EFA00E917D4 /* Absensi */ = {
 			isa = PBXGroup;
 			children = (
+				05C9C80B2834F2870077F71D /* Cells */,
 				05CB89F828339F2A00E917D4 /* AbsensiMainViewController.swift */,
 				05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */,
 				05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */,
 				05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */,
+				05C9C80E2834F3B20077F71D /* ReportAbsensiViewController.swift */,
 			);
 			path = Absensi;
 			sourceTree = "<group>";
@@ -1016,10 +1047,12 @@
 				158D95282813E23700C72218 /* Onboarding.storyboard in Resources */,
 				5A8AD01D278CA0FA003937C2 /* Poppins-Italic.ttf in Resources */,
 				5A8AD015278CA0FA003937C2 /* Poppins-BlackItalic.ttf in Resources */,
+				05C9C8112835201B0077F71D /* StatsCell.xib in Resources */,
 				05C8BFA7282BAEFA005DB1E4 /* EditProfileTableViewCell.xib in Resources */,
 				05AB042C2825083E00FC523E /* NewsVideoStatusTableViewCell.xib in Resources */,
 				5A8AD011278CA0FA003937C2 /* Poppins-Medium.ttf in Resources */,
 				05BD280528127FFE00B06463 /* Login.storyboard in Resources */,
+				05C9C80A2834F2300077F71D /* DateCell.xib in Resources */,
 				5A8AD010278CA0FA003937C2 /* Poppins-Light.ttf in Resources */,
 				5A8AD01C278CA0FA003937C2 /* Poppins-SemiBold.ttf in Resources */,
 				5A8AD00F278CA0FA003937C2 /* Poppins-BoldItalic.ttf in Resources */,
@@ -1104,6 +1137,7 @@
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
+				05C9C813283522640077F71D /* StatsCell.swift in Sources */,
 				05CB89F328339AAA00E917D4 /* InfoPlistParser.swift in Sources */,
 				05C8BFA5282BAECC005DB1E4 /* EditProfileViewController.swift in Sources */,
 				05BDCBE3281BE10A0092A8A3 /* PromoListTableViewCell.swift in Sources */,
@@ -1125,6 +1159,8 @@
 				05DD81AD282D0138006CC967 /* LeaveRequestListViewController.swift in Sources */,
 				05DD81B5282D07F5006CC967 /* LeaveDetailViewController.swift in Sources */,
 				158D95482819454600C72218 /* HomeNotificationViewController.swift in Sources */,
+				05C9C80D2834F29A0077F71D /* DateCell.swift in Sources */,
+				05C9C80F2834F3B20077F71D /* ReportAbsensiViewController.swift in Sources */,
 				158D95462819390000C72218 /* HomePromoCollectionViewCell.swift in Sources */,
 				05C8BFBB282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift in Sources */,
 				05C6776E282A50120060C87B /* ProfileVerificationCollectionViewCell.swift in Sources */,

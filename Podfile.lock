@@ -7,6 +7,8 @@ PODS:
   - GoogleMaps/Maps (6.2.1):
     - GoogleMaps/Base
   - GooglePlaces (6.2.1)
+  - JTAppleCalendar (7.1.8)
+  - MagicPie (1.1.2)
   - PureLayout (3.1.9)
   - Sevruk-PageControl (1.0.0)
 
@@ -15,6 +17,8 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - GoogleMaps (= 6.2.1)
   - GooglePlaces (= 6.2.1)
+  - JTAppleCalendar (~> 7.1)
+  - MagicPie
   - PureLayout
   - Sevruk-PageControl
 
@@ -24,6 +28,8 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - GoogleMaps
     - GooglePlaces
+    - JTAppleCalendar
+    - MagicPie
     - PureLayout
     - Sevruk-PageControl
 
@@ -32,9 +38,11 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
   GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
+  JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
+  MagicPie: 5ee9378594f474c5dc5d519aeba2534d79d41930
   PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
 
-PODFILE CHECKSUM: 6a0d9316db39ffccca2457dda9befe801868092c
+PODFILE CHECKSUM: ea2652257a74d1b24b19ba97c7da245c89ccc2bf
 
 COCOAPODS: 1.11.2

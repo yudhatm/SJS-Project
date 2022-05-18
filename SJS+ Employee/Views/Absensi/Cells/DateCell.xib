@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="RYe-MP-n7M" customClass="DateCell" customModule="SJS__Employee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="146" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GMK-mL-Bxi">
+                <rect key="frame" x="0.0" y="0.0" width="146" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ga-qI-3XP">
+                        <rect key="frame" x="8" y="8" width="130" height="105"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaD-yB-HSB">
+                        <rect key="frame" x="71" y="89" width="4.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="OaD-yB-HSB" secondAttribute="bottom" constant="12" id="20O-Mx-N8D"/>
+                    <constraint firstItem="5Ga-qI-3XP" firstAttribute="top" secondItem="GMK-mL-Bxi" secondAttribute="top" constant="8" id="C1Z-ot-nqv"/>
+                    <constraint firstAttribute="trailing" secondItem="5Ga-qI-3XP" secondAttribute="trailing" constant="8" id="LFe-6E-2DJ"/>
+                    <constraint firstItem="5Ga-qI-3XP" firstAttribute="leading" secondItem="GMK-mL-Bxi" secondAttribute="leading" constant="8" id="miL-ZJ-kEc"/>
+                    <constraint firstAttribute="bottom" secondItem="5Ga-qI-3XP" secondAttribute="bottom" constant="8" id="zSa-eE-wv9"/>
+                    <constraint firstItem="OaD-yB-HSB" firstAttribute="centerX" secondItem="GMK-mL-Bxi" secondAttribute="centerX" id="zbz-Te-JXo"/>
+                    <constraint firstItem="OaD-yB-HSB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GMK-mL-Bxi" secondAttribute="top" constant="8" id="zi2-Kg-vu2"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="146" height="121"/>
+            <connections>
+                <outlet property="dateLabel" destination="OaD-yB-HSB" id="wCf-nf-hZd"/>
+                <outlet property="selectedView" destination="5Ga-qI-3XP" id="5of-6b-QSX"/>
+            </connections>
+            <point key="canvasLocation" x="-6" y="126"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

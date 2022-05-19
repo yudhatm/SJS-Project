@@ -11,7 +11,7 @@ import GooglePlaces
 
 class AbsensiMainViewController: UIViewController, Storyboarded {
     
-    weak var coordinator: LoginCoordinator?
+    weak var coordinator: HomeCoordinator?
     
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var checkInButton: SJSButton!

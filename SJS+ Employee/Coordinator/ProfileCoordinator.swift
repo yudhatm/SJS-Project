@@ -1,14 +1,14 @@
 //
-//  HomeCoordinator.swift
+//  ProfileCoordinator.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 29/04/22.
+//  Created by Buana on 19/05/22.
 //
 
 import Foundation
 import UIKit
 
-class HomeCoordinator: Coordinator {
+class ProfileCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
@@ -17,14 +17,8 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = HomeMainViewController.instantiate(.home)
+        let vc = ProfileMainViewController.instantiate(.profile)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
-    }
-    
-    func goToAbsenMap() {
-        let vc = AbsensiMainViewController.instantiate(.absensi)
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
     }
 }

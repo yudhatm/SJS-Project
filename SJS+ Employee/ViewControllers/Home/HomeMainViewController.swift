@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeMainViewController: UIViewController, Storyboarded {
-    weak var coordinator: HomeCoordinator?
+    var coordinator: HomeCoordinator?
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var userCompanyLabel: UILabel!
@@ -31,7 +31,7 @@ class HomeMainViewController: UIViewController, Storyboarded {
             contentCollectionView.delegate = self
             contentCollectionView.dataSource = self
             
-            contentCollectionView.backgroundColor = .green
+//            contentCollectionView.backgroundColor = .green
         }
     }
     
@@ -40,12 +40,7 @@ class HomeMainViewController: UIViewController, Storyboarded {
             newsCollectionView.delegate = self
             newsCollectionView.dataSource = self
             
-            newsCollectionView.backgroundColor = .yellow
-            
-//            let layout = UICollectionViewFlowLayout()
-//            layout.scrollDirection = .horizontal
-//            layout.itemSize = CGSize(width: 100, height: 200)
-//            newsCollectionView.collectionViewLayout = layout
+//            newsCollectionView.backgroundColor = .yellow
         }
     }
     
@@ -54,7 +49,7 @@ class HomeMainViewController: UIViewController, Storyboarded {
             promoCollectionView.delegate = self
             promoCollectionView.dataSource = self
             
-            promoCollectionView.backgroundColor = .cyan
+//            promoCollectionView.backgroundColor = .cyan
         }
     }
     
@@ -84,7 +79,7 @@ class HomeMainViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         registerCells()
-        setupNavigationBar()
+        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -109,10 +104,17 @@ class HomeMainViewController: UIViewController, Storyboarded {
     }
     
     func setupNavigationBar() {
-        self.navigationController?.navigationBar.backgroundColor = UIColor.appColor(.sjsOrange)
-        self.navigationController?.navigationBar.barTintColor = UIColor.appColor(.sjsOrange)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Bold", size: 20.0) ?? UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.title = "SJS+"
+        self.navigationItem.title = "SJS+"
+    }
+    
+    func setupView() {
+        setupNavigationBar()
+        
+        absensiButton.addTarget(self, action: #selector(absensiButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func absensiButtonTapped() {
+        coordinator?.goToAbsenMap()
     }
 }
 

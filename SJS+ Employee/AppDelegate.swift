@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(gmapAPIKey)
         GMSPlacesClient.provideAPIKey(gmapAPIKey)
         
+        setNavigationConfiguration()
+        
         return true
     }
 
@@ -38,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func setNavigationConfiguration() {
+        UINavigationBar.appearance().backgroundColor = UIColor.appColor(.sjsOrange)
+        UINavigationBar.appearance().barTintColor = UIColor.appColor(.sjsOrange)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Bold", size: 20.0) ?? UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
 }
 

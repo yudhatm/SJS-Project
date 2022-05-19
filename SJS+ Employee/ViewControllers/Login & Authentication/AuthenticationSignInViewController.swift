@@ -34,22 +34,23 @@ class AuthenticationSignInViewController: UIViewController, Storyboarded {
     }
 
     //MARK: - Init View
-    private func initButtons(){
+    private func initButtons() {
         forgotButton.addTarget(self, action: #selector(navigateToRequestPassword), for: .touchUpInside)
         smallRegisterButton.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
         bigRegisterButton.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
     }
     
     //MARK: - Navigation
-    @objc
-    private func navigateToRequestPassword(){
-        let requestPasswordViewController = AuthenticationForgotRequestViewController()
-        navigationController?.pushViewController(requestPasswordViewController, animated: true)
+    @objc private func navigateToRequestPassword(){
+        coordinator?.goToForgotPasswordRequest()
     }
     
-    @objc
-    private func navigateToRegister() {
+    @objc private func navigateToRegister() {
         coordinator?.goToRegister()
     }
 
+    @objc private func loginTapped() {
+        coordinator?.goToMainTab()
+    }
 }

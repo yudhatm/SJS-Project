@@ -7,12 +7,14 @@
 
 import UIKit
 
-class PenggajianMainViewController: UIViewController {
-
+class PenggajianMainViewController: UIViewController, Storyboarded {
+    var coordinator: PenggajianCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Penggajian"
     }
     
 

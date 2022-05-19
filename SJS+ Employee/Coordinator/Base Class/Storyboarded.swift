@@ -13,6 +13,7 @@ enum Storyboards: String {
     case onboarding = "Onboarding"
     case home = "Home"
     case penggajian = "Penggajian"
+    case profile = "Profile"
     case document = "Document"
     case absensi = "Absensi"
 }

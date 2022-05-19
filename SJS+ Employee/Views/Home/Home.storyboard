@@ -282,7 +282,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" name="SJSAccentColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dHS-UM-DPW" secondAttribute="trailing" id="Cp6-Mr-86c"/>
                             <constraint firstItem="dHS-UM-DPW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Dac-CR-IYV"/>
@@ -327,7 +327,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gf5-XN-tFd"/>
-                        <color key="backgroundColor" name="SJSAccentColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Gf5-XN-tFd" firstAttribute="bottom" secondItem="qNm-zp-AZU" secondAttribute="bottom" id="Dcp-O2-YrK"/>
                             <constraint firstItem="Gf5-XN-tFd" firstAttribute="trailing" secondItem="qNm-zp-AZU" secondAttribute="trailing" id="U9w-JS-vL8"/>
@@ -792,7 +792,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0NK-Lx-O0j"/>
-                        <color key="backgroundColor" name="SJSAccentColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0NK-Lx-O0j" firstAttribute="trailing" secondItem="0Pu-Ky-ZQV" secondAttribute="trailing" id="EDY-mG-6Qa"/>
                             <constraint firstItem="0Pu-Ky-ZQV" firstAttribute="top" secondItem="0NK-Lx-O0j" secondAttribute="top" id="MbI-7a-mtR"/>
@@ -804,6 +804,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdT-Od-AJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861" y="792"/>
+        </scene>
+        <!--Tab Main View Controller-->
+        <scene sceneID="hJu-Hj-vTp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piH-zV-OzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="TabMainViewController" id="KjE-22-ZvC" customClass="TabMainViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w54-ms-xib">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="132" y="-560"/>
         </scene>
         <!--Home Notification View Controller-->
         <scene sceneID="tVY-tO-fxx">
@@ -819,7 +833,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ou-ID-pc3"/>
-                        <color key="backgroundColor" name="SJSAccentColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Ou-ID-pc3" firstAttribute="trailing" secondItem="IK0-ov-ZLu" secondAttribute="trailing" id="CzX-lN-spu"/>
                             <constraint firstItem="7Ou-ID-pc3" firstAttribute="bottom" secondItem="IK0-ov-ZLu" secondAttribute="bottom" id="QAB-E0-ZVU"/>
@@ -905,7 +919,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="30g-Xe-Z5b"/>
-                        <color key="backgroundColor" name="SJSAccentColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="30g-Xe-Z5b" firstAttribute="bottom" secondItem="Ytp-gH-v9N" secondAttribute="bottom" id="blK-M1-vj9"/>
                             <constraint firstItem="Ytp-gH-v9N" firstAttribute="leading" secondItem="30g-Xe-Z5b" secondAttribute="leading" id="eqh-Ig-NJD"/>

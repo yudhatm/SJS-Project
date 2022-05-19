@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ProfileMainViewController: UIViewController {
-
+class ProfileMainViewController: UIViewController, Storyboarded {
+    var coordinator: ProfileCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Akun"
     }
     
 

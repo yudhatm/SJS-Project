@@ -68,6 +68,13 @@
 		05CB89FB2833A84800E917D4 /* WorkplaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */; };
 		05CB89FD2833A9E500E917D4 /* RegularInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */; };
 		05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */; };
+		05D2D2E52837869C007A82D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D2D2E42837869C007A82D2 /* GoogleService-Info.plist */; };
+		05D2D2EE28378F4A007A82D2 /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2EA28378F4A007A82D2 /* PieElement.m */; };
+		05D2D2EF28378F4A007A82D2 /* NSMutableArray+pieEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2EB28378F4A007A82D2 /* NSMutableArray+pieEx.m */; };
+		05D2D2F028378F4A007A82D2 /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2EC28378F4A007A82D2 /* PieLayer.m */; };
+		05D2D2F52837A994007A82D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2F42837A994007A82D2 /* NetworkManager.swift */; };
+		05D2D2F92837ACA5007A82D2 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2F82837ACA5007A82D2 /* SignInViewModel.swift */; };
+		05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2D2FB2837AFD3007A82D2 /* User.swift */; };
 		05DD819C282CCCD2006CC967 /* SlipGajiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD819B282CCCD2006CC967 /* SlipGajiViewController.swift */; };
 		05DD819F282CCD78006CC967 /* Document.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DD819E282CCD78006CC967 /* Document.storyboard */; };
 		05DD81A2282CCE32006CC967 /* DocumentMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD81A1282CCE32006CC967 /* DocumentMainViewController.swift */; };
@@ -201,6 +208,17 @@
 		05CB89FA2833A84800E917D4 /* WorkplaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceListViewController.swift; sourceTree = "<group>"; };
 		05CB89FC2833A9E500E917D4 /* RegularInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularInViewController.swift; sourceTree = "<group>"; };
 		05CB89FE2833AADD00E917D4 /* AbsensiKunjunganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiKunjunganViewController.swift; sourceTree = "<group>"; };
+		05D2D2E42837869C007A82D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05D2D2E728378F4A007A82D2 /* NSMutableArray+pieEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+pieEx.h"; sourceTree = "<group>"; };
+		05D2D2E828378F4A007A82D2 /* MagicPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPieLayer.h; sourceTree = "<group>"; };
+		05D2D2E928378F4A007A82D2 /* PieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieLayer.h; sourceTree = "<group>"; };
+		05D2D2EA28378F4A007A82D2 /* PieElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieElement.m; sourceTree = "<group>"; };
+		05D2D2EB28378F4A007A82D2 /* NSMutableArray+pieEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+pieEx.m"; sourceTree = "<group>"; };
+		05D2D2EC28378F4A007A82D2 /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
+		05D2D2ED28378F4A007A82D2 /* PieElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieElement.h; sourceTree = "<group>"; };
+		05D2D2F42837A994007A82D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		05D2D2F82837ACA5007A82D2 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		05D2D2FB2837AFD3007A82D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		05DD819B282CCCD2006CC967 /* SlipGajiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipGajiViewController.swift; sourceTree = "<group>"; };
 		05DD819E282CCD78006CC967 /* Document.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Document.storyboard; sourceTree = "<group>"; };
 		05DD81A1282CCE32006CC967 /* DocumentMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMainViewController.swift; sourceTree = "<group>"; };
@@ -579,6 +597,52 @@
 			path = Absensi;
 			sourceTree = "<group>";
 		};
+		05D2D2E628378F4A007A82D2 /* MagicPieLayer */ = {
+			isa = PBXGroup;
+			children = (
+				05D2D2E728378F4A007A82D2 /* NSMutableArray+pieEx.h */,
+				05D2D2E828378F4A007A82D2 /* MagicPieLayer.h */,
+				05D2D2E928378F4A007A82D2 /* PieLayer.h */,
+				05D2D2EA28378F4A007A82D2 /* PieElement.m */,
+				05D2D2EB28378F4A007A82D2 /* NSMutableArray+pieEx.m */,
+				05D2D2EC28378F4A007A82D2 /* PieLayer.m */,
+				05D2D2ED28378F4A007A82D2 /* PieElement.h */,
+			);
+			path = MagicPieLayer;
+			sourceTree = "<group>";
+		};
+		05D2D2F12837A96B007A82D2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				05D2D2F42837A994007A82D2 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		05D2D2F62837AC7A007A82D2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				05D2D2F72837AC83007A82D2 /* Authentication */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		05D2D2F72837AC83007A82D2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				05D2D2F82837ACA5007A82D2 /* SignInViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		05D2D2FA2837AFC9007A82D2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				05D2D2FB2837AFD3007A82D2 /* User.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		05DD819D282CCD5C006CC967 /* Document */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +722,7 @@
 		158D952F2813E7B500C72218 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05D2D2FA2837AFC9007A82D2 /* Authentication */,
 				158D95302813E7C400C72218 /* OnboardingSlide.swift */,
 				05A6B9F928167CA600EEFBF4 /* MainMenu.swift */,
 			);
@@ -667,6 +732,7 @@
 		158D95342813FF0800C72218 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				05D2D2E628378F4A007A82D2 /* MagicPieLayer */,
 				158D95352813FF1F00C72218 /* Extensions.swift */,
 				05BDCBD5281BC6FB0092A8A3 /* Constants.swift */,
 				05BDCBD7281BD0C90092A8A3 /* Builder.swift */,
@@ -746,10 +812,13 @@
 		5A87860E2783E19F005048D4 /* SJS+ Employee */ = {
 			isa = PBXGroup;
 			children = (
+				05D2D2E42837869C007A82D2 /* GoogleService-Info.plist */,
+				05D2D2F12837A96B007A82D2 /* Managers */,
 				158D952F2813E7B500C72218 /* Models */,
 				05BD27F828127D7D00B06463 /* Coordinator */,
 				05BD280128127FAE00B06463 /* Views */,
 				05BD280228127FC800B06463 /* ViewControllers */,
+				05D2D2F62837AC7A007A82D2 /* ViewModels */,
 				5AD30E75280DB606002A1D20 /* Features */,
 				5AC08F9D27B2E1CB0036F940 /* Common UI */,
 				5A8ACFF7278CA0E7003937C2 /* Font */,
@@ -1022,6 +1091,7 @@
 				5A1C292E278C90A60015B245 /* .gitignore in Resources */,
 				5A8AD014278CA0FA003937C2 /* Poppins-ExtraBold.ttf in Resources */,
 				158D953C281910BA00C72218 /* HomeAbsenCollectionViewCell.xib in Resources */,
+				05D2D2E52837869C007A82D2 /* GoogleService-Info.plist in Resources */,
 				05DD81B9282D0823006CC967 /* LeaveDetailTableViewCell.xib in Resources */,
 				5A8AD01A278CA0FA003937C2 /* Poppins-Black.ttf in Resources */,
 				05C67763282A42010060C87B /* Profile.storyboard in Resources */,
@@ -1142,6 +1212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D2D2F52837A994007A82D2 /* NetworkManager.swift in Sources */,
 				05BDCBDC281BDDE60092A8A3 /* PromoListViewController.swift in Sources */,
 				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
 				05CB89FD2833A9E500E917D4 /* RegularInViewController.swift in Sources */,
@@ -1149,6 +1220,7 @@
 				05DD819C282CCCD2006CC967 /* SlipGajiViewController.swift in Sources */,
 				158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */,
 				05BDCBD1281BC2070092A8A3 /* OverlayPickerViewController.swift in Sources */,
+				05D2D2F92837ACA5007A82D2 /* SignInViewModel.swift in Sources */,
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
@@ -1166,6 +1238,7 @@
 				05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */,
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
+				05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
 				05AB04252825006700FC523E /* NewsListViewController.swift in Sources */,
 				05AB0431282508A100FC523E /* NewsTextStatusTableViewCell.swift in Sources */,
@@ -1173,6 +1246,7 @@
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BDCBE5281BED5B0092A8A3 /* PromoDetailViewController.swift in Sources */,
+				05D2D2EE28378F4A007A82D2 /* PieElement.m in Sources */,
 				05DD81AD282D0138006CC967 /* LeaveRequestListViewController.swift in Sources */,
 				05DD81B5282D07F5006CC967 /* LeaveDetailViewController.swift in Sources */,
 				158D95482819454600C72218 /* HomeNotificationViewController.swift in Sources */,
@@ -1184,6 +1258,7 @@
 				05CB89F928339F2A00E917D4 /* AbsensiMainViewController.swift in Sources */,
 				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
+				05D2D2EF28378F4A007A82D2 /* NSMutableArray+pieEx.m in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
 				05777EEF28362BC800B01C42 /* TabMainViewController.swift in Sources */,
 				158D95332813E8C300C72218 /* OnboardingViewController.swift in Sources */,
@@ -1208,6 +1283,7 @@
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
 				05C8BFAB282BB256005DB1E4 /* ChangePasswordViewController.swift in Sources */,
 				05777EFB2836420000B01C42 /* NewsCoordinator.swift in Sources */,
+				05D2D2F028378F4A007A82D2 /* PieLayer.m in Sources */,
 				05AB042F2825089600FC523E /* NewsImageStatusTableViewCell.swift in Sources */,
 				05CB89FB2833A84800E917D4 /* WorkplaceListViewController.swift in Sources */,
 				05DD81A8282CF3F6006CC967 /* DocumentListTableViewCell.swift in Sources */,
@@ -1277,6 +1353,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1331,6 +1408,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1345,9 +1423,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DR6XQ5SU54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1362,6 +1442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjs.employee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJS+ Employee/SJS+ Employee-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1378,9 +1459,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DR6XQ5SU54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1395,6 +1478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjs.employee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJS+ Employee/SJS+ Employee-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

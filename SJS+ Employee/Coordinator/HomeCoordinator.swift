@@ -27,4 +27,10 @@ class HomeCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func goToAbsenDetail() {
+        let vc = ReportAbsensiViewController.instantiate(.absensi)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

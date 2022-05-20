@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MagicPie
 
 class StatsCell: UITableViewCell {
     static let identifier = String(describing: StatsCell.self)

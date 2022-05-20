@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>871318399603-su576jq2ah13niq7j3iad5sokn6n1d8f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.871318399603-su576jq2ah13niq7j3iad5sokn6n1d8f</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD23P_v88hWCL50Z7GLTWvEPftbsWN-Rl8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>871318399603</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sjs.employee</string>
+	<key>PROJECT_ID</key>
+	<string>kerjaplus-b87c2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kerjaplus-b87c2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:871318399603:ios:311994361c2847417f5806</string>
+</dict>
+</plist>

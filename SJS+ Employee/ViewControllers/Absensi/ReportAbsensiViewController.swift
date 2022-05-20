@@ -9,7 +9,7 @@ import UIKit
 import JTAppleCalendar
 
 class ReportAbsensiViewController: UIViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
+    weak var coordinator: HomeCoordinator?
     
     @IBOutlet weak var calendarView: JTAppleCalendarView! {
         didSet {

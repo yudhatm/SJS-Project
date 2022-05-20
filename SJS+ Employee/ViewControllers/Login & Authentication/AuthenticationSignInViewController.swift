@@ -9,6 +9,7 @@ import UIKit
 
 class AuthenticationSignInViewController: UIViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
+    var viewModel: SignInViewModel?
     
     @IBOutlet weak var nipTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!

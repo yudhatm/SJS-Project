@@ -8,6 +8,8 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import FirebaseCore
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey(gmapAPIKey)
         
         setNavigationConfiguration()
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
         
         return true
     }

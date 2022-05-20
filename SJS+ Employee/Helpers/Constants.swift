@@ -13,6 +13,16 @@ public typealias CornerRadius = Constants.CornerRadius
 public typealias InfoPlistKeys = Constants.InfoPlistKeys
 
 public struct Constants {
+    public struct URLs {
+        #if DEBUG
+            static let baseURL = "https://dev-api-employee.kerjaplus.id/public/"
+        #else
+            static let baseURL = "https://api.sjsplus.id/public/p3"
+        #endif
+        
+        static let loginURL = baseURL + "users/login"
+    }
+    
     public struct ViewSize {
         static let threeQuarterScreen = 0.75
         static let halfScreen = 0.5

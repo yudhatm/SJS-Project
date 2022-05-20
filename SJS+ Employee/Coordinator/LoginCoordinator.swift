@@ -25,6 +25,7 @@ class LoginCoordinator: Coordinator {
     func goToSignUp() {
         let vc = AuthenticationSignInViewController.instantiate(.login)
         vc.coordinator = self
+        vc.viewModel = SignInViewModel()
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.pushViewController(vc, animated: false)
     }

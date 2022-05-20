@@ -6,13 +6,16 @@ target 'SJS+ Employee' do
   use_frameworks!
 
   # Pods for SJS+ Employee
+  pod 'Alamofire'
   pod 'Cosmos', '~> 23.0'
   pod 'DZNEmptyDataSet'
+  pod 'FirebaseAuth'
   pod 'GoogleMaps', '6.2.1'
   pod 'GooglePlaces', '6.2.1'
   pod 'JTAppleCalendar', '~> 7.1'
-  pod 'MagicPie'
   pod 'PureLayout'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
   pod 'Sevruk-PageControl'
 
 end
@@ -23,6 +26,9 @@ post_install do |installer|
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_VERSION'] = '4.0'
       end
+    end
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
     end
   end
 end

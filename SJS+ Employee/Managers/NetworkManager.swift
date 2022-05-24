@@ -35,9 +35,9 @@ class NetworkManager {
         return header
     }
     
-    func APIRequest<T: Codable> (_ methodType: HTTPMethod, url: String = "", parameters: [String: Any] = [:]) -> Observable<T> {
+    func APIRequest<T: Codable> (_ methodType: HTTPMethod, encoding: ParameterEncoding = URLEncoding.default, url: String = "", parameters: [String: Any] = [:]) -> Observable<T> {
         return Observable<T>.create { observer in
-            let request = AF.request(url, method: methodType, parameters: parameters, encoding: URLEncoding.default, headers: self.setHeaders(), interceptor: nil)
+            let request = AF.request(url, method: methodType, parameters: parameters, encoding: encoding, headers: self.setHeaders(), interceptor: nil)
                 .responseDecodable { (responseData: AFDataResponse<T>) in
                     switch responseData.result {
                     case .success(let value):

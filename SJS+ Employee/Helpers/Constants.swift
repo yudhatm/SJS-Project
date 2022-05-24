@@ -11,14 +11,17 @@ public typealias ViewSize = Constants.ViewSize
 public typealias Constraints = Constants.Constraints
 public typealias CornerRadius = Constants.CornerRadius
 public typealias InfoPlistKeys = Constants.InfoPlistKeys
+public typealias URLs = Constants.URLs
 
 public struct Constants {
     public struct URLs {
-        #if DEBUG
-            static let baseURL = "https://dev-api-employee.kerjaplus.id/public/"
-        #else
-            static let baseURL = "https://api.sjsplus.id/public/p3"
-        #endif
+//        #if DEBUG
+//            static let baseURL = "https://dev-api-employee.kerjaplus.id/public/"
+//        #else
+//            static let baseURL = "https://api.sjsplus.id/public/p3/"
+//        #endif
+        
+        static let baseURL = "https://api.sjsplus.id/public/p3/"
         
         static let loginURL = baseURL + "users/login"
     }

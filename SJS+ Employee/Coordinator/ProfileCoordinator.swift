@@ -21,4 +21,8 @@ class ProfileCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func showAlert(_ controller: UIAlertController) {
+        navigationController.present(controller, animated: true, completion: nil)
+    }
 }

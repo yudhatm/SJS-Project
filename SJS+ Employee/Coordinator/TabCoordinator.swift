@@ -22,4 +22,8 @@ class TabCoordinator: Coordinator {
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func showAlert(_ controller: UIAlertController) {
+        navigationController.present(controller, animated: true, completion: nil)
+    }
 }

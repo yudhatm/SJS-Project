@@ -12,4 +12,5 @@ protocol Coordinator {
     var navigationController: UINavigationController { get set }
 
     func start()
+    func showAlert(_ controller: UIAlertController)
 }

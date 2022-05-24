@@ -68,4 +68,8 @@ class LoginCoordinator: Coordinator {
             }
         }
     }
+    
+    func showAlert(_ controller: UIAlertController) {
+        navigationController.present(controller, animated: true, completion: nil)
+    }
 }

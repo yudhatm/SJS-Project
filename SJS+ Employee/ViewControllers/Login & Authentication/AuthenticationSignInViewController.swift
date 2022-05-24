@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import ProgressHUD
 
 class AuthenticationSignInViewController: UIViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
-    var viewModel: SignInViewModel?
+    var viewModel: SignInViewModelType?
     
     @IBOutlet weak var nipTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,6 +19,8 @@ class AuthenticationSignInViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loginButton: SJSButton!
     @IBOutlet weak var bigRegisterButton: SJSButton!
     @IBOutlet weak var smallRegisterButton: UIButton!
+    
+    private var bag = DisposeBag()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,6 +36,7 @@ class AuthenticationSignInViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         initButtons()
+        setupRx()
     }
 
     //MARK: - Init View
@@ -52,6 +57,46 @@ class AuthenticationSignInViewController: UIViewController, Storyboarded {
     }
 
     @objc private func loginTapped() {
-        coordinator?.goToMainTab()
+        validateInput()
+    }
+    
+    func setupRx() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        viewModel.loginObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { userData in
+                print(userData)
+                ProgressHUD.dismiss()
+                self.coordinator?.goToMainTab()
+            })
+            .disposed(by: bag)
+        
+        viewModel.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                print(error.localizedDescription)
+            })
+            .disposed(by: bag)
+    }
+    
+    func validateInput() {
+        guard nipTextField.text != "" else {
+            let ac = OverlayBuilder.createErrorAlert(message: "NIK tidak boleh kosong")
+            coordinator?.showAlert(ac)
+            return
+        }
+        
+        guard passwordTextField.text != "" else {
+            let ac = OverlayBuilder.createErrorAlert(message: "Password tidak boleh kosong")
+            coordinator?.showAlert(ac)
+            return
+        }
+        
+        ProgressHUD.show()
+        viewModel?.loginUser(username: nipTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 }

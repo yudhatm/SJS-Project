@@ -10,6 +10,9 @@ import GoogleMaps
 import GooglePlaces
 import FirebaseCore
 import FirebaseAuth
+import netfox
+import ProgressHUD
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        #if DEBUG
+            NFX.sharedInstance().start()
+        #endif
+        
         let gmapAPIKey = InfoPlistParser.getStringValue(forKey: InfoPlistKeys.gmapAPIKey)
         GMSServices.provideAPIKey(gmapAPIKey)
         GMSPlacesClient.provideAPIKey(gmapAPIKey)
@@ -27,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        
+        //Setup ProgressHUD
+        ProgressHUD.colorAnimation = .appColor(.sjsOrange)
+        ProgressHUD.animationType = .lineSpinFade
+        
+        IQKeyboardManager.shared.enable = true
         
         return true
     }

@@ -14,4 +14,16 @@ struct OverlayBuilder {
         
         return vc
     }
+    
+    static func createSimpleAlert(title: String, message: String) -> UIAlertController {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(okAction)
+        
+        return ac
+    }
+    
+    static func createErrorAlert(message: String) -> UIAlertController {
+        return createSimpleAlert(title: "Error", message: message)
+    }
 }

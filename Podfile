@@ -14,12 +14,14 @@ target 'SJS+ Employee' do
   pod 'GooglePlaces', '6.2.1'
   pod 'IQKeyboardManagerSwift'
   pod 'JTAppleCalendar', '~> 7.1'
+  pod 'Kingfisher', '~> 7.0'
   pod 'netfox'
   pod 'PureLayout'
   pod 'ProgressHUD'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'Sevruk-PageControl'
+  pod 'SwiftyJSON'
 
 end
 

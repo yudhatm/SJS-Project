@@ -35,6 +35,7 @@ final class SignInViewModel: SignInViewModelType {
         obs.subscribe(onNext: { data in
             print(data)
             self.loginSubject.onNext(data)
+            UserDefaultManager.shared.saveClassObject(data, key: UserDefaultsKey.userData)
         }, onError: { error in
             print(error)
             self.errorSubject.onNext(error)

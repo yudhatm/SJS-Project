@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var coordinator: LoginCoordinator?
+    var coordinator: Coordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,7 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         
         // send that into our coordinator so that it can display view controllers
-        coordinator = LoginCoordinator(navigationController: navController)
+        if UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) != nil {
+            coordinator = TabCoordinator(navigationController: navController)
+        }
+        else {
+            coordinator = LoginCoordinator(navigationController: navController)
+        }
         
         // tell the coordinator to take over control
         coordinator?.start()

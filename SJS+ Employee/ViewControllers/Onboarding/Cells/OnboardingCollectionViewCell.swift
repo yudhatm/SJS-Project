@@ -15,6 +15,8 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var headerLabelHeight: NSLayoutConstraint!
+    
     func setup(_ slide: OnboardingSlide) {
         onboardingImage.image = slide.image
         headerLabel.text = slide.title

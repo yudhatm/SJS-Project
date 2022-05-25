@@ -47,6 +47,7 @@ PODS:
   - GTMSessionFetcher/Core (1.7.2)
   - IQKeyboardManagerSwift (6.5.10)
   - JTAppleCalendar (7.1.8)
+  - Kingfisher (7.2.2)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -63,6 +64,7 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - Sevruk-PageControl (1.0.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -73,12 +75,14 @@ DEPENDENCIES:
   - GooglePlaces (= 6.2.1)
   - IQKeyboardManagerSwift
   - JTAppleCalendar (~> 7.1)
+  - Kingfisher (~> 7.0)
   - netfox
   - ProgressHUD
   - PureLayout
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - Sevruk-PageControl
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -96,6 +100,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - JTAppleCalendar
+    - Kingfisher
     - nanopb
     - netfox
     - ProgressHUD
@@ -105,6 +110,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - Sevruk-PageControl
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -121,6 +127,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
+  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
@@ -130,7 +137,8 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 494c6c05e9048e5a315a84d2e1589c3a54e4734a
+PODFILE CHECKSUM: 6b89262383444fd5a82718c5829353de86b5a325
 
 COCOAPODS: 1.11.2

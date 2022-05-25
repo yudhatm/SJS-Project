@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 enum AssetsColor {
     case sjsOrange

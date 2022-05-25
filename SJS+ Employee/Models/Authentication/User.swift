@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Convertable {
     var value: UserData?
 }
 

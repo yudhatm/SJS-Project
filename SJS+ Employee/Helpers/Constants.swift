@@ -12,6 +12,7 @@ public typealias Constraints = Constants.Constraints
 public typealias CornerRadius = Constants.CornerRadius
 public typealias InfoPlistKeys = Constants.InfoPlistKeys
 public typealias URLs = Constants.URLs
+public typealias UserDefaultsKey = Constants.UserDefaultsKey
 
 public struct Constants {
     public struct URLs {
@@ -24,6 +25,7 @@ public struct Constants {
         static let baseURL = "https://api.sjsplus.id/public/p3/"
         
         static let loginURL = baseURL + "users/login"
+        static let menuURL = baseURL + "users/menuapp2/1/"
     }
     
     public struct ViewSize {
@@ -48,5 +50,9 @@ public struct Constants {
     
     public struct InfoPlistKeys {
         static let gmapAPIKey = "GMAP_API_KEY"
+    }
+    
+    public struct UserDefaultsKey {
+        static let userData = "user_data"
     }
 }

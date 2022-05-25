@@ -12,6 +12,11 @@ class HomeMainMenuCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menuLabel: UILabel!
+    @IBOutlet weak var menuImageContainerView: UIView!
+    
+    override func awakeFromNib() {
+        self.menuImageContainerView.layer.cornerRadius = self.menuImageContainerView.frame.height / 2
+    }
     
     func setup(_ menuData: MainMenu) {
         self.menuImage.image = menuData.image

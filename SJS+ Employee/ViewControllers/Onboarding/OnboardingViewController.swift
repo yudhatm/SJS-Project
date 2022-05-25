@@ -25,6 +25,7 @@ class OnboardingViewController: UIViewController, Storyboarded {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var loginButtonView: UIView!
+    @IBOutlet weak var arrowButtonView: UIView!
     
     var slides: [OnboardingSlide] = []
     
@@ -45,10 +46,21 @@ class OnboardingViewController: UIViewController, Storyboarded {
         
         // Do any additional setup after loading the view.
         slides = [
-            OnboardingSlide(title: "Step 1", description: "Lazy fox blablablablabla I wanna jump like a rabbit etc etc etc etc", image: #imageLiteral(resourceName: "thank-you-1")),
-            OnboardingSlide(title: "Step 2", description: "Lazy fox blablablablabla I wanna jump like a rabbit etc etc etc etc", image: #imageLiteral(resourceName: "thank-you-1")),
-            OnboardingSlide(title: "Step 3", description: "Lazy fox blablablablabla I wanna jump like a rabbit etc etc etc etc", image: #imageLiteral(resourceName: "thank-you-1"))
+            OnboardingSlide(title: "Selamat Datang di SJS+ Aplikasi Karyawan",
+                            description: "Hai SJSquad, SJS+ Karyawan adalah aplikasi yang bertujuan memudahkan karyawan melihat, memeriksa dan memperbaharui administrasi secara otomatis dan mandiri sekaligus sarana melakukan interaksi antara karyawan dan perusahaan",
+                            image: UIImage(named: "onboarding_1")!
+                           ),
+            OnboardingSlide(title: "Kelola urusan administrasi kepegawaianmu dengan mudah",
+                            description: "Hi SJSquad, yuk.. kelola urusan administrasi personalia kamu seperti pembaharuan data diri, absensi online, pengajuan cuti, permintaan surat, pembukaan rekening baru, cek kontrak kerja hingga cek slip gaji dengan mudah hanya dalam satu genggaman.",
+                            image: UIImage(named: "onboarding_2")!
+                           ),
+            OnboardingSlide(title: "Dapatkan notifikasi untuk semua proses administrasi yang kamu ajukan",
+                            description: "Hi SJSquad, fitur notifikasi SJS+ akan menginformasikan kamu perihal semua aktifitas yang dilakukan melalui aplikasi SJS+",
+                            image: UIImage(named: "onboarding_3")!
+                           )
         ]
+        
+        arrowButtonView.layer.cornerRadius = arrowButtonView.frame.width / 2
         
         loginButtonView.isHidden = true
     }

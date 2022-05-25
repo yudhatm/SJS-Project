@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import ProgressHUD
+import Kingfisher
 
 class HomeMainViewController: UIViewController, Storyboarded {
     var coordinator: HomeCoordinator?
+    var viewModel: HomeViewModelType?
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var userCompanyLabel: UILabel!
@@ -75,6 +79,11 @@ class HomeMainViewController: UIViewController, Storyboarded {
     var menuItemsPerRow: CGFloat = 3
     var absenItemsPerRow: CGFloat = 2
     
+    private var bag = DisposeBag()
+    
+    var menuList: [MenuData] = []
+    var totalNotif = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,14 +91,16 @@ class HomeMainViewController: UIViewController, Storyboarded {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupRx()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        let height = mainMenuCollectionView.collectionViewLayout.collectionView?.contentSize.height
-        let absenHeight = contentCollectionView.collectionViewLayout.collectionView?.contentSize.height
         
-        mainMenuCollectionViewHeight.constant = height ?? 0
-        contentCollectionViewHeight.constant = absenHeight ?? 0
-
-        self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        adjustCollectionViewsHeight()
     }
     
     func registerCells() {
@@ -111,10 +122,41 @@ class HomeMainViewController: UIViewController, Storyboarded {
         setupNavigationBar()
         
         absensiButton.addTarget(self, action: #selector(absensiButtonTapped), for: .touchUpInside)
+        
+        if let userData = viewModel?.getUserData() {
+            let data = userData.value
+            self.userCompanyLabel.text = data?.nama_perusahaan ?? ""
+            self.userNameLabel.text = data?.name_employee ?? ""
+            self.userJobLabel.text = data?.position ?? ""
+        }
     }
     
     @objc private func absensiButtonTapped() {
         coordinator?.goToAbsenMap()
+    }
+    
+    func setupRx() {
+        viewModel?.menuObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: {  menuData in
+                ProgressHUD.dismiss()
+                self.totalNotif = menuData.total_notif
+                self.menuList = menuData.menu ?? []
+                
+                self.mainMenuCollectionView.reloadData()
+                self.adjustCollectionViewsHeight()
+            })
+            .disposed(by: bag)
+    }
+    
+    func adjustCollectionViewsHeight() {
+        let height = mainMenuCollectionView.collectionViewLayout.collectionView?.contentSize.height
+        let absenHeight = contentCollectionView.collectionViewLayout.collectionView?.contentSize.height
+        
+        mainMenuCollectionViewHeight.constant = height ?? 0
+        contentCollectionViewHeight.constant = absenHeight ?? 0
+
+        self.view.layoutIfNeeded()
     }
 }
 
@@ -129,7 +171,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == mainMenuCollectionView {
-            return 6
+            return menuList.count
         }
         
         if collectionView == contentCollectionView {
@@ -151,9 +193,9 @@ extension HomeMainViewController: UICollectionViewDataSource {
         if collectionView == mainMenuCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMainMenuCollectionViewCell.identifier, for: indexPath) as! HomeMainMenuCollectionViewCell
             
-            let menu = MainMenu(image: #imageLiteral(resourceName: "logo-sjs"), title: "menu \(indexPath.row)")
+            let data = menuList[indexPath.row]
             
-            cell.backgroundColor = .red
+            let menu = MainMenu(image: UIImage(named: "calendar")!, title: data.nama_menu ?? "")
             cell.setup(menu)
             
             return cell
@@ -202,7 +244,7 @@ extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
             let paddingSpace = sectionInsets.left * (menuItemsPerRow + 1)
             let availableWidth = self.mainMenuCollectionView.frame.width - paddingSpace
             let widthPerItem = availableWidth / menuItemsPerRow
-            let heightPerItem = widthPerItem * 1.2
+            let heightPerItem = widthPerItem * 1.5
             
             return CGSize(width: widthPerItem, height: heightPerItem)
         }

@@ -81,7 +81,13 @@ class HomeMainViewController: UIViewController, Storyboarded {
     
     private var bag = DisposeBag()
     
-    var menuList: [MenuData] = []
+    var menuList: [MainMenu] = [MainMenu(image: UIImage(named: "calendar")!, title: "Report Absensi"),
+                                MainMenu(image: UIImage(named: "to-do-list")!, title: "Pengajuan Sakit/Izin/Cuti"),
+                                MainMenu(image: UIImage(named: "fileIcon")!, title: "Permintaan Surat"),
+                                MainMenu(image: UIImage(named: "loan")!, title: "Pengambilan Gaji Dimuka"),
+                                MainMenu(image: UIImage(named: "training")!, title: "Training"),
+                                MainMenu(image: UIImage(named: "credit-card")!, title: "Pembukaan Rek Baru")
+                                ]
     var totalNotif = 0
     
     override func viewDidLoad() {
@@ -96,11 +102,11 @@ class HomeMainViewController: UIViewController, Storyboarded {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.mainMenuCollectionView.reloadData()
+        adjustCollectionViewsHeight()
     }
     
     override func viewDidLayoutSubviews() {
-        adjustCollectionViewsHeight()
     }
     
     func registerCells() {
@@ -136,17 +142,16 @@ class HomeMainViewController: UIViewController, Storyboarded {
     }
     
     func setupRx() {
-        viewModel?.menuObs
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: {  menuData in
-                ProgressHUD.dismiss()
-                self.totalNotif = menuData.total_notif
-                self.menuList = menuData.menu ?? []
-                
-                self.mainMenuCollectionView.reloadData()
-                self.adjustCollectionViewsHeight()
-            })
-            .disposed(by: bag)
+//        viewModel?.menuObs
+//            .observe(on: MainScheduler.instance)
+//            .subscribe(onNext: {  menuData in
+//                ProgressHUD.dismiss()
+//                self.totalNotif = menuData.total_notif
+//
+//                self.mainMenuCollectionView.reloadData()
+//                self.adjustCollectionViewsHeight()
+//            })
+//            .disposed(by: bag)
     }
     
     func adjustCollectionViewsHeight() {
@@ -194,9 +199,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMainMenuCollectionViewCell.identifier, for: indexPath) as! HomeMainMenuCollectionViewCell
             
             let data = menuList[indexPath.row]
-            
-            let menu = MainMenu(image: UIImage(named: "calendar")!, title: data.nama_menu ?? "")
-            cell.setup(menu)
+            cell.setup(data)
             
             return cell
         }

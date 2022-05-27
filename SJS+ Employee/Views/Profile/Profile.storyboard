@@ -78,8 +78,8 @@
                                                     <constraint firstAttribute="height" constant="40" id="otO-oF-MP8"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil Saya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-XT-2Gj">
-                                                <rect key="frame" x="24" y="228.5" width="74" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelengkapan Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-XT-2Gj">
+                                                <rect key="frame" x="24" y="228.5" width="132" height="20"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="6df-ye-0H9" secondAttribute="bottom" id="yOL-Rh-GGk"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dUx-2D-6Um">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dUx-2D-6Um">
                                                 <rect key="frame" x="0.0" y="406.5" width="414" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -266,6 +266,12 @@
                             <constraint firstItem="LnO-Dv-mHt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ior-u9-0Ll"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="WSd-EV-eMU" id="rGk-K6-aZb"/>
+                        <outlet property="listTableView" destination="dUx-2D-6Um" id="xan-hX-3Qj"/>
+                        <outlet property="listTableViewHeight" destination="bLc-ze-fXL" id="GPg-0A-qJO"/>
+                        <outlet property="usernameLabel" destination="zrD-dk-dnK" id="zjE-px-P3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

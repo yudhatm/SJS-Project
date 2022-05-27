@@ -27,6 +27,9 @@
 		05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB043428250A0700FC523E /* NewsDetailViewController.swift */; };
 		05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB043628250FA700FC523E /* CreatePostViewController.swift */; };
 		05AB04392825138800FC523E /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB04382825138800FC523E /* RatingViewController.swift */; };
+		05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2055A2840C77A00564615 /* AbsenStatus.swift */; };
+		05B2055D2840DC6500564615 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2055C2840DC6500564615 /* Promo.swift */; };
+		05B205612840EA5400564615 /* ProfileMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B205602840EA5400564615 /* ProfileMainViewModel.swift */; };
 		05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27F928127D8F00B06463 /* Coordinator.swift */; };
 		05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD27FB28127DC200B06463 /* Storyboarded.swift */; };
 		05BD280528127FFE00B06463 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD280428127FFE00B06463 /* Login.storyboard */; };
@@ -171,6 +174,9 @@
 		05AB043428250A0700FC523E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		05AB043628250FA700FC523E /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		05AB04382825138800FC523E /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		05B2055A2840C77A00564615 /* AbsenStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenStatus.swift; sourceTree = "<group>"; };
+		05B2055C2840DC6500564615 /* Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		05B205602840EA5400564615 /* ProfileMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainViewModel.swift; sourceTree = "<group>"; };
 		05BD27F928127D8F00B06463 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05BD27FB28127DC200B06463 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		05BD280428127FFE00B06463 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -382,6 +388,22 @@
 				05AB0432282508AC00FC523E /* NewsVideoStatusTableViewCell.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		05B2055E2840EA2B00564615 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				05E1B490283E441B00D7E7C8 /* Menu.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		05B2055F2840EA4000564615 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				05B205602840EA5400564615 /* ProfileMainViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		05BD27F828127D7D00B06463 /* Coordinator */ = {
@@ -633,6 +655,7 @@
 		05D2D2F62837AC7A007A82D2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				05B2055F2840EA4000564615 /* Profile */,
 				05E1B48C283E3BF300D7E7C8 /* Home */,
 				05D2D2F72837AC83007A82D2 /* Authentication */,
 			);
@@ -716,7 +739,8 @@
 		05E1B48F283E440F00D7E7C8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				05E1B490283E441B00D7E7C8 /* Menu.swift */,
+				05B2055A2840C77A00564615 /* AbsenStatus.swift */,
+				05B2055C2840DC6500564615 /* Promo.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -750,6 +774,7 @@
 		158D952F2813E7B500C72218 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05B2055E2840EA2B00564615 /* Profile */,
 				05E1B48F283E440F00D7E7C8 /* Home */,
 				05D2D2FA2837AFC9007A82D2 /* Authentication */,
 				158D95302813E7C400C72218 /* OnboardingSlide.swift */,
@@ -1272,6 +1297,7 @@
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
 				05E1B489283E350D00D7E7C8 /* UserDefaultManager.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
+				05B205612840EA5400564615 /* ProfileMainViewModel.swift in Sources */,
 				05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
 				05AB04252825006700FC523E /* NewsListViewController.swift in Sources */,
@@ -1312,7 +1338,9 @@
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
 				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
+				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
+				05B2055D2840DC6500564615 /* Promo.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,

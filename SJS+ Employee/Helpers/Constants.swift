@@ -23,9 +23,12 @@ public struct Constants {
 //        #endif
         
         static let baseURL = "https://api.sjsplus.id/public/p3/"
+        static let users = "users/"
         
-        static let loginURL = baseURL + "users/login"
-        static let menuURL = baseURL + "users/menuapp2/1/"
+        static let loginURL = baseURL + users + "login"
+        static let menuURL = baseURL + users + "menuapp2/1/"
+        static let todayAbsenStatusURL = baseURL + users + "getabsentoday/"
+        static let promoListURL = baseURL + users + "promotion/"
     }
     
     public struct ViewSize {

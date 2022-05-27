@@ -12,54 +12,64 @@ import Alamofire
 import SwiftyJSON
 
 protocol HomeViewModelType {
-    var menuObs: Observable<Menu> { get }
+    var absenStatusObs: Observable<AbsenStatus> { get }
+    var promoObs: Observable<[Promo]> { get }
     var errorObs: Observable<Error> { get }
     
-    func getMenuItem()
-    func getUserData() -> User?
+    func getAbsenStatus()
+    func getPromoList()
 }
 
 final class HomeViewModel: HomeViewModelType {
-    lazy var menuObs: Observable<Menu> = menuSubject.asObservable()
+    lazy var absenStatusObs: Observable<AbsenStatus> = absenStatusSubject.asObservable()
+    lazy var promoObs: Observable<[Promo]> = promoSubject.asObservable()
     lazy var errorObs: Observable<Error> = errorSubject.asObservable()
     
-    var menuSubject = PublishSubject<Menu>()
+    var absenStatusSubject = PublishSubject<AbsenStatus>()
+    var promoSubject = PublishSubject<[Promo]>()
     var errorSubject = PublishSubject<Error>()
     
     private var bag = DisposeBag()
     
     init() {
-        getMenuItem()
+//        getMenuItem()
+        getAbsenStatus()
+        getPromoList()
     }
     
-    func getMenuItem() {
-        if let userData = getUserData() {
+    func getAbsenStatus() {
+        if let userData = UserDefaultManager.shared.getUserData() {
             let employeeId = userData.value?.id_employee ?? "0"
             
-            let url = URLs.menuURL + employeeId
-            let obs: Observable<Menu> = NetworkManager.shared.APIRequest(.get, url: url)
+            let url = URLs.todayAbsenStatusURL + employeeId
+            let obs: Observable<AbsenStatus> = NetworkManager.shared.APIRequest(.get, url: url)
             
             obs.subscribe(onNext: { data in
                 print(data)
-                self.menuSubject.onNext(data)
+                self.absenStatusSubject.onNext(data)
             }, onError: { error in
                 print(error)
                 self.errorSubject.onNext(error)
             }, onCompleted: {
-                print("get menu completed")
+                print("get absen status completed")
             })
             .disposed(by: bag)
         }
     }
     
-    func getUserData() -> User? {
-        let data = UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) as! Dictionary<String, Any>
-        let json = JSON(data)
+    func getPromoList() {
+        let url = URLs.promoListURL + "0"
+        let obs: Observable<[Promo]> = NetworkManager.shared.APIRequest(.get, url: url)
         
-        if let userData: User? = DecodeHelper().decode(json: json) {
-            return userData
-        } else {
-            return nil
-        }
+        obs.subscribe(onNext: { data in
+            print(data)
+            self.promoSubject.onNext(data)
+        }, onError: { error in
+            print(error)
+            self.errorSubject.onNext(error)
+        }, onCompleted: {
+            print("get promo list completed")
+        })
+        .disposed(by: bag)
     }
 }

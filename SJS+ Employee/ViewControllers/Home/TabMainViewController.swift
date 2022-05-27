@@ -24,18 +24,22 @@ class TabMainViewController: UITabBarController, Storyboarded {
         let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
         homeCoordinator.start()
         homeCoordinator.navigationController.tabBarItem.title = "Home"
+        homeCoordinator.navigationController.tabBarItem.image = UIImage(named: "home")
         
         let penggajianCoordinator = PenggajianCoordinator(navigationController: UINavigationController())
         penggajianCoordinator.start()
         penggajianCoordinator.navigationController.tabBarItem.title = "Penggajian"
+        penggajianCoordinator.navigationController.tabBarItem.image = UIImage(named: "money")
         
         let newsCoordinator = NewsCoordinator(navigationController: UINavigationController())
         newsCoordinator.start()
         newsCoordinator.navigationController.tabBarItem.title = "Berita"
+        newsCoordinator.navigationController.tabBarItem.image = UIImage(named: "table")
         
         let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
         profileCoordinator.start()
         profileCoordinator.navigationController.tabBarItem.title = "Akun"
+        profileCoordinator.navigationController.tabBarItem.image = UIImage(named: "user")
         
         self.viewControllers = [homeCoordinator.navigationController,
                                 penggajianCoordinator.navigationController,
@@ -44,6 +48,8 @@ class TabMainViewController: UITabBarController, Storyboarded {
         
         self.tabBar.barTintColor = .white
         self.tabBar.backgroundColor = .white
+        self.tabBar.tintColor = .appColor(.sjsOrange)
+        self.tabBar.unselectedItemTintColor = UIColor(hexaRGB: "#ADADAD")
     }
 }
 

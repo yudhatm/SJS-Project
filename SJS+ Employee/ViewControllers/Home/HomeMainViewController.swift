@@ -34,8 +34,6 @@ class HomeMainViewController: UIViewController, Storyboarded {
         didSet {
             contentCollectionView.delegate = self
             contentCollectionView.dataSource = self
-            
-//            contentCollectionView.backgroundColor = .green
         }
     }
     
@@ -43,8 +41,6 @@ class HomeMainViewController: UIViewController, Storyboarded {
         didSet {
             newsCollectionView.delegate = self
             newsCollectionView.dataSource = self
-            
-//            newsCollectionView.backgroundColor = .yellow
         }
     }
     
@@ -52,8 +48,6 @@ class HomeMainViewController: UIViewController, Storyboarded {
         didSet {
             promoCollectionView.delegate = self
             promoCollectionView.dataSource = self
-            
-//            promoCollectionView.backgroundColor = .cyan
         }
     }
     
@@ -88,7 +82,10 @@ class HomeMainViewController: UIViewController, Storyboarded {
                                 MainMenu(image: UIImage(named: "training")!, title: "Training"),
                                 MainMenu(image: UIImage(named: "credit-card")!, title: "Pembukaan Rek Baru")
                                 ]
+    var promoList: [Promo] = []
     var totalNotif = 0
+    var jamMasuk = ""
+    var jamPulang = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,8 +125,10 @@ class HomeMainViewController: UIViewController, Storyboarded {
         setupNavigationBar()
         
         absensiButton.addTarget(self, action: #selector(absensiButtonTapped), for: .touchUpInside)
+        absensiButton.disabledColor = UIColor(hexaRGB: "#9E9E9E")
+        absensiButton.setTitle("Absensi Selesai", for: .disabled)
         
-        if let userData = viewModel?.getUserData() {
+        if let userData = UserDefaultManager.shared.getUserData() {
             let data = userData.value
             self.userCompanyLabel.text = data?.nama_perusahaan ?? ""
             self.userNameLabel.text = data?.name_employee ?? ""
@@ -152,6 +151,23 @@ class HomeMainViewController: UIViewController, Storyboarded {
 //                self.adjustCollectionViewsHeight()
 //            })
 //            .disposed(by: bag)
+        
+        viewModel?.absenStatusObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { statusData in
+                ProgressHUD.dismiss()
+                self.setupAbsenViews(data: statusData)
+            })
+            .disposed(by: bag)
+        
+        viewModel?.promoObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { list in
+                ProgressHUD.dismiss()
+                self.promoList = list
+                self.promoCollectionView.reloadData()
+            })
+            .disposed(by: bag)
     }
     
     func adjustCollectionViewsHeight() {
@@ -162,6 +178,27 @@ class HomeMainViewController: UIViewController, Storyboarded {
         contentCollectionViewHeight.constant = absenHeight ?? 0
 
         self.view.layoutIfNeeded()
+    }
+    
+    func setupAbsenViews(data: AbsenStatus) {
+        let absenColor = UIColor(hexaRGB: data.textHexColor ?? "#000000")
+        absensiNotifLabel.textColor = absenColor ?? .black
+        absensiNotifView.backgroundColor = absenColor?.withAlphaComponent(0.1) ?? .white
+        absensiNotifView.layer.borderColor = absenColor?.cgColor ?? UIColor.black.cgColor
+        absensiNotifView.layer.borderWidth = 1
+        absensiNotifView.layer.cornerRadius = 4
+        
+        if let isAbsen = data.isAbsen {
+            self.absensiButton.isEnabled = !isAbsen
+        } else {
+            self.absensiButton.isEnabled = false
+        }
+        
+        absensiNotifLabel.text = data.textMessage ?? "Status Absen tidak ditemukan"
+        jamMasuk = data.jamMasuk ?? "--:--"
+        jamPulang = data.jamPulang ?? "--:--"
+        
+        contentCollectionView.reloadData()
     }
 }
 
@@ -184,11 +221,11 @@ extension HomeMainViewController: UICollectionViewDataSource {
         }
         
         if collectionView == newsCollectionView {
-            return 5
+            return 1
         }
         
         if collectionView == promoCollectionView {
-            return 5
+            return promoList.count
         }
         
         return 0
@@ -207,6 +244,22 @@ extension HomeMainViewController: UICollectionViewDataSource {
         if collectionView == contentCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeAbsenCollectionViewCell.identifier, for: indexPath) as! HomeAbsenCollectionViewCell
             
+            if indexPath.row == 0 {
+                cell.absenIcon.image = UIImage(named: "in-time")
+                
+                if self.jamMasuk != "" {
+                    cell.absenTimeLabel.text = jamMasuk
+                }
+            }
+            else {
+                cell.absenIcon.image = UIImage(named: "out-time")
+                cell.absenTitleLabel.text = "Jam Pulang"
+                
+                if self.jamPulang != "" {
+                    cell.absenTimeLabel.text = jamPulang
+                }
+            }
+            
             return cell
         }
         
@@ -219,6 +272,20 @@ extension HomeMainViewController: UICollectionViewDataSource {
         if collectionView == promoCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePromoCollectionViewCell.identifier, for: indexPath) as! HomePromoCollectionViewCell
             
+            let item = promoList[indexPath.row]
+            
+            cell.titleLabel.text = item.title ?? ""
+            cell.contentLabel.text = item.deskripsi ?? ""
+            cell.promoImage.kf.setImage(with: URL(string: item.image ?? ""))
+            
+            let df = DateFormatter()
+            df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+            let date = df.date(from: item.doc ?? "") ?? Date()
+            df.dateFormat = "dd MMMM yyyy"
+            let string = df.string(from: date)
+            
+            cell.expiredLabel.text = "Expired: \(string)"
+                
             return cell
         }
         
@@ -256,17 +323,25 @@ extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
             let paddingSpace = 8.0
             let availableWidth = self.contentCollectionView.frame.width - paddingSpace
             let widthPerItem = availableWidth / absenItemsPerRow
-            let heightPerItem = widthPerItem * 0.5
+            let heightPerItem = widthPerItem * 0.4
 
             return CGSize(width: widthPerItem, height: heightPerItem)
         }
         
         if collectionView == newsCollectionView {
-            return CGSize(width: 225, height: 200)
+            let paddingSpace = sectionInsets.left * (1 + 1)
+            let availableWidth = self.newsCollectionView.frame.width - paddingSpace
+            let widthPerItem = availableWidth
+            let heightPerItem = widthPerItem / 1.8
+            return CGSize(width: widthPerItem, height: heightPerItem)
         }
         
         if collectionView == promoCollectionView {
-            return CGSize(width: 225, height: 200)
+            let paddingSpace = sectionInsets.left * (1 + 1)
+            let availableWidth = self.promoCollectionView.frame.width - paddingSpace
+            let widthPerItem = availableWidth
+            let heightPerItem = widthPerItem / 1.8
+            return CGSize(width: widthPerItem, height: heightPerItem)
         }
         
         return CGSize(width: 50, height: 50)

@@ -44,6 +44,10 @@
                     <constraint firstAttribute="bottom" secondItem="eyV-Cy-Bs6" secondAttribute="bottom" constant="20" symbolic="YES" id="rl5-9N-uLv"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="menuIcon" destination="eyV-Cy-Bs6" id="IRi-zC-g4T"/>
+                <outlet property="titleLabel" destination="NoF-yW-jIm" id="Lnd-is-df9"/>
+            </connections>
             <point key="canvasLocation" x="-10.144927536231885" y="164.39732142857142"/>
         </tableViewCell>
     </objects>

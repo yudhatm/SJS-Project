@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class UserDefaultManager {
     static var shared = UserDefaultManager()
@@ -35,5 +36,16 @@ class UserDefaultManager {
     func removeObject(key: String) {
         userDefault.removeObject(forKey: key)
         print("[UserDefaultManager] Object \(key) is removed")
+    }
+    
+    func getUserData() -> User? {
+        let data = UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) as! Dictionary<String, Any>
+        let json = JSON(data)
+        
+        if let userData: User? = DecodeHelper().decode(json: json) {
+            return userData
+        } else {
+            return nil
+        }
     }
 }

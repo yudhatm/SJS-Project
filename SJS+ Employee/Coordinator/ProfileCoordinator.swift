@@ -19,6 +19,7 @@ class ProfileCoordinator: Coordinator {
     func start() {
         let vc = ProfileMainViewController.instantiate(.profile)
         vc.coordinator = self
+        vc.viewModel = ProfileMainViewModel()
         navigationController.pushViewController(vc, animated: false)
     }
     

@@ -14,6 +14,9 @@ class ProfileMainViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var totalCutiLabel: UILabel!
+    @IBOutlet weak var cutiDipakaiLabel: UILabel!
+    @IBOutlet weak var sisaCutiLabel: UILabel!
     
     @IBOutlet weak var listTableView: UITableView! {
         didSet {
@@ -27,19 +30,43 @@ class ProfileMainViewController: UIViewController, Storyboarded {
         }
     }
     
+    @IBOutlet weak var dataCollectionView: UICollectionView! {
+        didSet {
+            dataCollectionView.delegate = self
+            dataCollectionView.dataSource = self
+            
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.scrollDirection = .horizontal
+            
+            dataCollectionView.collectionViewLayout = flowLayout
+            
+            let cell = UINib(nibName: "ProfileVerificationCollectionViewCell", bundle: nil)
+            dataCollectionView.register(cell, forCellWithReuseIdentifier: ProfileVerificationCollectionViewCell.identifier)
+        }
+    }
+    
+    @IBOutlet weak var profileButtonView: UIView!
     @IBOutlet weak var listTableViewHeight: NSLayoutConstraint!
     
     private let bag = DisposeBag()
     
     var menuList: [MenuData] = []
+    var verificationList = ["Verifikasi Data",
+                            "Home Check",
+                            "Ref Check"
+                            ]
+    
+    private let sectionInsets = UIEdgeInsets(
+        top: 8.0,
+        left: 0.0,
+        bottom: 8.0,
+        right: 8.0
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.navigationItem.title = "Akun"
-        
-        setupRx()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +77,13 @@ class ProfileMainViewController: UIViewController, Storyboarded {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    func setupView() {
+        self.navigationItem.title = "Akun"
+        profileButtonView.layer.cornerRadius = profileButtonView.frame.height / 2
+        
+        setupRx()
     }
     
     func adjustViewsHeight() {
@@ -92,8 +126,49 @@ extension ProfileMainViewController: UITableViewDataSource {
         let item = menuList[indexPath.row]
         
         cell.titleLabel.text = item.nama_menu
-        cell.accessoryType = .disclosureIndicator
+        
         
         return cell
+    }
+}
+
+extension ProfileMainViewController: UICollectionViewDelegate {
+    
+}
+
+extension ProfileMainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return verificationList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileVerificationCollectionViewCell.identifier, for: indexPath) as! ProfileVerificationCollectionViewCell
+        
+        cell.titleLabel.text = verificationList[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension ProfileMainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * (1 + 1)
+        let availableWidth = 220.0 - paddingSpace
+        let widthPerItem = availableWidth
+        let heightPerItem = 50.0
+        
+        return CGSize(width: widthPerItem, height: heightPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.right
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize.zero
     }
 }

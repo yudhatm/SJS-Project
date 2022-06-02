@@ -12,6 +12,7 @@ import GooglePlaces
 class AbsensiMainViewController: UIViewController, Storyboarded {
     
     weak var coordinator: HomeCoordinator?
+    var viewModel: AbsensiViewModelType?
     
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var checkInButton: SJSButton!
@@ -31,7 +32,14 @@ class AbsensiMainViewController: UIViewController, Storyboarded {
     }
     
     override func viewDidLayoutSubviews() {
+        setupView()
+    }
+    
+    func setupView() {
+        self.title = "Map Absensi"
         setupMapView()
+        
+        checkInButton.addTarget(self, action: #selector(checkInTapped), for: .touchUpInside)
     }
     
     func setupMapView() {
@@ -76,13 +84,21 @@ class AbsensiMainViewController: UIViewController, Storyboarded {
         view.addSubview(map)
         map.isHidden = true
     }
+    
+    @objc func checkInTapped() {
+        coordinator?.goToRegularIn(viewModel: viewModel!)
+    }
 }
 
 extension AbsensiMainViewController: CLLocationManagerDelegate {
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
+        currentLocation = location
         print("Location: \(location)")
+        
+        viewModel?.lat = location.coordinate.latitude
+        viewModel?.lng = location.coordinate.longitude
         
         var zoomLevel: Float = 0
         
@@ -145,6 +161,7 @@ extension AbsensiMainViewController: CLLocationManagerDelegate {
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
+            self.locationManager.startUpdatingLocation()
         @unknown default:
             fatalError()
         }

@@ -113,6 +113,8 @@
 		158D95482819454600C72218 /* HomeNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95472819454600C72218 /* HomeNotificationViewController.swift */; };
 		158D954C2819458E00C72218 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158D954B2819458E00C72218 /* NotificationTableViewCell.xib */; };
 		158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D954F281945BF00C72218 /* NotificationTableViewCell.swift */; };
+		158D95522848AFD800C72218 /* RegularInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95512848AFD700C72218 /* RegularInData.swift */; };
+		158D95542848B25700C72218 /* AbsensiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95532848B25600C72218 /* AbsensiViewModel.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
@@ -265,6 +267,8 @@
 		158D95472819454600C72218 /* HomeNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotificationViewController.swift; sourceTree = "<group>"; };
 		158D954B2819458E00C72218 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		158D954F281945BF00C72218 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		158D95512848AFD700C72218 /* RegularInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularInData.swift; sourceTree = "<group>"; };
+		158D95532848B25600C72218 /* AbsensiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiViewModel.swift; sourceTree = "<group>"; };
 		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
 		3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.release.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.release.xcconfig"; sourceTree = "<group>"; };
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -732,6 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				05E1B48D283E3C0400D7E7C8 /* HomeViewModel.swift */,
+				158D95532848B25600C72218 /* AbsensiViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 			children = (
 				05B2055A2840C77A00564615 /* AbsenStatus.swift */,
 				05B2055C2840DC6500564615 /* Promo.swift */,
+				158D95512848AFD700C72218 /* RegularInData.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1270,6 +1276,7 @@
 			files = (
 				05D2D2F52837A994007A82D2 /* NetworkManager.swift in Sources */,
 				05E1B48B283E3AF200D7E7C8 /* Convertable.swift in Sources */,
+				158D95542848B25700C72218 /* AbsensiViewModel.swift in Sources */,
 				05BDCBDC281BDDE60092A8A3 /* PromoListViewController.swift in Sources */,
 				158D95312813E7C400C72218 /* OnboardingSlide.swift in Sources */,
 				05CB89FD2833A9E500E917D4 /* RegularInViewController.swift in Sources */,
@@ -1342,6 +1349,7 @@
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				05B2055D2840DC6500564615 /* Promo.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
+				158D95522848AFD800C72218 /* RegularInData.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
 				05C8BFAB282BB256005DB1E4 /* ChangePasswordViewController.swift in Sources */,

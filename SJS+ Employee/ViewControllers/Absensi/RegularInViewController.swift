@@ -7,23 +7,22 @@
 
 import UIKit
 
-class RegularInViewController: UIViewController {
-
+class RegularInViewController: UIViewController, Storyboarded {
+    weak var coordinator: HomeCoordinator?
+    var viewModel: AbsensiViewModelType?
+    
+    @IBOutlet weak var shiftTextField: UITextField!
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var cameraImage: UIImageView!
+    
+    @IBOutlet weak var absenButton: SJSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("View model data\n")
+        print("lat: \(viewModel?.lat)")
+        print("lng: \(viewModel?.lng)")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

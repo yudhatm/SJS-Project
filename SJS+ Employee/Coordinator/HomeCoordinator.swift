@@ -26,12 +26,20 @@ class HomeCoordinator: Coordinator {
     func goToAbsenMap() {
         let vc = AbsensiMainViewController.instantiate(.absensi)
         vc.coordinator = self
+        vc.viewModel = AbsensiViewModel()
         navigationController.pushViewController(vc, animated: true)
     }
     
     func goToAbsenDetail() {
         let vc = ReportAbsensiViewController.instantiate(.absensi)
         vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToRegularIn(viewModel: AbsensiViewModelType) {
+        let vc = RegularInViewController.instantiate(.absensi)
+        vc.coordinator = self
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
     }
     

@@ -32,7 +32,6 @@ final class HomeViewModel: HomeViewModelType {
     private var bag = DisposeBag()
     
     init() {
-//        getMenuItem()
         getAbsenStatus()
         getPromoList()
     }

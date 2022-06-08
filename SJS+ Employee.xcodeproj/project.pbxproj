@@ -152,6 +152,7 @@
 		5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */; };
 		5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */; };
 		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
+		723065422850815300AA6183 /* SJSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723065412850815300AA6183 /* SJSNavigationController.swift */; };
 		A700356D82F16A3BF28C9149 /* Pods_SJS__Employee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */; };
 /* End PBXBuildFile section */
 
@@ -310,6 +311,7 @@
 		5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotSuccessViewController.xib; sourceTree = "<group>"; };
 		5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOTPViewController.swift; sourceTree = "<group>"; };
 		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
+		723065412850815300AA6183 /* SJSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSNavigationController.swift; sourceTree = "<group>"; };
 		D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJS__Employee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -799,6 +801,7 @@
 				05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */,
 				05E1B48A283E3AF200D7E7C8 /* Convertable.swift */,
 				05E1B492283E4F0A00D7E7C8 /* DecodeHelper.swift */,
+				723065412850815300AA6183 /* SJSNavigationController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1345,6 +1348,7 @@
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
 				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
+				723065422850815300AA6183 /* SJSNavigationController.swift in Sources */,
 				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				05B2055D2840DC6500564615 /* Promo.swift in Sources */,

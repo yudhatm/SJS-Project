@@ -9,9 +9,9 @@ import UIKit
 
 class LoginCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: SJSNavigationController
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: SJSNavigationController) {
         self.navigationController = navigationController
     }
 
@@ -52,7 +52,7 @@ class LoginCoordinator: Coordinator {
     }
     
     func goToMainTab() {
-        let navController = UINavigationController()
+        let navController = SJSNavigationController()
         let tabCoordinator = TabCoordinator(navigationController: navController)
         tabCoordinator.start()
         

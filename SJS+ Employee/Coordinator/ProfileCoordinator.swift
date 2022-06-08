@@ -10,9 +10,9 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: SJSNavigationController
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: SJSNavigationController) {
         self.navigationController = navigationController
     }
     

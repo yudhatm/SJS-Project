@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,12 +36,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pto-72-fQo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="442.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="642.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-UU-3RH">
                                                 <rect key="frame" x="20" y="20" width="374" height="202.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-Yq-Ww6">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_kartu" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-Yq-Ww6">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="202.5"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Kartu Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-fs-EjY">
@@ -74,9 +74,13 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-wh-nqJ">
+                                                        <rect key="frame" x="324" y="22" width="34" height="11"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="bwa-wh-nqJ" firstAttribute="top" secondItem="fcn-UU-3RH" secondAttribute="top" constant="22" id="07z-VC-lKb"/>
                                                     <constraint firstItem="ILi-Tp-s9S" firstAttribute="top" secondItem="0x5-fs-EjY" secondAttribute="bottom" constant="8" id="2FL-s0-pj5"/>
                                                     <constraint firstItem="9TY-Yq-Ww6" firstAttribute="leading" secondItem="fcn-UU-3RH" secondAttribute="leading" id="8QI-yi-7dA"/>
                                                     <constraint firstItem="YsN-6x-E5u" firstAttribute="leading" secondItem="fcn-UU-3RH" secondAttribute="leading" constant="16" id="Gnh-9I-xHa"/>
@@ -84,6 +88,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="9TY-Yq-Ww6" secondAttribute="trailing" id="TqW-CP-sGQ"/>
                                                     <constraint firstItem="ILi-Tp-s9S" firstAttribute="leading" secondItem="fcn-UU-3RH" secondAttribute="leading" constant="16" id="VQg-og-Dq3"/>
                                                     <constraint firstItem="YsN-6x-E5u" firstAttribute="top" secondItem="H8D-kH-QBY" secondAttribute="bottom" constant="4" id="VtA-hw-e7Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bwa-wh-nqJ" secondAttribute="trailing" constant="16" id="a5I-Gw-Wdu"/>
                                                     <constraint firstAttribute="bottom" secondItem="9TY-Yq-Ww6" secondAttribute="bottom" id="aAX-fI-hBb"/>
                                                     <constraint firstItem="H8D-kH-QBY" firstAttribute="leading" secondItem="fcn-UU-3RH" secondAttribute="leading" constant="16" id="eAn-H2-XPl"/>
                                                     <constraint firstAttribute="bottom" secondItem="YsN-6x-E5u" secondAttribute="bottom" constant="16" id="fv4-P2-y54"/>
@@ -95,10 +100,10 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lpb-Fe-DOS">
-                                                <rect key="frame" x="0.0" y="242.5" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="242.5" width="414" height="400"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="ust-ys-Yx8"/>
+                                                    <constraint firstAttribute="height" constant="400" id="ust-ys-Yx8"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xNa-xz-OQ9">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -109,7 +114,7 @@
                                                 <cells/>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="lpb-Fe-DOS" firstAttribute="top" secondItem="fcn-UU-3RH" secondAttribute="bottom" constant="20" id="4qQ-FI-cjB"/>
                                             <constraint firstAttribute="trailing" secondItem="lpb-Fe-DOS" secondAttribute="trailing" id="7DS-DN-azU"/>
@@ -141,6 +146,9 @@
                             <constraint firstItem="tdU-9V-W9m" firstAttribute="top" secondItem="JCH-C3-aRx" secondAttribute="top" id="vH6-xL-piz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemsCollectionView" destination="lpb-Fe-DOS" id="uq4-xN-SFG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtg-YT-DaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,6 +226,8 @@
         </designable>
     </designables>
     <resources>
+        <image name="background_kartu" width="325" height="176"/>
+        <image name="visa_logo" width="34" height="11"/>
         <namedColor name="SJSAccentColor">
             <color red="0.94901960784313721" green="0.6588235294117647" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

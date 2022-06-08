@@ -34,6 +34,9 @@ extension Storyboarded where Self: UIViewController {
         let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: Bundle.main)
 
         // instantiate a view controller with that identifier, and force cast as the type that was requested
-        return storyboard.instantiateViewController(withIdentifier: className) as! Self
+        let vc = storyboard.instantiateViewController(withIdentifier: className) as! Self
+        vc.setBackButton()
+        
+        return vc
     }
 }

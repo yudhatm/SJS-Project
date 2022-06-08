@@ -21,22 +21,22 @@ class TabMainViewController: UITabBarController, Storyboarded {
     }
     
     func setupTabBar() {
-        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+        let homeCoordinator = HomeCoordinator(navigationController: SJSNavigationController())
         homeCoordinator.start()
         homeCoordinator.navigationController.tabBarItem.title = "Home"
         homeCoordinator.navigationController.tabBarItem.image = UIImage(named: "home")
         
-        let penggajianCoordinator = PenggajianCoordinator(navigationController: UINavigationController())
+        let penggajianCoordinator = PenggajianCoordinator(navigationController: SJSNavigationController())
         penggajianCoordinator.start()
         penggajianCoordinator.navigationController.tabBarItem.title = "Penggajian"
         penggajianCoordinator.navigationController.tabBarItem.image = UIImage(named: "money")
         
-        let newsCoordinator = NewsCoordinator(navigationController: UINavigationController())
+        let newsCoordinator = NewsCoordinator(navigationController: SJSNavigationController())
         newsCoordinator.start()
         newsCoordinator.navigationController.tabBarItem.title = "Berita"
         newsCoordinator.navigationController.tabBarItem.image = UIImage(named: "table")
         
-        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+        let profileCoordinator = ProfileCoordinator(navigationController: SJSNavigationController())
         profileCoordinator.start()
         profileCoordinator.navigationController.tabBarItem.title = "Akun"
         profileCoordinator.navigationController.tabBarItem.image = UIImage(named: "user")

@@ -82,3 +82,10 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController {
+    func setBackButton() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .white
+    }
+}

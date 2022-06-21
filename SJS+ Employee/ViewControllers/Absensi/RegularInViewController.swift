@@ -2,12 +2,12 @@
 //  RegularInViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 17/05/22.
+//  Created by Prabaesa Yudha Tama on 17/05/22.
 //
 
 import UIKit
 
-class RegularInViewController: UIViewController, Storyboarded {
+class RegularInViewController: SJSViewController, Storyboarded {
     weak var coordinator: HomeCoordinator?
     var viewModel: AbsensiViewModelType?
     

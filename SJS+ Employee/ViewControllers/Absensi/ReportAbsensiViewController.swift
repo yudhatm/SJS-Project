@@ -2,13 +2,13 @@
 //  ReportAbsensiViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 18/05/22.
+//  Created by Prabaesa Yudha Tama on 18/05/22.
 //
 
 import UIKit
 import JTAppleCalendar
 
-class ReportAbsensiViewController: UIViewController, Storyboarded {
+class ReportAbsensiViewController: SJSViewController, Storyboarded {
     weak var coordinator: HomeCoordinator?
     
     @IBOutlet weak var calendarView: JTAppleCalendarView! {

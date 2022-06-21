@@ -2,7 +2,7 @@
 //  HomeMainMenuCollectionViewCell.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 25/04/22.
+//  Created by Prabaesa Yudha Tama on 25/04/22.
 //
 
 import UIKit

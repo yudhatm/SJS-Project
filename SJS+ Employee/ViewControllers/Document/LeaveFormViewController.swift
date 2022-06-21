@@ -2,12 +2,12 @@
 //  LeaveFormViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 12/05/22.
+//  Created by Prabaesa Yudha Tama on 12/05/22.
 //
 
 import UIKit
 
-class LeaveFormViewController: UIViewController {
+class LeaveFormViewController: SJSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

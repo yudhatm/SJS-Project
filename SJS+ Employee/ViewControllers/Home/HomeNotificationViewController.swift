@@ -8,7 +8,7 @@
 import UIKit
 import DZNEmptyDataSet
 
-class HomeNotificationViewController: UIViewController, Storyboarded {
+class HomeNotificationViewController: SJSViewController, Storyboarded {
 //    weak var coordinator: HomeCoordinator?
     weak var coordinator: LoginCoordinator?
     

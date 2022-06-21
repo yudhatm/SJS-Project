@@ -2,12 +2,12 @@
 //  NewsListViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 06/05/22.
+//  Created by Prabaesa Yudha Tama on 06/05/22.
 //
 
 import UIKit
 
-class NewsListViewController: UIViewController, Storyboarded {
+class NewsListViewController: SJSViewController, Storyboarded {
     var coordinator: NewsCoordinator?
     
     override func viewDidLoad() {

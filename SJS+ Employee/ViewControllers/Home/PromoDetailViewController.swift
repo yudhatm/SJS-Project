@@ -2,12 +2,12 @@
 //  PromoDetailViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 29/04/22.
+//  Created by Prabaesa Yudha Tama on 29/04/22.
 //
 
 import UIKit
 
-class PromoDetailViewController: UIViewController, Storyboarded {
+class PromoDetailViewController: SJSViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()

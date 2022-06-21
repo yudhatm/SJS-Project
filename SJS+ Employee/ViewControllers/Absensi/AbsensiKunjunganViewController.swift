@@ -2,12 +2,12 @@
 //  AbsensiKunjunganViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 17/05/22.
+//  Created by Prabaesa Yudha Tama on 17/05/22.
 //
 
 import UIKit
 
-class AbsensiKunjunganViewController: UIViewController {
+class AbsensiKunjunganViewController: SJSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

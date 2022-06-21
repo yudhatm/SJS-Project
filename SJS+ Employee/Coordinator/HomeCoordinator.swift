@@ -2,7 +2,7 @@
 //  HomeCoordinator.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 29/04/22.
+//  Created by Prabaesa Yudha Tama on 29/04/22.
 //
 
 import Foundation
@@ -10,9 +10,9 @@ import UIKit
 
 class HomeCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: SJSNavigationController
+    var navigationController: UINavigationController
 
-    init(navigationController: SJSNavigationController) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
@@ -44,7 +44,7 @@ class HomeCoordinator: Coordinator {
     }
     
     func goToPengajuanCuti() {
-        let vc = DocumentMainViewController.instantiate(.document)
+        let vc = LeaveRequestListViewController.instantiate(.document)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

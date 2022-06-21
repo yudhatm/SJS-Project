@@ -2,12 +2,12 @@
 //  WorkplaceListViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 17/05/22.
+//  Created by Prabaesa Yudha Tama on 17/05/22.
 //
 
 import UIKit
 
-class WorkplaceListViewController: UIViewController {
+class WorkplaceListViewController: SJSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

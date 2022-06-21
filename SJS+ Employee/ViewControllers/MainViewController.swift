@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, Storyboarded {
+class MainViewController: SJSViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()

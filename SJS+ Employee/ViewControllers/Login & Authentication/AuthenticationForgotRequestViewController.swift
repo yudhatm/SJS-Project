@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationForgotRequestViewController: UIViewController, Storyboarded {
+class AuthenticationForgotRequestViewController: SJSViewController, Storyboarded {
 
     weak var coordinator: LoginCoordinator?
     

@@ -2,12 +2,12 @@
 //  PromoListViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 29/04/22.
+//  Created by Prabaesa Yudha Tama on 29/04/22.
 //
 
 import UIKit
 
-class PromoListViewController: UIViewController, Storyboarded {
+class PromoListViewController: SJSViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
     
     var isMyPromo: Bool = false

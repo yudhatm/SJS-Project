@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlj-C0-16O">
-                        <rect key="frame" x="8" y="8" width="518" height="157"/>
+                        <rect key="frame" x="16" y="8" width="502" height="157"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cuti" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-rv-79Y">
                                 <rect key="frame" x="16" y="16" width="150" height="22.5"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Jan 22" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81T-RM-dgp">
-                                <rect key="frame" x="439" y="16" width="63" height="20"/>
+                                <rect key="frame" x="423" y="16" width="63" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,9 +51,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-G7-Uej">
-                                <rect key="frame" x="16" y="46.5" width="486" height="20"/>
+                                <rect key="frame" x="16" y="46.5" width="470" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -74,13 +74,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="rlj-C0-16O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2yI-g8-7hQ"/>
-                    <constraint firstItem="rlj-C0-16O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="aLD-Jp-5Iq"/>
-                    <constraint firstAttribute="trailing" secondItem="rlj-C0-16O" secondAttribute="trailing" constant="8" id="dHF-xj-lRs"/>
+                    <constraint firstItem="rlj-C0-16O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aLD-Jp-5Iq"/>
+                    <constraint firstAttribute="trailing" secondItem="rlj-C0-16O" secondAttribute="trailing" constant="16" id="dHF-xj-lRs"/>
                     <constraint firstAttribute="bottom" secondItem="rlj-C0-16O" secondAttribute="bottom" constant="8" id="raz-UY-yeZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dateLabel" destination="81T-RM-dgp" id="nHj-ni-SxW"/>
+                <outlet property="descriptionLabel" destination="4BG-G7-Uej" id="LxC-EW-2BJ"/>
+                <outlet property="leaveTypeLabel" destination="2p6-rv-79Y" id="TgC-Hn-PqG"/>
+                <outlet property="statusLabel" destination="pbs-nq-eHY" id="vL6-IL-dor"/>
+            </connections>
             <point key="canvasLocation" x="5.7971014492753632" y="35.825892857142854"/>
         </tableViewCell>
     </objects>

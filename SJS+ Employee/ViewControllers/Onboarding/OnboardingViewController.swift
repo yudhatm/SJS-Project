@@ -8,7 +8,7 @@
 import UIKit
 import Sevruk_PageControl
 
-class OnboardingViewController: UIViewController, Storyboarded {
+class OnboardingViewController: SJSViewController, Storyboarded {
     
     weak var coordinator: LoginCoordinator?
     

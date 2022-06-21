@@ -2,13 +2,15 @@
 //  DocumentMainViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 12/05/22.
+//  Created by Prabaesa Yudha Tama on 12/05/22.
 //
 
 import UIKit
 
-class DocumentMainViewController: UIViewController, Storyboarded {
+class DocumentMainViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

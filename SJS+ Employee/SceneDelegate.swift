@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         // create the main navigation controller to be used for our app
-        let navController = SJSNavigationController()
+        let navController = UINavigationController()
         
         // send that into our coordinator so that it can display view controllers
         if UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) != nil {

@@ -45,6 +45,9 @@ PODS:
   - GoogleUtilities/Reachability (7.7.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.7.2)
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
   - IQKeyboardManagerSwift (6.5.10)
   - JTAppleCalendar (7.1.8)
   - Kingfisher (7.2.2)
@@ -73,6 +76,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - GoogleMaps (= 6.2.1)
   - GooglePlaces (= 6.2.1)
+  - IGListKit (~> 4.0)
   - IQKeyboardManagerSwift
   - JTAppleCalendar (~> 7.1)
   - Kingfisher (~> 7.0)
@@ -98,6 +102,8 @@ SPEC REPOS:
     - GooglePlaces
     - GoogleUtilities
     - GTMSessionFetcher
+    - IGListDiffKit
+    - IGListKit
     - IQKeyboardManagerSwift
     - JTAppleCalendar
     - Kingfisher
@@ -125,6 +131,8 @@ SPEC CHECKSUMS:
   GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
@@ -139,6 +147,6 @@ SPEC CHECKSUMS:
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 6b89262383444fd5a82718c5829353de86b5a325
+PODFILE CHECKSUM: 8779e10191b838663caab094e736f9d8bd2c20b9
 
 COCOAPODS: 1.11.3

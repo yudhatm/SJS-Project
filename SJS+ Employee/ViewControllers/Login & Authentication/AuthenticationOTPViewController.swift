@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationOTPViewController: UIViewController, Storyboarded {
+class AuthenticationOTPViewController: SJSViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
     
     @IBOutlet weak var firstOTPTextField: UITextField!

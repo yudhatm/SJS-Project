@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthenticationRegistrationViewController: UIViewController, Storyboarded {
+class AuthenticationRegistrationViewController: SJSViewController, Storyboarded {
 
     weak var coordinator: LoginCoordinator?
     

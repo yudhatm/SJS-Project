@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import ProgressHUD
 
-class AuthenticationSignInViewController: UIViewController, Storyboarded {
+class AuthenticationSignInViewController: SJSViewController, Storyboarded {
     weak var coordinator: LoginCoordinator?
     var viewModel: SignInViewModelType?
     

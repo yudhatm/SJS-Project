@@ -2,7 +2,7 @@
 //  ProfileCoordinator.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 19/05/22.
+//  Created by Prabaesa Yudha Tama on 19/05/22.
 //
 
 import Foundation
@@ -10,9 +10,9 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: SJSNavigationController
+    var navigationController: UINavigationController
 
-    init(navigationController: SJSNavigationController) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     

@@ -2,7 +2,7 @@
 //  NewsTextStatusTableViewCell.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 06/05/22.
+//  Created by Prabaesa Yudha Tama on 06/05/22.
 //
 
 import UIKit

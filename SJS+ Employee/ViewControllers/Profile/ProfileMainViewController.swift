@@ -2,13 +2,13 @@
 //  ProfileMainViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 10/05/22.
+//  Created by Prabaesa Yudha Tama on 10/05/22.
 //
 
 import UIKit
 import RxSwift
 
-class ProfileMainViewController: UIViewController, Storyboarded {
+class ProfileMainViewController: SJSViewController, Storyboarded {
     var coordinator: ProfileCoordinator?
     var viewModel: ProfileMainViewModelType?
     

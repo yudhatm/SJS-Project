@@ -2,12 +2,12 @@
 //  PenggajianMainViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 11/05/22.
+//  Created by Prabaesa Yudha Tama on 11/05/22.
 //
 
 import UIKit
 
-class PenggajianMainViewController: UIViewController, Storyboarded {
+class PenggajianMainViewController: SJSViewController, Storyboarded {
     var coordinator: PenggajianCoordinator?
     
     @IBOutlet weak var itemsCollectionView: UICollectionView! {

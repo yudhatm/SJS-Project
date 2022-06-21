@@ -152,7 +152,14 @@
 		5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */; };
 		5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */; };
 		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
-		723065422850815300AA6183 /* SJSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723065412850815300AA6183 /* SJSNavigationController.swift */; };
+		72A91B0628573CDA00904ACC /* SJSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B0528573CDA00904ACC /* SJSViewController.swift */; };
+		72A91B08285882AD00904ACC /* NewPenggajianMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B07285882AD00904ACC /* NewPenggajianMainViewController.swift */; };
+		72A91B0B285884DE00904ACC /* CardSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B0A285884DE00904ACC /* CardSectionController.swift */; };
+		72A91B0E2858857200904ACC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B0D2858857200904ACC /* Card.swift */; };
+		72A91B102858866800904ACC /* DebitCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A91B0F2858866800904ACC /* DebitCardCollectionCell.xib */; };
+		72A91B122858871800904ACC /* DebitCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B112858871800904ACC /* DebitCardCollectionCell.swift */; };
+		72A91B1628588E3F00904ACC /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B1528588E3E00904ACC /* EmbeddedCollectionViewCell.swift */; };
+		72A91B1828598D7600904ACC /* PenggajianMenuSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B1728598D7600904ACC /* PenggajianMenuSectionController.swift */; };
 		A700356D82F16A3BF28C9149 /* Pods_SJS__Employee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */; };
 /* End PBXBuildFile section */
 
@@ -311,7 +318,14 @@
 		5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotSuccessViewController.xib; sourceTree = "<group>"; };
 		5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOTPViewController.swift; sourceTree = "<group>"; };
 		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
-		723065412850815300AA6183 /* SJSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSNavigationController.swift; sourceTree = "<group>"; };
+		72A91B0528573CDA00904ACC /* SJSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSViewController.swift; sourceTree = "<group>"; };
+		72A91B07285882AD00904ACC /* NewPenggajianMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPenggajianMainViewController.swift; sourceTree = "<group>"; };
+		72A91B0A285884DE00904ACC /* CardSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSectionController.swift; sourceTree = "<group>"; };
+		72A91B0D2858857200904ACC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		72A91B0F2858866800904ACC /* DebitCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebitCardCollectionCell.xib; sourceTree = "<group>"; };
+		72A91B112858871800904ACC /* DebitCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebitCardCollectionCell.swift; sourceTree = "<group>"; };
+		72A91B1528588E3E00904ACC /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
+		72A91B1728598D7600904ACC /* PenggajianMenuSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianMenuSectionController.swift; sourceTree = "<group>"; };
 		D7D8C76A9B312F7D2C9CAB5C /* Pods_SJS__Employee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJS__Employee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -436,6 +450,7 @@
 				05A6B9EF2816788500EEFBF4 /* Home */,
 				05C67761282A41F40060C87B /* Profile */,
 				05C8BFB0282BC307005DB1E4 /* Penggajian */,
+				72A91B1528588E3E00904ACC /* EmbeddedCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -575,6 +590,7 @@
 				05C8BFB9282BCE76005DB1E4 /* Cells */,
 				05C8BFB4282BCCDF005DB1E4 /* PenggajianMainViewController.swift */,
 				05DD819B282CCCD2006CC967 /* SlipGajiViewController.swift */,
+				72A91B07285882AD00904ACC /* NewPenggajianMainViewController.swift */,
 			);
 			path = Penggajian;
 			sourceTree = "<group>";
@@ -583,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				05C8BFB7282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib */,
+				72A91B0F2858866800904ACC /* DebitCardCollectionCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -591,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				05C8BFBA282BCE8A005DB1E4 /* PenggajianItemCollectionViewCell.swift */,
+				72A91B112858871800904ACC /* DebitCardCollectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -782,6 +800,7 @@
 		158D952F2813E7B500C72218 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				72A91B0C2858856000904ACC /* Penggajian */,
 				05B2055E2840EA2B00564615 /* Profile */,
 				05E1B48F283E440F00D7E7C8 /* Home */,
 				05D2D2FA2837AFC9007A82D2 /* Authentication */,
@@ -801,7 +820,7 @@
 				05CB89F228339AAA00E917D4 /* InfoPlistParser.swift */,
 				05E1B48A283E3AF200D7E7C8 /* Convertable.swift */,
 				05E1B492283E4F0A00D7E7C8 /* DecodeHelper.swift */,
-				723065412850815300AA6183 /* SJSNavigationController.swift */,
+				72A91B0528573CDA00904ACC /* SJSViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -883,6 +902,7 @@
 				05BD27F828127D7D00B06463 /* Coordinator */,
 				05BD280128127FAE00B06463 /* Views */,
 				05BD280228127FC800B06463 /* ViewControllers */,
+				72A91B1328588E0300904ACC /* SectionControllers */,
 				05D2D2F62837AC7A007A82D2 /* ViewModels */,
 				5AD30E75280DB606002A1D20 /* Features */,
 				5AC08F9D27B2E1CB0036F940 /* Common UI */,
@@ -1080,6 +1100,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		72A91B0C2858856000904ACC /* Penggajian */ = {
+			isa = PBXGroup;
+			children = (
+				72A91B0D2858857200904ACC /* Card.swift */,
+			);
+			path = Penggajian;
+			sourceTree = "<group>";
+		};
+		72A91B1328588E0300904ACC /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72A91B1428588E1200904ACC /* Penggajian */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		72A91B1428588E1200904ACC /* Penggajian */ = {
+			isa = PBXGroup;
+			children = (
+				72A91B0A285884DE00904ACC /* CardSectionController.swift */,
+				72A91B1728598D7600904ACC /* PenggajianMenuSectionController.swift */,
+			);
+			path = Penggajian;
+			sourceTree = "<group>";
+		};
 		E1FD45C312F10F9048FFFFCE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1153,6 +1198,7 @@
 			files = (
 				05C67768282A4F110060C87B /* ProfileVerificationCollectionViewCell.xib in Resources */,
 				158D954C2819458E00C72218 /* NotificationTableViewCell.xib in Resources */,
+				72A91B102858866800904ACC /* DebitCardCollectionCell.xib in Resources */,
 				5A1C292E278C90A60015B245 /* .gitignore in Resources */,
 				5A8AD014278CA0FA003937C2 /* Poppins-ExtraBold.ttf in Resources */,
 				158D953C281910BA00C72218 /* HomeAbsenCollectionViewCell.xib in Resources */,
@@ -1304,15 +1350,19 @@
 				05DD81A2282CCE32006CC967 /* DocumentMainViewController.swift in Sources */,
 				05BDCBDA281BD42D0092A8A3 /* HomeDetailNotificationViewController.swift in Sources */,
 				05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */,
+				72A91B1828598D7600904ACC /* PenggajianMenuSectionController.swift in Sources */,
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
 				05E1B489283E350D00D7E7C8 /* UserDefaultManager.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
+				72A91B0628573CDA00904ACC /* SJSViewController.swift in Sources */,
 				05B205612840EA5400564615 /* ProfileMainViewModel.swift in Sources */,
 				05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
 				05AB04252825006700FC523E /* NewsListViewController.swift in Sources */,
+				72A91B122858871800904ACC /* DebitCardCollectionCell.swift in Sources */,
 				05AB0431282508A100FC523E /* NewsTextStatusTableViewCell.swift in Sources */,
 				05AB0433282508AC00FC523E /* NewsVideoStatusTableViewCell.swift in Sources */,
+				72A91B0B285884DE00904ACC /* CardSectionController.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BDCBE5281BED5B0092A8A3 /* PromoDetailViewController.swift in Sources */,
@@ -1348,7 +1398,7 @@
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
 				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
-				723065422850815300AA6183 /* SJSNavigationController.swift in Sources */,
+				72A91B1628588E3F00904ACC /* EmbeddedCollectionViewCell.swift in Sources */,
 				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				05B2055D2840DC6500564615 /* Promo.swift in Sources */,
@@ -1363,6 +1413,8 @@
 				05AB042F2825089600FC523E /* NewsImageStatusTableViewCell.swift in Sources */,
 				05CB89FB2833A84800E917D4 /* WorkplaceListViewController.swift in Sources */,
 				05DD81A8282CF3F6006CC967 /* DocumentListTableViewCell.swift in Sources */,
+				72A91B0E2858857200904ACC /* Card.swift in Sources */,
+				72A91B08285882AD00904ACC /* NewPenggajianMainViewController.swift in Sources */,
 				05BDCBD8281BD0C90092A8A3 /* Builder.swift in Sources */,
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
 				5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */,

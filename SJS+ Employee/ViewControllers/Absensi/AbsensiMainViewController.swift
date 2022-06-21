@@ -2,14 +2,14 @@
 //  AbsensiMainViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 17/05/22.
+//  Created by Prabaesa Yudha Tama on 17/05/22.
 //
 
 import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class AbsensiMainViewController: UIViewController, Storyboarded {
+class AbsensiMainViewController: SJSViewController, Storyboarded {
     
     weak var coordinator: HomeCoordinator?
     var viewModel: AbsensiViewModelType?

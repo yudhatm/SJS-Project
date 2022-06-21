@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="qe2-uM-KOq" id="kDs-mA-FtN"/>
+                        <outlet property="tableView" destination="qe2-uM-KOq" id="gEL-HL-8am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Rw-1i-m9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,7 +111,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keperluan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smi-xx-4u9">
-                                <rect key="frame" x="20" y="159" width="63" height="17"/>
+                                <rect key="frame" x="20" y="159" width="62.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -156,9 +156,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5kd-Fc-QQg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5kd-Fc-QQg">
+                                <rect key="frame" x="0.0" y="52" width="414" height="715"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-W0-QVE" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
                                 <rect key="frame" x="20" y="787" width="374" height="55"/>
@@ -168,7 +168,7 @@
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Tambah Dokumen"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Buat Pengajuan Baru"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" name="SJSAccentColor"/>
                                     </userDefinedRuntimeAttribute>
@@ -179,19 +179,19 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pdf-yj-N1K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Tgt-W0-QVE" firstAttribute="top" secondItem="5kd-Fc-QQg" secondAttribute="bottom" constant="20" id="57B-9h-KkB"/>
                             <constraint firstItem="Pdf-yj-N1K" firstAttribute="trailing" secondItem="Tgt-W0-QVE" secondAttribute="trailing" constant="20" id="B38-XL-ND4"/>
                             <constraint firstItem="Pdf-yj-N1K" firstAttribute="bottom" secondItem="Tgt-W0-QVE" secondAttribute="bottom" constant="20" id="C0w-E4-4eq"/>
-                            <constraint firstItem="5kd-Fc-QQg" firstAttribute="top" secondItem="Pdf-yj-N1K" secondAttribute="top" id="KgS-Wl-3fB"/>
+                            <constraint firstItem="5kd-Fc-QQg" firstAttribute="top" secondItem="Pdf-yj-N1K" secondAttribute="top" constant="8" id="KgS-Wl-3fB"/>
                             <constraint firstItem="Pdf-yj-N1K" firstAttribute="trailing" secondItem="5kd-Fc-QQg" secondAttribute="trailing" id="P8q-Bd-WgZ"/>
                             <constraint firstItem="Tgt-W0-QVE" firstAttribute="leading" secondItem="9qb-9w-aaL" secondAttribute="leading" constant="20" id="Unl-Tu-RZ4"/>
                             <constraint firstItem="5kd-Fc-QQg" firstAttribute="leading" secondItem="Pdf-yj-N1K" secondAttribute="leading" id="ilC-bF-zlC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="5kd-Fc-QQg" id="D1w-GB-svH"/>
+                        <outlet property="tableView" destination="5kd-Fc-QQg" id="wu7-gc-X0C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maq-tK-1T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,7 +230,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Pengajuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMj-WS-1bR">
-                                                <rect key="frame" x="20" y="20" width="101" height="17"/>
+                                                <rect key="frame" x="20" y="20" width="100.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -244,13 +244,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal Mulai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNI-5J-ech">
-                                                <rect key="frame" x="20" y="115" width="87" height="17"/>
+                                                <rect key="frame" x="20" y="115" width="86.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto Dokumen Pendukung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7f-5G-C8E">
-                                                <rect key="frame" x="20" y="210" width="160" height="17"/>
+                                                <rect key="frame" x="20" y="210" width="159.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -264,7 +264,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal Selesai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-Kc-FsS">
-                                                <rect key="frame" x="217" y="115" width="97" height="17"/>
+                                                <rect key="frame" x="217" y="115" width="96.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -305,7 +305,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keterangan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWG-0q-Vfd">
-                                                <rect key="frame" x="20" y="439.5" width="72" height="17"/>
+                                                <rect key="frame" x="20" y="439.5" width="71.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51372549020000002" green="0.50196078430000002" blue="0.5450980392" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

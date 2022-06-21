@@ -2,12 +2,12 @@
 //  SlipGajiViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 12/05/22.
+//  Created by Prabaesa Yudha Tama on 12/05/22.
 //
 
 import UIKit
 
-class SlipGajiViewController: UIViewController {
+class SlipGajiViewController: SJSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

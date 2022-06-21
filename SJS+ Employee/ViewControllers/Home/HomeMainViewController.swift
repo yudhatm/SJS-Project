@@ -2,7 +2,7 @@
 //  HomeMainViewController.swift
 //  SJS+ Employee
 //
-//  Created by Buana on 25/04/22.
+//  Created by Prabaesa Yudha Tama on 25/04/22.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import RxSwift
 import ProgressHUD
 import Kingfisher
 
-class HomeMainViewController: UIViewController, Storyboarded {
+class HomeMainViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
     var viewModel: HomeViewModelType?
 
@@ -207,6 +207,9 @@ extension HomeMainViewController: UICollectionViewDelegate {
         switch indexPath.row {
         case 0:
             coordinator?.goToAbsenDetail()
+            
+        case 1:
+            coordinator?.goToPengajuanCuti()
             
         default:
             break

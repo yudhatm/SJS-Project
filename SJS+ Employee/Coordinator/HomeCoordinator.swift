@@ -43,6 +43,12 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToPengajuanCuti() {
+        let vc = DocumentMainViewController.instantiate(.document)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }

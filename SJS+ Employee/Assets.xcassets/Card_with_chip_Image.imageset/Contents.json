@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Card_with_chip_Image.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

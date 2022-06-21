@@ -203,7 +203,15 @@ class HomeMainViewController: UIViewController, Storyboarded {
 }
 
 extension HomeMainViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            coordinator?.goToAbsenDetail()
+            
+        default:
+            break
+        }
+    }
 }
 
 extension HomeMainViewController: UICollectionViewDataSource {

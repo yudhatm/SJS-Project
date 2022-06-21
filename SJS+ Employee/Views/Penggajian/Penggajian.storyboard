@@ -41,7 +41,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-UU-3RH">
                                                 <rect key="frame" x="20" y="20" width="374" height="202.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_kartu" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-Yq-Ww6">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_with_chip_Image" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-Yq-Ww6">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="202.5"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Kartu Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-fs-EjY">
@@ -226,7 +226,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="background_kartu" width="325" height="176"/>
+        <image name="Card_with_chip_Image" width="325" height="176"/>
         <image name="visa_logo" width="34" height="11"/>
         <namedColor name="SJSAccentColor">
             <color red="0.94901960784313721" green="0.6588235294117647" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

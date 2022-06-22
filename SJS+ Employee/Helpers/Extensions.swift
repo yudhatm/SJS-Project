@@ -102,3 +102,15 @@ extension UINavigationController {
         view.addSubview(statusBarView)
     }
 }
+
+//extension UITableViewCell {
+//    var cellIdentifier: String {
+//        return String(describing: Self.self)
+//    }
+//}
+
+extension NSObject {
+    var classIdentifier: String {
+        return NSStringFromClass(type(of: self))
+    }
+}

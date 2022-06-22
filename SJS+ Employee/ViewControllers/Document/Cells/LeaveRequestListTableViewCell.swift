@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum StatusPengajuan {
-    case approved, waiting, rejected
-}
-
 class LeaveRequestListTableViewCell: UITableViewCell {
     static let identifier = String(describing: LeaveRequestListTableViewCell.self)
     
@@ -19,9 +15,12 @@ class LeaveRequestListTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var status: StatusPengajuan = .undefined
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,6 +30,8 @@ class LeaveRequestListTableViewCell: UITableViewCell {
     }
     
     func setupView(status: StatusPengajuan) {
+        self.status = status
+        
         switch status {
         case .approved:
             statusLabel.text = "Disetujui"
@@ -41,6 +42,8 @@ class LeaveRequestListTableViewCell: UITableViewCell {
         case .rejected:
             statusLabel.text = "Ditolak"
             statusLabel.textColor = UIColor(hexaRGB: "#E03F3F")
+        case .undefined:
+            break
         }
     }
 }

@@ -22,15 +22,41 @@ class LeaveRequestListViewController: SJSViewController, Storyboarded {
         }
     }
     
+    @IBOutlet weak var createLeaveButton: SJSButton!
+    
+    var filterList = ["Lihat Semua", "Sakit", "Cuti", "Izin"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Daftar Pengajuan"
+        
+        let filterButton = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: self, action: #selector(openFilterView))
+        self.navigationItem.rightBarButtonItem = filterButton
+    }
+    
+    @objc func openFilterView() {
+        print("button tapped")
+        
+        let vc = OverlayBuilder.createOverlayPicker()
+        vc.transitioningDelegate = self
+        
+        vc.titleText = "Jenis Surat"
+        vc.pickerComponents = filterList
+        vc.buttonCallback = { pickerComponent in
+            print(pickerComponent)
+        }
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
 extension LeaveRequestListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! LeaveRequestListTableViewCell
+        
+        coordinator?.goToCutiDetail(status: cell.status)
+    }
 }
 
 extension LeaveRequestListViewController: UITableViewDataSource {
@@ -75,5 +101,13 @@ extension LeaveRequestListViewController: DZNEmptyDataSetSource {
         let font = UIFont(name: "Poppins-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
         let string = NSMutableAttributedString(string: "Silahkan isi form pengajuan jika kamu tidak dapat hadir ke kantor", attributes: [.foregroundColor: UIColor.black, .font: font])
         return string
+    }
+}
+
+extension LeaveRequestListViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let overlay = OverlayPickerPresentationController(presentedViewController: presented, presenting: presenting)
+        
+        return overlay
     }
 }

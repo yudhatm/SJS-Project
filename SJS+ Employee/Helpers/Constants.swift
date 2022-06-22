@@ -64,3 +64,7 @@ public struct Constants {
         case black
     }
 }
+
+enum StatusPengajuan {
+    case approved, waiting, rejected, undefined
+}

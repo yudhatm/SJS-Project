@@ -49,6 +49,25 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToCutiDetail(status: StatusPengajuan) {
+        let vc = LeaveDetailViewController.instantiate(.document)
+        vc.coordinator = self
+        vc.status = status
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToDocumentList() {
+        let vc = DocumentMainViewController.instantiate(.document)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToDocumentRequest() {
+        let vc = DocumentRequestViewController.instantiate(.document)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }

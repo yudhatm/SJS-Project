@@ -33,5 +33,6 @@ open class SJSViewController: UIViewController {
         }
         
         navigationItem.backBarButtonItem?.tintColor = buttonColor
+        self.navigationController?.navigationBar.tintColor = buttonColor
     }
 }

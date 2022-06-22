@@ -211,6 +211,9 @@ extension HomeMainViewController: UICollectionViewDelegate {
         case 1:
             coordinator?.goToPengajuanCuti()
             
+        case 2:
+            coordinator?.goToDocumentList()
+            
         default:
             break
         }

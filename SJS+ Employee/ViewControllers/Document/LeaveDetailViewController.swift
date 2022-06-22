@@ -7,23 +7,47 @@
 
 import UIKit
 
-class LeaveDetailViewController: SJSViewController {
+class LeaveDetailViewController: SJSViewController, Storyboarded {
+    var coordinator: HomeCoordinator?
+    
+    @IBOutlet weak var letterImageView: UIImageView!
+    @IBOutlet weak var detailTableView: UITableView! {
+        didSet {
+            detailTableView.delegate = self
+            detailTableView.dataSource = self
+            
+            let nib = UINib(nibName: LeaveDetailTableViewCell.identifier, bundle: nil)
+            detailTableView.register(nib, forCellReuseIdentifier: LeaveDetailTableViewCell.identifier)
+        }
+    }
 
+    var status: StatusPengajuan = .undefined
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+}
+
+extension LeaveDetailViewController: UITableViewDelegate {
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LeaveDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if status == .rejected {
+            return 6
+        } else {
+            return 5
+        }
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: LeaveDetailTableViewCell.identifier, for: indexPath) as! LeaveDetailTableViewCell
+        
+        cell.setupView(statusState: status, index: indexPath.row)
+        
+        return cell
+    }
 }

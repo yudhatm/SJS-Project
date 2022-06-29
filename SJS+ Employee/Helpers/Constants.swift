@@ -29,6 +29,7 @@ public struct Constants {
         static let menuURL = baseURL + users + "menuapp2/1/"
         static let todayAbsenStatusURL = baseURL + users + "getabsentoday/"
         static let promoListURL = baseURL + users + "promotion/"
+        static let outletList = baseURL + users + "absen/"
     }
     
     public struct ViewSize {

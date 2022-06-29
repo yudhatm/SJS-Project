@@ -95,7 +95,10 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setupRx()
+        backButtonColor = .white
     }
     
     override func viewDidAppear(_ animated: Bool) {

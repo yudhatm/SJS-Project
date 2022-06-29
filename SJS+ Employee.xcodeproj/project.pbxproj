@@ -152,6 +152,9 @@
 		5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */; };
 		5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */; };
 		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
+		7290ED3E286C5A27000315B2 /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290ED3D286C5A27000315B2 /* Outlet.swift */; };
+		7290ED40286C7F06000315B2 /* OutletListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290ED3F286C7F06000315B2 /* OutletListCell.xib */; };
+		7290ED42286C7F80000315B2 /* OutletListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290ED41286C7F80000315B2 /* OutletListCell.swift */; };
 		72A91B0628573CDA00904ACC /* SJSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B0528573CDA00904ACC /* SJSViewController.swift */; };
 		72A91B08285882AD00904ACC /* NewPenggajianMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B07285882AD00904ACC /* NewPenggajianMainViewController.swift */; };
 		72A91B0B285884DE00904ACC /* CardSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A91B0A285884DE00904ACC /* CardSectionController.swift */; };
@@ -318,6 +321,9 @@
 		5AD30E90280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationForgotSuccessViewController.xib; sourceTree = "<group>"; };
 		5AE67802280F098F00882520 /* AuthenticationOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOTPViewController.swift; sourceTree = "<group>"; };
 		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
+		7290ED3D286C5A27000315B2 /* Outlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outlet.swift; sourceTree = "<group>"; };
+		7290ED3F286C7F06000315B2 /* OutletListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletListCell.xib; sourceTree = "<group>"; };
+		7290ED41286C7F80000315B2 /* OutletListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletListCell.swift; sourceTree = "<group>"; };
 		72A91B0528573CDA00904ACC /* SJSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSViewController.swift; sourceTree = "<group>"; };
 		72A91B07285882AD00904ACC /* NewPenggajianMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPenggajianMainViewController.swift; sourceTree = "<group>"; };
 		72A91B0A285884DE00904ACC /* CardSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSectionController.swift; sourceTree = "<group>"; };
@@ -618,6 +624,7 @@
 			children = (
 				05C9C8092834F2300077F71D /* DateCell.xib */,
 				05C9C8102835201B0077F71D /* StatsCell.xib */,
+				7290ED3F286C7F06000315B2 /* OutletListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -627,6 +634,7 @@
 			children = (
 				05C9C80C2834F29A0077F71D /* DateCell.swift */,
 				05C9C812283522640077F71D /* StatsCell.swift */,
+				7290ED41286C7F80000315B2 /* OutletListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -767,6 +775,7 @@
 				05B2055A2840C77A00564615 /* AbsenStatus.swift */,
 				05B2055C2840DC6500564615 /* Promo.swift */,
 				158D95512848AFD700C72218 /* RegularInData.swift */,
+				7290ED3D286C5A27000315B2 /* Outlet.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1204,6 +1213,7 @@
 				158D953C281910BA00C72218 /* HomeAbsenCollectionViewCell.xib in Resources */,
 				05D2D2E52837869C007A82D2 /* GoogleService-Info.plist in Resources */,
 				05DD81B9282D0823006CC967 /* LeaveDetailTableViewCell.xib in Resources */,
+				7290ED40286C7F06000315B2 /* OutletListCell.xib in Resources */,
 				5A8AD01A278CA0FA003937C2 /* Poppins-Black.ttf in Resources */,
 				05C67763282A42010060C87B /* Profile.storyboard in Resources */,
 				5A8AD017278CA0FA003937C2 /* Poppins-Regular.ttf in Resources */,
@@ -1359,6 +1369,7 @@
 				05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
 				05AB04252825006700FC523E /* NewsListViewController.swift in Sources */,
+				7290ED3E286C5A27000315B2 /* Outlet.swift in Sources */,
 				72A91B122858871800904ACC /* DebitCardCollectionCell.swift in Sources */,
 				05AB0431282508A100FC523E /* NewsTextStatusTableViewCell.swift in Sources */,
 				05AB0433282508AC00FC523E /* NewsVideoStatusTableViewCell.swift in Sources */,
@@ -1382,6 +1393,7 @@
 				05D2D2EF28378F4A007A82D2 /* NSMutableArray+pieEx.m in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
 				05777EEF28362BC800B01C42 /* TabMainViewController.swift in Sources */,
+				7290ED42286C7F80000315B2 /* OutletListCell.swift in Sources */,
 				158D95332813E8C300C72218 /* OnboardingViewController.swift in Sources */,
 				5AD30E91280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.swift in Sources */,
 				05BD28092812906800B06463 /* LoginCoordinator.swift in Sources */,
@@ -1551,7 +1563,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DR6XQ5SU54;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
@@ -1587,7 +1599,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DR6XQ5SU54;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";

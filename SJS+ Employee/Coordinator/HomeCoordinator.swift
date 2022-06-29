@@ -36,6 +36,13 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToWorkplaceList(viewModel: AbsensiViewModelType) {
+        let vc = WorkplaceListViewController.instantiate(.absensi)
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToRegularIn(viewModel: AbsensiViewModelType) {
         let vc = RegularInViewController.instantiate(.absensi)
         vc.coordinator = self

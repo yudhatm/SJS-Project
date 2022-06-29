@@ -31,6 +31,11 @@ class AbsensiMainViewController: SJSViewController, Storyboarded {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backButtonColor = .white
+    }
+    
     override func viewDidLayoutSubviews() {
         setupView()
     }
@@ -86,7 +91,9 @@ class AbsensiMainViewController: SJSViewController, Storyboarded {
     }
     
     @objc func checkInTapped() {
-        coordinator?.goToRegularIn(viewModel: viewModel!)
+//        coordinator?.goToRegularIn(viewModel: viewModel!)
+        backButtonColor = .black
+        coordinator?.goToWorkplaceList(viewModel: viewModel!)
     }
 }
 

@@ -56,8 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setNavigationConfiguration() {
-        UINavigationBar.appearance().backgroundColor = UIColor.appColor(.sjsOrange)
-        UINavigationBar.appearance().barTintColor = UIColor.appColor(.sjsOrange)
+//        UINavigationBar.appearance().backgroundColor = UIColor.appColor(.sjsOrange)
+//        UINavigationBar.appearance().barTintColor = UIColor.appColor(.sjsOrange)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Bold", size: 20.0) ?? UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

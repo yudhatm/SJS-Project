@@ -28,11 +28,18 @@ open class SJSViewController: UIViewController {
         switch color {
         case .white:
             buttonColor = .white
+            self.navigationController?.navigationBar.backgroundColor = .appColor(.sjsOrange)
         case .black:
             buttonColor = .black
+            self.navigationController?.navigationBar.backgroundColor = .white
         }
         
-        navigationItem.backBarButtonItem?.tintColor = buttonColor
+        self.navigationItem.backBarButtonItem?.tintColor = buttonColor
         self.navigationController?.navigationBar.tintColor = buttonColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Bold", size: 20.0) ?? UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: buttonColor]
+    }
+    
+    fileprivate func setNavigationBarColor(color: Constants.BackButtonColor) {
+        
     }
 }

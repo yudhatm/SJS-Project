@@ -30,6 +30,12 @@ public struct Constants {
         static let todayAbsenStatusURL = baseURL + users + "getabsentoday/"
         static let promoListURL = baseURL + users + "promotion/"
         static let outletList = baseURL + users + "absen/"
+        static let newMenuUrl = baseURL + users + "menuapp/home/{id_customer}/{id_user}"
+    }
+    
+    public enum VariableKeys: String {
+        case customerId = "{id_customer}"
+        case userId = "{id_user}"
     }
     
     public struct ViewSize {

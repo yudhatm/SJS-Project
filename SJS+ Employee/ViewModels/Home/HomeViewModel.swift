@@ -15,6 +15,7 @@ protocol HomeViewModelType {
     var absenStatusObs: Observable<AbsenStatus> { get }
     var promoObs: Observable<[Promo]> { get }
     var errorObs: Observable<Error> { get }
+    var menuListObs: Observable<[MenuItem]> { get }
     
     func getAbsenStatus()
     func getPromoList()
@@ -23,10 +24,12 @@ protocol HomeViewModelType {
 final class HomeViewModel: HomeViewModelType {
     lazy var absenStatusObs: Observable<AbsenStatus> = absenStatusSubject.asObservable()
     lazy var promoObs: Observable<[Promo]> = promoSubject.asObservable()
+    lazy var menuListObs: Observable<[MenuItem]> = menuItemSubject.asObservable()
     lazy var errorObs: Observable<Error> = errorSubject.asObservable()
     
     var absenStatusSubject = PublishSubject<AbsenStatus>()
     var promoSubject = PublishSubject<[Promo]>()
+    var menuItemSubject = PublishSubject<[MenuItem]>()
     var errorSubject = PublishSubject<Error>()
     
     private var bag = DisposeBag()
@@ -34,6 +37,7 @@ final class HomeViewModel: HomeViewModelType {
     init() {
         getAbsenStatus()
         getPromoList()
+        getMainMenu()
     }
     
     func getAbsenStatus() {
@@ -68,6 +72,39 @@ final class HomeViewModel: HomeViewModelType {
             self.errorSubject.onNext(error)
         }, onCompleted: {
             print("get promo list completed")
+        })
+        .disposed(by: bag)
+    }
+    
+    func getMainMenu() {
+        var url = URLs.newMenuUrl
+        
+        if let userData = UserDefaultManager.shared.getUserData() {
+            let customerId = userData.value?.id_customer
+            let userId = userData.value?.id_employee
+            
+            url = url.replacingOccurrences(of: Constants.VariableKeys.customerId.rawValue, with: customerId ?? "")
+            url = url.replacingOccurrences(of: Constants.VariableKeys.userId.rawValue, with: userId ?? "")
+        }
+        
+        let obs: Observable<JSON> = NetworkManager.shared.APIRequestJSON(.get, url: url)
+        
+        obs.subscribe(onNext: { data in
+            let items = data["menu"].arrayValue
+            var menuList: [MenuItem] = []
+            
+            for item in items {
+                let menuItem = MenuItem(icon: item["icon"].stringValue,
+                                        id: item["id"].stringValue,
+                                        menuName: item["nama_menu"].stringValue)
+                menuList.append(menuItem)
+            }
+            
+            self.menuItemSubject.onNext(menuList)
+        }, onError: { error in
+            self.errorSubject.onNext(error)
+        }, onCompleted: {
+            print("get main menu completed")
         })
         .disposed(by: bag)
     }

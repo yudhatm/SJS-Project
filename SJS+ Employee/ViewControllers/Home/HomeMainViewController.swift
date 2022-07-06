@@ -75,13 +75,14 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     
     private var bag = DisposeBag()
     
-    var menuList: [MainMenu] = [MainMenu(image: UIImage(named: "calendar")!, title: "Report Absensi"),
-                                MainMenu(image: UIImage(named: "to-do-list")!, title: "Pengajuan Sakit/Izin/Cuti"),
-                                MainMenu(image: UIImage(named: "fileIcon")!, title: "Permintaan Surat"),
-                                MainMenu(image: UIImage(named: "loan")!, title: "Pengambilan Gaji Dimuka"),
-                                MainMenu(image: UIImage(named: "training")!, title: "Training"),
-                                MainMenu(image: UIImage(named: "credit-card")!, title: "Pembukaan Rek Baru")
-                                ]
+//    var menuList: [MainMenu] = [MainMenu(image: UIImage(named: "calendar")!, title: "Report Absensi"),
+//                                MainMenu(image: UIImage(named: "to-do-list")!, title: "Pengajuan Sakit/Izin/Cuti"),
+//                                MainMenu(image: UIImage(named: "fileIcon")!, title: "Permintaan Surat"),
+//                                MainMenu(image: UIImage(named: "loan")!, title: "Pengambilan Gaji Dimuka"),
+//                                MainMenu(image: UIImage(named: "training")!, title: "Training"),
+//                                MainMenu(image: UIImage(named: "credit-card")!, title: "Pembukaan Rek Baru")
+    var menuList: [MenuItem] = []
+    
     var promoList: [Promo] = []
     var totalNotif = 0
     var jamMasuk = ""
@@ -169,6 +170,19 @@ class HomeMainViewController: SJSViewController, Storyboarded {
                 ProgressHUD.dismiss()
                 self.promoList = list
                 self.promoCollectionView.reloadData()
+            })
+            .disposed(by: bag)
+        
+        viewModel?.menuListObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { menuList in
+                ProgressHUD.dismiss()
+                self.menuList = menuList
+                
+                self.mainMenuCollectionView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.adjustCollectionViewsHeight()
+                }
             })
             .disposed(by: bag)
     }

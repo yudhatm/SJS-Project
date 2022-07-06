@@ -18,8 +18,11 @@ class HomeMainMenuCollectionViewCell: UICollectionViewCell {
         self.menuImageContainerView.layer.cornerRadius = self.menuImageContainerView.frame.height / 2
     }
     
-    func setup(_ menuData: MainMenu) {
-        self.menuImage.image = menuData.image
-        self.menuLabel.text = menuData.title
+    func setup(_ menuData: MenuItem) {
+        if let url = URL(string: menuData.icon ?? "") {
+            self.menuImage.kf.setImage(with: url)
+        }
+        
+        self.menuLabel.text = menuData.menuName ?? ""
     }
 }

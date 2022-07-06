@@ -23,15 +23,18 @@ open class SJSViewController: UIViewController {
     
     fileprivate func setBackButton(color: Constants.BackButtonColor) {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: emptyString, style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.isTranslucent = false
         
         var buttonColor: UIColor = .white
         switch color {
         case .white:
             buttonColor = .white
             self.navigationController?.navigationBar.backgroundColor = .appColor(.sjsOrange)
+            self.navigationController?.navigationBar.barTintColor = .appColor(.sjsOrange)
         case .black:
             buttonColor = .black
             self.navigationController?.navigationBar.backgroundColor = .white
+            self.navigationController?.navigationBar.barTintColor = .white
         }
         
         self.navigationItem.backBarButtonItem?.tintColor = buttonColor

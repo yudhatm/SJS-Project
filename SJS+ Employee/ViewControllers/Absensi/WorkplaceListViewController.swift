@@ -84,6 +84,7 @@ class WorkplaceListViewController: SJSViewController, Storyboarded {
                 self.viewModel?.lat = Double(model.latitude ?? "0.0") ?? 0.0
                 self.viewModel?.lng = Double(model.longitude ?? "0.0") ?? 0.0
                 
+                self.backButtonColor = .white
                 self.coordinator?.goToRegularIn(viewModel: viewModel!)
             })
             .disposed(by: bag)

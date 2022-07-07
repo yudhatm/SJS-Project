@@ -526,6 +526,7 @@
                     </view>
                     <connections>
                         <outlet property="absenButton" destination="xti-vi-EeW" id="mtj-0t-tks"/>
+                        <outlet property="cameraButton" destination="qjx-VR-Me9" id="JWA-5a-V90"/>
                         <outlet property="cameraImage" destination="38p-iA-aCh" id="ef6-Yt-lQo"/>
                         <outlet property="photoImageView" destination="Alp-a0-cW3" id="ocT-I6-JcA"/>
                         <outlet property="shiftTextField" destination="giq-o7-oQ9" id="BGp-7f-v7a"/>

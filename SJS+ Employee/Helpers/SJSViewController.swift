@@ -31,10 +31,12 @@ open class SJSViewController: UIViewController {
             buttonColor = .white
             self.navigationController?.navigationBar.backgroundColor = .appColor(.sjsOrange)
             self.navigationController?.navigationBar.barTintColor = .appColor(.sjsOrange)
+            self.navigationController?.setStatusBar(backgroundColor: .appColor(.sjsOrange))
         case .black:
             buttonColor = .black
             self.navigationController?.navigationBar.backgroundColor = .white
             self.navigationController?.navigationBar.barTintColor = .white
+            self.navigationController?.setStatusBar(backgroundColor: .white)
         }
         
         self.navigationItem.backBarButtonItem?.tintColor = buttonColor

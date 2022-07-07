@@ -42,12 +42,11 @@ class NetworkManager {
                 .responseDecodable { (responseData: AFDataResponse<T>) in
                     print("====================")
                     print("URL: \(url)")
-                    print("Status: \(responseData.response?.statusCode)")
+                    print("Status: \(String(describing: responseData.response?.statusCode))")
                     print("JSON Response: \(JSON(responseData.data))")
                     
                     switch responseData.result {
                     case .success(let value):
-                        print("Response: \(value)")
                         if let statusCode = responseData.response?.statusCode, statusCode == 200 {
                             observer.onNext(value)
                             observer.onCompleted()
@@ -79,12 +78,11 @@ class NetworkManager {
                 .responseDecodable { (responseData: AFDataResponse<JSON>) in
                     print("====================")
                     print("URL: \(url)")
-                    print("Status: \(responseData.response?.statusCode)")
+                    print("Status: \(String(describing: responseData.response?.statusCode))")
                     print("JSON Response: \(JSON(responseData.value))")
                     
                     switch responseData.result {
                     case .success(let value):
-                        print("Response: \(value)")
                         if let statusCode = responseData.response?.statusCode, statusCode == 200 {
                             observer.onNext(value)
                             observer.onCompleted()

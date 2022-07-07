@@ -16,6 +16,7 @@ protocol AbsensiViewModelType {
     
     var lat: Double { get set }
     var lng: Double { get set }
+    var shiftList: [ShiftData] { get set }
     
     func getOutletList()
 }
@@ -29,6 +30,7 @@ final class AbsensiViewModel: AbsensiViewModelType {
     
     var lat: Double = 0.0
     var lng: Double = 0.0
+    var shiftList: [ShiftData] = []
     
     private var bag = DisposeBag()
     
@@ -45,6 +47,8 @@ final class AbsensiViewModel: AbsensiViewModelType {
                 } else {
                     self.outletListSubject.onNext([])
                 }
+                
+                self.shiftList = data.shift ?? []
             }, onError: { error in
                 print("error: \(error.localizedDescription)")
             }, onCompleted: {

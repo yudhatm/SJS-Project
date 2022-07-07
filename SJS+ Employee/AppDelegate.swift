@@ -13,6 +13,7 @@ import FirebaseAuth
 import netfox
 import ProgressHUD
 import IQKeyboardManagerSwift
+import DropDown
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ProgressHUD.animationType = .lineSpinFade
         
         IQKeyboardManager.shared.enable = true
+        DropDown.startListeningToKeyboard()
         
         return true
     }

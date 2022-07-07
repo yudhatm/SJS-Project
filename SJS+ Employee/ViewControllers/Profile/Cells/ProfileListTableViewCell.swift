@@ -24,5 +24,13 @@ class ProfileListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setup(_ menuData: MenuItem) {
+        if let url = URL(string: menuData.icon ?? "") {
+            self.menuIcon.kf.setImage(with: url)
+        }
+        
+        self.titleLabel.text = menuData.menuName ?? ""
+    }
 
 }

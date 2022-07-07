@@ -8,6 +8,7 @@ target 'SJS+ Employee' do
   # Pods for SJS+ Employee
   pod 'Alamofire'
   pod 'Cosmos', '~> 23.0'
+  pod 'DropDown'
   pod 'DZNEmptyDataSet'
   pod 'FirebaseAuth'
   pod 'GoogleMaps', '6.2.1'

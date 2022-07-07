@@ -50,7 +50,7 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
     
     private let bag = DisposeBag()
     
-    var menuList: [MenuData] = []
+    var menuList: [MenuItem] = []
     var verificationList = ["Verifikasi Data",
                             "Home Check",
                             "Ref Check"
@@ -96,7 +96,7 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
         viewModel?.menuObs
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { list in
-                self.menuList = list.menu ?? []
+                self.menuList = list
                 self.listTableView.reloadData()
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
@@ -124,9 +124,7 @@ extension ProfileMainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileListTableViewCell.identifier) as! ProfileListTableViewCell
         
         let item = menuList[indexPath.row]
-        
-        cell.titleLabel.text = item.nama_menu
-        
+        cell.setup(item)
         
         return cell
     }

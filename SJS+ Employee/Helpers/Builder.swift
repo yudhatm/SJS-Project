@@ -15,15 +15,15 @@ struct OverlayBuilder {
         return vc
     }
     
-    static func createSimpleAlert(title: String, message: String) -> UIAlertController {
+    static func createSimpleAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         ac.addAction(okAction)
         
         return ac
     }
     
     static func createErrorAlert(message: String) -> UIAlertController {
-        return createSimpleAlert(title: "Error", message: message)
+        return createSimpleAlert(title: "Error", message: message, handler: nil)
     }
 }

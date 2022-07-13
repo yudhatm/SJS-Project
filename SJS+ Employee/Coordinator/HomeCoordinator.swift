@@ -78,4 +78,8 @@ class HomeCoordinator: Coordinator {
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }
+    
+    func backToHome() {
+        navigationController.popToRootViewController(animated: true)
+    }
 }

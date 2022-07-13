@@ -83,6 +83,7 @@ class WorkplaceListViewController: SJSViewController, Storyboarded {
             .subscribe(onNext: { [unowned self] model in
                 self.viewModel?.lat = Double(model.latitude ?? "0.0") ?? 0.0
                 self.viewModel?.lng = Double(model.longitude ?? "0.0") ?? 0.0
+                self.viewModel?.selectedOutlet = model
                 
                 self.backButtonColor = .white
                 self.coordinator?.goToRegularIn(viewModel: viewModel!)

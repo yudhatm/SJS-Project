@@ -100,6 +100,7 @@ class HomeMainViewController: SJSViewController, Storyboarded {
         
         setupRx()
         backButtonColor = .white
+        viewModel?.getAbsenStatus()
     }
     
     override func viewDidAppear(_ animated: Bool) {

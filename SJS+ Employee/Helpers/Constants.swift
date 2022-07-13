@@ -32,6 +32,7 @@ public struct Constants {
         static let outletList = baseURL + users + "absen/"
         static let newMenuUrl = baseURL + users + "menuapp/home/{id_customer}/{id_user}"
         static let newProfileMenuUrl = baseURL + users + "menuapp/account/{id_customer}/{id_user}"
+        static let absenRegularIn = baseURL + users + "absen/insert"
     }
     
     public enum VariableKeys: String {

@@ -108,6 +108,52 @@ class NetworkManager {
         }
     }
     
+    func APIUploadRequest(_ methodType: HTTPMethod, encoding: ParameterEncoding = URLEncoding.default, url: String = "", parameters: [String: Any] = [:], uploadData: Data, imageName: String, imageKeyName: String) -> Observable<JSON> {
+        return Observable<JSON>.create { observer in
+            let request = AF.upload(multipartFormData: { multipartData in
+                for (key, value) in parameters {
+                    multipartData.append((value as! String).data(using: .utf8) ?? Data(), withName: key)
+                }
+                
+                multipartData.append(uploadData, withName: imageKeyName, fileName: imageName, mimeType: "image/jpg")
+            }, to: url, method: .post, headers: self.setHeaders(), interceptor: nil)
+                .uploadProgress(queue: .main, closure: { progress in
+                    //Current upload progress of file
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                .responseDecodable(of: JSON.self) { responseData in
+                    print("====================")
+                    print("URL: \(url)")
+                    print("Status: \(String(describing: responseData.response?.statusCode))")
+                    print("JSON Response: \(JSON(responseData.value))")
+                    
+                    switch responseData.result {
+                    case .success(let value):
+                        if let statusCode = responseData.response?.statusCode, statusCode == 200 {
+                            observer.onNext(value)
+                            observer.onCompleted()
+                        }
+                        else {
+                            observer.onError(NSError(domain: "networkError", code: responseData.response?.statusCode ?? -1, userInfo: nil))
+                        }
+                        
+                    case .failure(let error):
+                        print("Something went error")
+                        print(responseData.response?.statusCode)
+                        print(error)
+                        print(error.localizedDescription)
+                        print(responseData.result)
+                        
+                        observer.onError(error)
+                    }
+                }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+    
     func startNetworkMonitoring() {
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {

@@ -7,6 +7,8 @@
 
 import UIKit
 import DropDown
+import RxSwift
+import ProgressHUD
 
 class RegularInViewController: SJSViewController, Storyboarded {
     weak var coordinator: HomeCoordinator?
@@ -23,10 +25,15 @@ class RegularInViewController: SJSViewController, Storyboarded {
     let dropdown = DropDown()
     var selectedShift: ShiftData?
     
+    var currentPhotoImage: UIImage?
+    
+    var bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureView()
+        setupRx()
     }
     
     private func configureView() {
@@ -35,13 +42,30 @@ class RegularInViewController: SJSViewController, Storyboarded {
         shiftTextField.delegate = self
         shiftTextField.placeholder = "Pilih shift"
         setupDropDown()
+        
+        absenButton.addTarget(self, action: #selector(postAbsen), for: .touchUpInside)
+    }
+    
+    func setupRx() {
+        self.viewModel?.regularInObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { json in
+                ProgressHUD.dismiss()
+                let ac = OverlayBuilder.createSimpleAlert(title: "Sukses", message: "Absen berhasil!") { action in
+                    self.coordinator?.backToHome()
+                }
+                self.coordinator?.showAlert(ac)
+            }, onError: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
+            }, onCompleted: {
+            })
+            .disposed(by: bag)
     }
     
     private func setupDropDown() {
         var shiftDataSource: [String] = []
-        
-        dropdown.anchorView = shiftTextField
-        dropdown.dataSource = shiftDataSource
         
         guard let shiftList = viewModel?.shiftList else {
             return
@@ -51,6 +75,9 @@ class RegularInViewController: SJSViewController, Storyboarded {
             let itemString = "\(item.label ?? "") (\(item.inTime ?? "") - \(item.outTime ?? ""))"
             shiftDataSource.append(itemString)
         }
+        
+        dropdown.anchorView = shiftTextField
+        dropdown.dataSource = shiftDataSource
 
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
             shiftTextField.text = item
@@ -84,6 +111,61 @@ class RegularInViewController: SJSViewController, Storyboarded {
             self.present(imagePickerController, animated: true, completion: nil)
         }
     }
+    
+    @objc func postAbsen() {
+        guard shiftTextField.text != "" else {
+            let alert = OverlayBuilder.createSimpleAlert(title: "Error", message: "Shift harus dipilih")
+            self.present(alert, animated: true)
+            return
+        }
+
+        guard let currentPhotoImage = currentPhotoImage else {
+            let alert = OverlayBuilder.createSimpleAlert(title: "Error", message: "Harus ada foto")
+            self.present(alert, animated: true)
+            return
+        }
+
+        let imageData = currentPhotoImage.jpegData(compressionQuality: 0.5) ?? Data()
+        
+        let userData = UserDefaultManager.shared.getUserData()
+        
+        let employeeId = userData?.value?.id_employee ?? ""
+        let principleId = "1"
+        let outletId = viewModel?.selectedOutlet?.id ?? ""
+        let shiftId = selectedShift?.id ?? ""
+        let absenType = "regular"
+        let lat = "\(viewModel?.lat ?? 0.0)"
+        let lolat = "\(viewModel?.lng ?? 0.0)"
+        
+        let df = DateFormatter()
+        df.timeZone = TimeZone(identifier: "id")
+        df.dateFormat = "E, d MMM yyyy HH:mm:ss Z"
+        let str = df.string(from: Date())
+        let localeDate = df.date(from: str) ?? Date()
+        
+        df.dateFormat = "yyyy-MM-dd"
+        let tanggal = df.string(from: localeDate)
+        
+        df.dateFormat = "HH:mm:ss"
+        let time = df.string(from: localeDate)
+        
+        let param: [String: Any] = ["id_employee": employeeId,
+                                    "id_principle": principleId,
+                                    "id_outlet": outletId,
+                                    "id_shift": shiftId,
+                                    "tgl": tanggal,
+                                    "time": time,
+                                    "type_ci": "CI",
+                                    "type": absenType,
+                                    "id": "0",
+                                    "lat": lat,
+                                    "lolat": lolat,
+                                    "approve_by": "0"
+                                    ]
+        
+        ProgressHUD.show()
+        self.viewModel?.postRegularIn(parameters: param, photoData: imageData, imageKeyName: "fotoAbsen", imageFileName: "foto absen \(userData?.value?.name_employee ?? "employee").png")
+    }
 }
 
 extension RegularInViewController: UITextFieldDelegate {
@@ -103,6 +185,7 @@ extension RegularInViewController: UIImagePickerControllerDelegate {
             //Setting image to your image view
             self?.photoImageView.image = image
             self?.cameraImage.isHidden = true
+            self?.currentPhotoImage = image
         }
     }
     

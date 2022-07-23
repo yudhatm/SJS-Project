@@ -16,6 +16,7 @@ class DocumentListTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     var status: StatusPengajuan = .undefined
+    var document: Document?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,26 +30,26 @@ class DocumentListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupView(status: StatusPengajuan) {
-        self.status = status
-        
-        switch status {
-        case .approved:
-            statusLabel.text = "Disetujui"
-            statusLabel.textColor = UIColor(hexaRGB: "#18DE20")
-            statusView.layer.borderColor = UIColor(hexaRGB: "#18DE20")?.cgColor
-        case .waiting:
-            statusLabel.text = "Menunggu Persetujuan"
-            statusLabel.textColor = UIColor(hexaRGB: "#FCAE4F")
-            statusView.layer.borderColor = UIColor(hexaRGB: "#FCAE4F")?.cgColor
-        case .rejected:
-            statusLabel.text = "Ditolak"
-            statusLabel.textColor = UIColor(hexaRGB: "#E03F3F")
-            statusView.layer.borderColor = UIColor(hexaRGB: "#E03F3F")?.cgColor
-        case .undefined:
-            break
+    func setupView() {
+        guard let document = document else {
+            return
         }
-        
+
+        let df = DateFormatter()
+        df.timeZone = TimeZone(identifier: "id")
+        df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        let convertedDate = df.date(from: document.create ?? "2000-01-01 10:00:00")
+
+        df.dateFormat = "hh MMM yy"
+        let dateStr = df.string(from: convertedDate ?? Date())
+
+        titleLabel.text = document.title ?? ""
+        dateLabel.text = dateStr
+
+        statusLabel.text = document.status_name ?? "-"
+        statusLabel.textColor = UIColor(hexaRGB: document.status_name_color ?? "#F3F3F3")
+        statusView.layer.borderColor = UIColor(hexaRGB: document.status_name_color ?? "#F3F3F3")?.cgColor
+
         statusView.backgroundColor = UIColor(hexaRGB: "#F3F3F3", alpha: 0.5)
         statusView.layer.cornerRadius = statusView.frame.height / 2
         statusView.layer.borderWidth = 1

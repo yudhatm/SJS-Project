@@ -7,9 +7,12 @@
 
 import UIKit
 import DZNEmptyDataSet
+import RxSwift
+import RxCocoa
 
 class LeaveRequestListViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
+    var viewModel: LeaveRequestViewModelType?
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -25,14 +28,37 @@ class LeaveRequestListViewController: SJSViewController, Storyboarded {
     @IBOutlet weak var createLeaveButton: SJSButton!
     
     var filterList = ["Lihat Semua", "Sakit", "Cuti", "Izin"]
+    var requestList: [LeaveRequest] = [] {
+        didSet { tableView.reloadData() }
+    }
+    
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupView()
+        setupRx()
+        
+        viewModel?.getLeaveRequestList()
+    }
+    
+    func setupView() {
         self.title = "Daftar Pengajuan"
         
         let filterButton = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: self, action: #selector(openFilterView))
         self.navigationItem.rightBarButtonItem = filterButton
+        
+        createLeaveButton.addTarget(self, action: #selector(createLeaveButtonTapped), for: .touchUpInside)
+    }
+    
+    func setupRx() {
+        viewModel?.leaveRequestList
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { data in
+                self.requestList = data
+            })
+            .disposed(by: bag)
     }
     
     @objc func openFilterView() {
@@ -49,6 +75,10 @@ class LeaveRequestListViewController: SJSViewController, Storyboarded {
         
         self.present(vc, animated: true, completion: nil)
     }
+    
+    @objc func createLeaveButtonTapped() {
+        coordinator?.goToPengajuanForm(viewModel: viewModel!)
+    }
 }
 
 extension LeaveRequestListViewController: UITableViewDelegate {
@@ -61,22 +91,14 @@ extension LeaveRequestListViewController: UITableViewDelegate {
 
 extension LeaveRequestListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return requestList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LeaveRequestListTableViewCell.identifier, for: indexPath) as! LeaveRequestListTableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.setupView(status: .approved)
-        case 1:
-            cell.setupView(status: .waiting)
-        case 2:
-            cell.setupView(status: .rejected)
-        default:
-            break
-        }
+        cell.leaveRequest = requestList[indexPath.row]
+        cell.setupView()
         
         return cell
     }

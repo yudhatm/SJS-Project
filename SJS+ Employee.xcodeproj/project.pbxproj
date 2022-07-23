@@ -154,6 +154,10 @@
 		5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */; };
 		720AB9FC287552B1005C63B5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720AB9FB287552B1005C63B5 /* MenuItem.swift */; };
 		720AB9FE2875535B005C63B5 /* HomeMenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720AB9FD2875535B005C63B5 /* HomeMenuResponse.swift */; };
+		727A8046288BB138001205C9 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A8045288BB138001205C9 /* DocumentViewModel.swift */; };
+		727A8048288BB6D8001205C9 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A8047288BB6D8001205C9 /* Document.swift */; };
+		727A804D288BE11E001205C9 /* LeaveRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A804C288BE11E001205C9 /* LeaveRequestViewModel.swift */; };
+		727A804F288BE1C1001205C9 /* LeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A804E288BE1C1001205C9 /* LeaveRequest.swift */; };
 		7290ED3E286C5A27000315B2 /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290ED3D286C5A27000315B2 /* Outlet.swift */; };
 		7290ED40286C7F06000315B2 /* OutletListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7290ED3F286C7F06000315B2 /* OutletListCell.xib */; };
 		7290ED42286C7F80000315B2 /* OutletListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290ED41286C7F80000315B2 /* OutletListCell.swift */; };
@@ -325,6 +329,10 @@
 		5AE67803280F098F00882520 /* AuthenticationOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationOTPViewController.xib; sourceTree = "<group>"; };
 		720AB9FB287552B1005C63B5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		720AB9FD2875535B005C63B5 /* HomeMenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuResponse.swift; sourceTree = "<group>"; };
+		727A8045288BB138001205C9 /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		727A8047288BB6D8001205C9 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		727A804C288BE11E001205C9 /* LeaveRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestViewModel.swift; sourceTree = "<group>"; };
+		727A804E288BE1C1001205C9 /* LeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequest.swift; sourceTree = "<group>"; };
 		7290ED3D286C5A27000315B2 /* Outlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outlet.swift; sourceTree = "<group>"; };
 		7290ED3F286C7F06000315B2 /* OutletListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletListCell.xib; sourceTree = "<group>"; };
 		7290ED41286C7F80000315B2 /* OutletListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletListCell.swift; sourceTree = "<group>"; };
@@ -691,6 +699,7 @@
 		05D2D2F62837AC7A007A82D2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				727A8044288BB12C001205C9 /* Document */,
 				05B2055F2840EA4000564615 /* Profile */,
 				05E1B48C283E3BF300D7E7C8 /* Home */,
 				05D2D2F72837AC83007A82D2 /* Authentication */,
@@ -814,6 +823,7 @@
 		158D952F2813E7B500C72218 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				727A8049288BB6E1001205C9 /* Document */,
 				72A91B0C2858856000904ACC /* Penggajian */,
 				05B2055E2840EA2B00564615 /* Profile */,
 				05E1B48F283E440F00D7E7C8 /* Home */,
@@ -1115,6 +1125,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		727A8044288BB12C001205C9 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				727A8045288BB138001205C9 /* DocumentViewModel.swift */,
+				727A804C288BE11E001205C9 /* LeaveRequestViewModel.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		727A8049288BB6E1001205C9 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				727A8047288BB6D8001205C9 /* Document.swift */,
+				727A804E288BE1C1001205C9 /* LeaveRequest.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
 		72A91B0C2858856000904ACC /* Penggajian */ = {
 			isa = PBXGroup;
 			children = (
@@ -1368,6 +1396,7 @@
 				05BDCBDA281BD42D0092A8A3 /* HomeDetailNotificationViewController.swift in Sources */,
 				05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */,
 				72A91B1828598D7600904ACC /* PenggajianMenuSectionController.swift in Sources */,
+				727A804F288BE1C1001205C9 /* LeaveRequest.swift in Sources */,
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
 				05E1B489283E350D00D7E7C8 /* UserDefaultManager.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
@@ -1415,16 +1444,19 @@
 				05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */,
 				05BDCBCA281BBC010092A8A3 /* HomeCoordinator.swift in Sources */,
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
+				727A804D288BE11E001205C9 /* LeaveRequestViewModel.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
 				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
 				72A91B1628588E3F00904ACC /* EmbeddedCollectionViewCell.swift in Sources */,
 				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
+				727A8046288BB138001205C9 /* DocumentViewModel.swift in Sources */,
 				05B2055D2840DC6500564615 /* Promo.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				158D95522848AFD800C72218 /* RegularInData.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
+				727A8048288BB6D8001205C9 /* Document.swift in Sources */,
 				05C8BFAB282BB256005DB1E4 /* ChangePasswordViewController.swift in Sources */,
 				05777EFB2836420000B01C42 /* NewsCoordinator.swift in Sources */,
 				05E1B493283E4F0A00D7E7C8 /* DecodeHelper.swift in Sources */,
@@ -1582,6 +1614,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1618,6 +1651,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

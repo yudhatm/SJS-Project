@@ -225,18 +225,22 @@ class HomeMainViewController: SJSViewController, Storyboarded {
 
 extension HomeMainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            coordinator?.goToAbsenDetail()
-            
-        case 1:
-            coordinator?.goToPengajuanCuti()
-            
-        case 2:
-            coordinator?.goToDocumentList()
-            
-        default:
-            break
+        if collectionView == mainMenuCollectionView {
+            if let id = menuList[indexPath.row].id {
+                switch id {
+                case "6":
+                    coordinator?.goToPengajuanCuti()
+                    
+                case "7":
+                    coordinator?.goToAbsenDetail()
+                    
+                case "8":
+                    coordinator?.goToDocumentList()
+                    
+                default:
+                    break
+                }
+            }
         }
     }
 }
@@ -315,6 +319,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
             
             let df = DateFormatter()
             df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+            df.timeZone = TimeZone(identifier: "id")
             let date = df.date(from: item.doc ?? "") ?? Date()
             df.dateFormat = "dd MMMM yyyy"
             let string = df.string(from: date)

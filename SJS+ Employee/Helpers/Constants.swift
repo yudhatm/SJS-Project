@@ -13,6 +13,7 @@ public typealias CornerRadius = Constants.CornerRadius
 public typealias InfoPlistKeys = Constants.InfoPlistKeys
 public typealias URLs = Constants.URLs
 public typealias UserDefaultsKey = Constants.UserDefaultsKey
+public typealias VariableKeys = Constants.VariableKeys
 
 public struct Constants {
     public struct URLs {
@@ -30,14 +31,18 @@ public struct Constants {
         static let todayAbsenStatusURL = baseURL + users + "getabsentoday/"
         static let promoListURL = baseURL + users + "promotion/"
         static let outletList = baseURL + users + "absen/"
-        static let newMenuUrl = baseURL + users + "menuapp/home/{id_customer}/{id_user}"
-        static let newProfileMenuUrl = baseURL + users + "menuapp/account/{id_customer}/{id_user}"
+        static let newMenuUrl = baseURL + users + "menuapp/home/{{id_customer}}/{{id_user}}"
+        static let newProfileMenuUrl = baseURL + users + "menuapp/account/{{id_customer}}/{{id_user}}"
         static let absenRegularIn = baseURL + users + "absen/insert"
+        static let pengajuan = baseURL + users + "sakit/{{id_user}}"
+        static let insertPengajuan = baseURL + users + "sakitinsert"
+        static let documents = baseURL + users + "doclist/{{id_user}}"
+        static let insertDocument = baseURL + users + "doc"
     }
     
     public enum VariableKeys: String {
-        case customerId = "{id_customer}"
-        case userId = "{id_user}"
+        case customerId = "{{id_customer}}"
+        case userId = "{{id_user}}"
     }
     
     public struct ViewSize {

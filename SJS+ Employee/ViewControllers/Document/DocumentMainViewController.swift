@@ -7,9 +7,17 @@
 
 import UIKit
 import DZNEmptyDataSet
+import RxSwift
+import RxCocoa
 
 class DocumentMainViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
+    var viewModel: DocumentViewModelType?
+    
+    var bag = DisposeBag()
+    var documents: [Document] = [] {
+        didSet { tableView.reloadData() }
+    }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -34,6 +42,19 @@ class DocumentMainViewController: SJSViewController, Storyboarded {
         self.navigationItem.rightBarButtonItem = filterButton
         
         createDocumentButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
+        
+        setupRx()
+        
+        viewModel?.getDocumentList()
+    }
+    
+    func setupRx() {
+        viewModel?.documentList
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { data in
+                self.documents = data
+            })
+            .disposed(by: bag)
     }
     
     @objc func openFilterView() {
@@ -52,7 +73,7 @@ class DocumentMainViewController: SJSViewController, Storyboarded {
     }
     
     @objc func createButtonTapped() {
-        coordinator?.goToDocumentRequest()
+        coordinator?.goToDocumentRequest(viewModel: viewModel!)
     }
 }
 
@@ -62,22 +83,14 @@ extension DocumentMainViewController: UITableViewDelegate {
 
 extension DocumentMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return documents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DocumentListTableViewCell.identifier, for: indexPath) as! DocumentListTableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.setupView(status: .approved)
-        case 1:
-            cell.setupView(status: .waiting)
-        case 2:
-            cell.setupView(status: .rejected)
-        default:
-            break
-        }
+        cell.document = documents[indexPath.row]
+        cell.setupView()
         
         return cell
     }

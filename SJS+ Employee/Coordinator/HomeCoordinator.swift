@@ -54,6 +54,7 @@ class HomeCoordinator: Coordinator {
     func goToPengajuanCuti() {
         let vc = LeaveRequestListViewController.instantiate(.document)
         vc.coordinator = self
+        vc.viewModel = LeaveRequestViewModel()
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -64,15 +65,24 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToDocumentList() {
-        let vc = DocumentMainViewController.instantiate(.document)
+    func goToPengajuanForm(viewModel: LeaveRequestViewModelType) {
+        let vc = LeaveFormViewController.instantiate(.document)
         vc.coordinator = self
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToDocumentRequest() {
+    func goToDocumentList() {
+        let vc = DocumentMainViewController.instantiate(.document)
+        vc.coordinator = self
+        vc.viewModel = DocumentViewModel()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToDocumentRequest(viewModel: DocumentViewModelType) {
         let vc = DocumentRequestViewController.instantiate(.document)
         vc.coordinator = self
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
     }
     

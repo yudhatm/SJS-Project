@@ -87,6 +87,7 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     var totalNotif = 0
     var jamMasuk = ""
     var jamPulang = ""
+    var isAlreadyAbsenRegularIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,7 +143,7 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     }
     
     @objc private func absensiButtonTapped() {
-        coordinator?.goToAbsenMap()
+        coordinator?.goToAbsenMap(isAlreadyAbsenRegularIn: self.isAlreadyAbsenRegularIn)
     }
     
     func setupRx() {
@@ -215,6 +216,8 @@ class HomeMainViewController: SJSViewController, Storyboarded {
         absensiNotifLabel.text = data.textMessage ?? "Status Absen tidak ditemukan"
         jamMasuk = data.jamMasuk ?? "--:--"
         jamPulang = data.jamPulang ?? "--:--"
+        
+        self.isAlreadyAbsenRegularIn = !jamMasuk.contains("--")
         
         contentCollectionView.reloadData()
     }

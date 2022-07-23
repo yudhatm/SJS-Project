@@ -23,10 +23,11 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func goToAbsenMap() {
+    func goToAbsenMap(isAlreadyAbsenRegularIn: Bool) {
         let vc = AbsensiMainViewController.instantiate(.absensi)
         vc.coordinator = self
         vc.viewModel = AbsensiViewModel()
+        vc.viewModel?.isAlreadyAbsenRegularIn = isAlreadyAbsenRegularIn
         navigationController.pushViewController(vc, animated: true)
     }
     

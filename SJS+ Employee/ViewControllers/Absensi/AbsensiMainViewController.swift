@@ -45,6 +45,7 @@ class AbsensiMainViewController: SJSViewController, Storyboarded {
         setupMapView()
         
         checkInButton.addTarget(self, action: #selector(checkInTapped), for: .touchUpInside)
+        checkInButton.setTitle(viewModel?.isAlreadyAbsenRegularIn ?? false ? "Regular Out" : "Regular In", for: .normal)
     }
     
     func setupMapView() {
@@ -91,7 +92,6 @@ class AbsensiMainViewController: SJSViewController, Storyboarded {
     }
     
     @objc func checkInTapped() {
-//        coordinator?.goToRegularIn(viewModel: viewModel!)
         backButtonColor = .black
         coordinator?.goToWorkplaceList(viewModel: viewModel!)
     }

@@ -20,6 +20,7 @@ protocol AbsensiViewModelType {
     var lng: Double { get set }
     var shiftList: [ShiftData] { get set }
     var selectedOutlet: OutletData? { get set }
+    var isAlreadyAbsenRegularIn: Bool { get set }
     
     func getOutletList()
     func postRegularIn(parameters: [String: Any], photoData: Data, imageKeyName: String, imageFileName: String)
@@ -38,6 +39,8 @@ final class AbsensiViewModel: AbsensiViewModelType {
     var lng: Double = 0.0
     var shiftList: [ShiftData] = []
     var selectedOutlet: OutletData?
+    
+    var isAlreadyAbsenRegularIn: Bool = false
     
     private var bag = DisposeBag()
     

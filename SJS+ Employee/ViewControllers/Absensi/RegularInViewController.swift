@@ -44,6 +44,18 @@ class RegularInViewController: SJSViewController, Storyboarded {
         setupDropDown()
         
         absenButton.addTarget(self, action: #selector(postAbsen), for: .touchUpInside)
+        
+        if let isAbsenIn = viewModel?.isAlreadyAbsenRegularIn, isAbsenIn == true {
+            self.title = "Regular Out"
+            shiftTextField.isUserInteractionEnabled = false
+            
+            if let item = viewModel?.shiftList.first {
+                let shiftName = "\(item.label ?? "") (\(item.inTime ?? "") - \(item.outTime ?? ""))"
+                shiftTextField.text = shiftName
+            } else {
+                shiftTextField.text = ""
+            }
+        }
     }
     
     func setupRx() {

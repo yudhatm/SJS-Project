@@ -38,6 +38,7 @@ public struct Constants {
         static let insertPengajuan = baseURL + users + "sakitinsert"
         static let documents = baseURL + users + "doclist/{{id_user}}"
         static let insertDocument = baseURL + users + "doc"
+        static let listBerita = baseURL + users + "berita/{{id_user}}//0"
     }
     
     public enum VariableKeys: String {

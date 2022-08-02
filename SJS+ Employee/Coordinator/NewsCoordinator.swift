@@ -19,6 +19,7 @@ class NewsCoordinator: Coordinator {
     func start() {
         let vc = NewsListViewController.instantiate(.home)
         vc.coordinator = self
+        vc.viewModel = NewsViewModel()
         navigationController.pushViewController(vc, animated: false)
     }
     

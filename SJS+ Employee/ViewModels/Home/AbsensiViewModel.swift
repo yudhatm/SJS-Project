@@ -73,13 +73,6 @@ final class AbsensiViewModel: AbsensiViewModelType {
         let obs: Observable<JSON> = NetworkManager.shared.APIUploadRequest(.post, encoding: JSONEncoding.default, url: url, parameters: parameters, uploadData: photoData, imageName: imageFileName, imageKeyName: imageKeyName)
         
         obs.subscribe(onNext: { data in
-//            if let outletData = data.outlet {
-//                self.outletListSubject.onNext(outletData)
-//            } else {
-//                self.outletListSubject.onNext([])
-//            }
-            
-//            self.shiftList = data.shift ?? []
             print("absen success")
             print("absen data: \n\(data)")
             self.regularInSubject.onNext(data)

@@ -16,20 +16,24 @@ protocol HomeViewModelType {
     var promoObs: Observable<[Promo]> { get }
     var errorObs: Observable<Error> { get }
     var menuListObs: Observable<[MenuItem]> { get }
+    var beritaListObs: Observable<[News]> { get }
     
     func getAbsenStatus()
     func getPromoList()
+    func getListBerita()
 }
 
 final class HomeViewModel: HomeViewModelType {
     lazy var absenStatusObs: Observable<AbsenStatus> = absenStatusSubject.asObservable()
     lazy var promoObs: Observable<[Promo]> = promoSubject.asObservable()
     lazy var menuListObs: Observable<[MenuItem]> = menuItemSubject.asObservable()
+    lazy var beritaListObs: Observable<[News]> = beritaListSubject.asObservable()
     lazy var errorObs: Observable<Error> = errorSubject.asObservable()
     
     var absenStatusSubject = PublishSubject<AbsenStatus>()
     var promoSubject = PublishSubject<[Promo]>()
     var menuItemSubject = PublishSubject<[MenuItem]>()
+    var beritaListSubject = PublishSubject<[News]>()
     var errorSubject = PublishSubject<Error>()
     
     private var bag = DisposeBag()
@@ -38,6 +42,7 @@ final class HomeViewModel: HomeViewModelType {
         getAbsenStatus()
         getPromoList()
         getMainMenu()
+        getListBerita()
     }
     
     func getAbsenStatus() {
@@ -105,6 +110,27 @@ final class HomeViewModel: HomeViewModelType {
             self.errorSubject.onNext(error)
         }, onCompleted: {
             print("get main menu completed")
+        })
+        .disposed(by: bag)
+    }
+    
+    func getListBerita() {
+        var url = URLs.listBerita
+        
+        if let userData = UserDefaultManager.shared.getUserData() {
+            let userId = userData.value?.id_employee
+
+            url = url.replacingOccurrences(of: Constants.VariableKeys.userId.rawValue, with: userId ?? "")
+        }
+        
+        let obs: Observable<[News]> = NetworkManager.shared.APIRequest(.get, url: url)
+        
+        obs.subscribe(onNext: { data in
+            self.beritaListSubject.onNext(data)
+        }, onError: { error in
+            self.errorSubject.onNext(error)
+        }, onCompleted: {
+            print("get list berita completed")
         })
         .disposed(by: bag)
     }

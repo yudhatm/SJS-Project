@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import ProgressHUD
 
 class ProfileMainViewController: SJSViewController, Storyboarded {
     var coordinator: ProfileCoordinator?
@@ -96,6 +97,7 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
         viewModel?.menuObs
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { list in
+                ProgressHUD.dismiss()
                 self.menuList = list
                 self.listTableView.reloadData()
                 
@@ -106,6 +108,15 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
                     self.adjustViewsHeight()
                 })
+            })
+            .disposed(by: bag)
+        
+        viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
     }

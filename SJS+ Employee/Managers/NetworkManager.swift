@@ -20,11 +20,12 @@ class NetworkManager {
     private var monitor: NWPathMonitor
     private var queue = DispatchQueue.global()
     
-    var isInternetConnected = false
+    public private(set) var isInternetConnected = false
     
     private init() {
         self.monitor = NWPathMonitor()
         self.queue = DispatchQueue.global(qos: .background)
+        self.startNetworkMonitoring()
         self.monitor.start(queue: queue)
     }
     

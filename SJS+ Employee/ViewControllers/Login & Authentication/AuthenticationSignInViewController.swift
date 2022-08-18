@@ -78,7 +78,8 @@ class AuthenticationSignInViewController: SJSViewController, Storyboarded {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { error in
                 ProgressHUD.dismiss()
-                print(error.localizedDescription)
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
     }

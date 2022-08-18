@@ -6,55 +6,59 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ProgressHUD
 
 class PromoListViewController: SJSViewController, Storyboarded {
-    weak var coordinator: LoginCoordinator?
-    
-    var isMyPromo: Bool = false
+    weak var coordinator: HomeCoordinator?
+    var viewModel: PromoViewModelType?
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
+            tableView.estimatedRowHeight = 200
+            tableView.rowHeight = UITableView.automaticDimension
             
             tableView.register(UINib(nibName: PromoListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: PromoListTableViewCell.identifier)
         }
     }
     
+    var isMyPromo: Bool = false
+    
+    var bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupView()
+        setupRx()
     }
     
     func setupView() {
         self.title = "Promo"
     }
-}
-
-extension PromoListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = PromoDetailViewController.instantiate(.home)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension PromoListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PromoListTableViewCell.identifier, for: indexPath) as! PromoListTableViewCell
+    func setupRx() {
+        viewModel?.promoListObs
+            .bind(to: tableView.rx.items(cellIdentifier: PromoListTableViewCell.identifier, cellType: PromoListTableViewCell.self)) { index, model, cell in
+                cell.model = model
+            }.disposed(by: bag)
         
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        tableView.rx
+            .modelSelected(Promo.self)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] model in
+                self.coordinator?.goToPromoDetail(promoData: model)
+            })
+            .disposed(by: bag)
+        
+        viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
+            })
+            .disposed(by: bag)
     }
 }

@@ -56,8 +56,8 @@ class LeaveRequestViewModel: LeaveRequestViewModelType {
         let obs: Observable<JSON> = NetworkManager.shared.APIUploadRequest(.post, encoding: JSONEncoding.default, url: url, parameters: parameters, uploadData: photoData, imageName: imageFileName, imageKeyName: imageKeyName)
         
         obs.subscribe(onNext: { data in
-            print("absen success")
-            print("absen data: \n\(data)")
+            print("leave request success")
+            print("leave request: \n\(data)")
             self.submitRequestSubject.onNext(data)
         }, onError: { error in
             print("error: \(error.localizedDescription)")

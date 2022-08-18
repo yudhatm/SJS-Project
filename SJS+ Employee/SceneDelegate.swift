@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         
         // send that into our coordinator so that it can display view controllers
-        if UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) != nil {
+        if UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData.rawValue) != nil {
             coordinator = TabCoordinator(navigationController: navController)
         }
         else {

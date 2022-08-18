@@ -70,8 +70,10 @@ public struct Constants {
         static let gmapAPIKey = "GMAP_API_KEY"
     }
     
-    public struct UserDefaultsKey {
-        static let userData = "user_data"
+    public enum UserDefaultsKey: String {
+        case userData = "user_data"
+        case currentWorkplaceData = "current_workplace_data"
+        case currentShiftData = "current_shift_data"
     }
     
     public enum BackButtonColor: String {

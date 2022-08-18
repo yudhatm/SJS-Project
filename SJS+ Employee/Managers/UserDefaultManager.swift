@@ -38,14 +38,47 @@ class UserDefaultManager {
         print("[UserDefaultManager] Object \(key) is removed")
     }
     
-    func getUserData() -> User? {
-        let data = UserDefaultManager.shared.loadObject(key: UserDefaultsKey.userData) as! Dictionary<String, Any>
-        let json = JSON(data)
-        
-        if let userData: User? = DecodeHelper().decode(json: json) {
-            return userData
+    func decodeJSON<T: Codable>(json: JSON?) -> T? {
+        guard let json = json else {
+            print("no JSON to be decoded")
+            return nil
+        }
+
+        if let data: T? = DecodeHelper().decode(json: json) {
+            return data
         } else {
             return nil
         }
+    }
+    
+    func getData(key: Constants.UserDefaultsKey) -> JSON? {
+        if let data = UserDefaultManager.shared.loadObject(key: key.rawValue) as? Dictionary<String, Any> {
+            return JSON(data)
+        } else {
+            return nil
+        }
+    }
+    
+    func getUserData() -> User? {
+        let json = self.getData(key: .userData)
+        return decodeJSON(json: json)
+    }
+    
+    func saveCurrentWorkplaceData(data: OutletData) {
+        self.saveClassObject(data, key: UserDefaultsKey.currentWorkplaceData.rawValue)
+    }
+    
+    func getCurrentWorkplaceData() -> OutletData? {
+        let json = getData(key: .currentWorkplaceData)
+        return decodeJSON(json: json)
+    }
+    
+    func saveCurrentShiftData(data: ShiftData) {
+        self.saveClassObject(data, key: UserDefaultsKey.currentShiftData.rawValue)
+    }
+    
+    func getCurrentShiftData() -> ShiftData? {
+        let json = getData(key: .currentShiftData)
+        return decodeJSON(json: json)
     }
 }

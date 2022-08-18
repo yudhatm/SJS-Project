@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z99-sN-pL3" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1336"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-ar-6Jd">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
@@ -157,10 +157,10 @@
                                                 <cells/>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-Jh-4fc">
-                                                <rect key="frame" x="20" y="736" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="736" width="374" height="270"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="afO-px-g4v"/>
+                                                    <constraint firstAttribute="height" constant="270" id="afO-px-g4v"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="F0Y-95-dzB">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -171,10 +171,10 @@
                                                 <cells/>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-Iz-erR">
-                                                <rect key="frame" x="20" y="1006" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="1076" width="374" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="Z9a-h5-aJ0"/>
+                                                    <constraint firstAttribute="height" constant="240" id="Z9a-h5-aJ0"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="F3g-oP-jAN">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -213,7 +213,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbl-E3-s5h">
-                                                <rect key="frame" x="20" y="956" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1026" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Promo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydj-I6-Xbf">
                                                         <rect key="frame" x="0.0" y="14" width="261" height="22.5"/>
@@ -304,6 +304,8 @@
                         <outlet property="newsCollectionViewHeight" destination="afO-px-g4v" id="kDw-dn-x3W"/>
                         <outlet property="promoCollectionView" destination="Lx2-Iz-erR" id="9K5-1H-6no"/>
                         <outlet property="promoCollectionViewHeight" destination="Z9a-h5-aJ0" id="uxI-dz-qfg"/>
+                        <outlet property="seeAllNewsButton" destination="vGL-uh-IXd" id="Ca7-YY-Bg9"/>
+                        <outlet property="seeAllPromoButton" destination="tll-je-xA0" id="PeV-FI-wDQ"/>
                         <outlet property="userCompanyLabel" destination="igU-Mo-Hei" id="ocr-H1-y55"/>
                         <outlet property="userJobLabel" destination="XDw-gR-Q7G" id="wd2-T3-reK"/>
                         <outlet property="userNameLabel" destination="d7q-hd-Q1U" id="UKY-Vs-2Kb"/>
@@ -762,7 +764,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-by-9bj">
-                                        <rect key="frame" x="20" y="264" width="374" height="467"/>
+                                        <rect key="frame" x="16" y="264" width="382" height="467"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -774,7 +776,7 @@
                                 <constraints>
                                     <constraint firstItem="ZWo-zt-dpK" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="20" id="0w9-lP-p4N"/>
                                     <constraint firstAttribute="trailing" secondItem="ZWo-zt-dpK" secondAttribute="trailing" constant="20" id="7t4-bg-O8w"/>
-                                    <constraint firstItem="cGH-by-9bj" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="20" id="92p-FK-M7I"/>
+                                    <constraint firstItem="cGH-by-9bj" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="16" id="92p-FK-M7I"/>
                                     <constraint firstAttribute="trailing" secondItem="SV8-bY-Tm3" secondAttribute="trailing" constant="20" id="ChN-YT-CqF"/>
                                     <constraint firstItem="zqq-UT-gBi" firstAttribute="top" secondItem="ZWo-zt-dpK" secondAttribute="bottom" constant="8" id="DL9-M3-t7a"/>
                                     <constraint firstAttribute="trailing" secondItem="zqq-UT-gBi" secondAttribute="trailing" constant="20" id="Map-7B-7a5"/>
@@ -786,7 +788,7 @@
                                     <constraint firstItem="CQm-ZA-2Ur" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="20" id="iiL-vA-aTq"/>
                                     <constraint firstItem="zqq-UT-gBi" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="20" id="ms0-aa-Qqu"/>
                                     <constraint firstItem="cGH-by-9bj" firstAttribute="top" secondItem="zqq-UT-gBi" secondAttribute="bottom" constant="12" id="p9a-T1-dRO"/>
-                                    <constraint firstAttribute="trailing" secondItem="cGH-by-9bj" secondAttribute="trailing" constant="20" id="pbv-VC-5if"/>
+                                    <constraint firstAttribute="trailing" secondItem="cGH-by-9bj" secondAttribute="trailing" constant="16" id="pbv-VC-5if"/>
                                     <constraint firstItem="SV8-bY-Tm3" firstAttribute="leading" secondItem="0Pu-Ky-ZQV" secondAttribute="leading" constant="20" id="pw0-nr-hu8"/>
                                 </constraints>
                             </view>
@@ -800,6 +802,13 @@
                             <constraint firstItem="0NK-Lx-O0j" firstAttribute="bottom" secondItem="0Pu-Ky-ZQV" secondAttribute="bottom" id="mX4-aL-DYj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="companyLabel" destination="zqq-UT-gBi" id="eCg-3e-MGV"/>
+                        <outlet property="descriptionTextView" destination="cGH-by-9bj" id="w5O-k8-CeG"/>
+                        <outlet property="promoButton" destination="CQm-ZA-2Ur" id="zcU-GZ-HqG"/>
+                        <outlet property="promoImage" destination="SV8-bY-Tm3" id="T1t-rx-sVb"/>
+                        <outlet property="titleLabel" destination="ZWo-zt-dpK" id="RWo-2J-BA1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdT-Od-AJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

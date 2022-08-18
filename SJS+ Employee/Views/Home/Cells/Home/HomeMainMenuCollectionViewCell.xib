@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,30 +25,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-ud-qr5">
                         <rect key="frame" x="8" y="8" width="141" height="141"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-De-5V4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yg6-Vx-WgV">
                                 <rect key="frame" x="25.5" y="25.5" width="90" height="90"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-xZ-Fi6">
-                                        <rect key="frame" x="20" y="20" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="1Yc-t0-lT9"/>
-                                            <constraint firstAttribute="height" constant="50" id="Gv5-Ph-Xau"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="AsY-4X-qUi"/>
-                                    <constraint firstAttribute="height" constant="90" id="Ywe-GK-MEJ"/>
-                                    <constraint firstItem="bsa-xZ-Fi6" firstAttribute="centerX" secondItem="Bvf-De-5V4" secondAttribute="centerX" id="b5a-5X-76Q"/>
-                                    <constraint firstItem="bsa-xZ-Fi6" firstAttribute="centerY" secondItem="Bvf-De-5V4" secondAttribute="centerY" id="cFv-HW-QOn"/>
+                                    <constraint firstAttribute="height" constant="90" id="GmI-Zv-8PF"/>
+                                    <constraint firstAttribute="width" constant="90" id="Km7-lG-DbH"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Yg6-Vx-WgV" firstAttribute="centerX" secondItem="XFh-ud-qr5" secondAttribute="centerX" id="9zd-KH-Dyw"/>
                             <constraint firstAttribute="width" secondItem="XFh-ud-qr5" secondAttribute="height" multiplier="1:1" id="Djs-s2-vC5"/>
-                            <constraint firstItem="Bvf-De-5V4" firstAttribute="centerX" secondItem="XFh-ud-qr5" secondAttribute="centerX" id="Kxi-ri-pCH"/>
-                            <constraint firstItem="Bvf-De-5V4" firstAttribute="centerY" secondItem="XFh-ud-qr5" secondAttribute="centerY" id="tGf-YK-k0f"/>
+                            <constraint firstItem="Yg6-Vx-WgV" firstAttribute="centerY" secondItem="XFh-ud-qr5" secondAttribute="centerY" id="FWN-u6-vtB"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="h3i-RK-6hH">
@@ -71,16 +58,10 @@
             </collectionViewCellContentView>
             <size key="customSize" width="157" height="202"/>
             <connections>
-                <outlet property="menuImage" destination="bsa-xZ-Fi6" id="03s-Be-Zfm"/>
-                <outlet property="menuImageContainerView" destination="Bvf-De-5V4" id="PwH-xI-6J6"/>
+                <outlet property="menuImage" destination="Yg6-Vx-WgV" id="NUZ-5g-QBb"/>
                 <outlet property="menuLabel" destination="h3i-RK-6hH" id="wM4-vZ-mrW"/>
             </connections>
             <point key="canvasLocation" x="124" y="105"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

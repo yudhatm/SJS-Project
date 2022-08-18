@@ -15,4 +15,21 @@ class HomePromoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var expiredLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    var item: Promo!
+    
+    func configureCell() {
+        titleLabel.text = item.title ?? ""
+        contentLabel.text = item.deskripsi ?? ""
+        promoImage.kf.setImage(with: URL(string: item.image ?? ""))
+        
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        df.timeZone = TimeZone(identifier: "id")
+        let date = df.date(from: item.doc ?? "") ?? Date()
+        df.dateFormat = "dd MMMM yyyy"
+        let string = df.string(from: date)
+        
+        expiredLabel.text = "Expired: \(string)"
+    }
+    
 }

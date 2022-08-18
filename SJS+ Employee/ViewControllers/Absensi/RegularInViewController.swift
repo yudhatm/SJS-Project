@@ -49,8 +49,9 @@ class RegularInViewController: SJSViewController, Storyboarded {
             self.title = "Regular Out"
             shiftTextField.isUserInteractionEnabled = false
             
-            if let item = viewModel?.shiftList.first {
-                let shiftName = "\(item.label ?? "") (\(item.inTime ?? "") - \(item.outTime ?? ""))"
+            if let shift = UserDefaultManager.shared.getCurrentShiftData() {
+                self.selectedShift = shift
+                let shiftName = "\(shift.label ?? "") (\(shift.inTime ?? "") - \(shift.outTime ?? ""))"
                 shiftTextField.text = shiftName
             } else {
                 shiftTextField.text = ""
@@ -63,15 +64,39 @@ class RegularInViewController: SJSViewController, Storyboarded {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { json in
                 ProgressHUD.dismiss()
-                let ac = OverlayBuilder.createSimpleAlert(title: "Sukses", message: "Absen berhasil!") { action in
+                let ac = OverlayBuilder.createSimpleAlert(title: "Sukses", message: "Absen Masuk berhasil!") { action in
                     self.coordinator?.backToHome()
                 }
+                
+                if let shift = self.selectedShift {
+                    UserDefaultManager.shared.saveCurrentShiftData(data: shift)
+                }
+                
                 self.coordinator?.showAlert(ac)
-            }, onError: { error in
+            })
+            .disposed(by: bag)
+        
+        self.viewModel?.regularOutObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { json in
+                ProgressHUD.dismiss()
+                let ac = OverlayBuilder.createSimpleAlert(title: "Sukses", message: "Absen Keluar berhasil!") { action in
+                    self.coordinator?.backToHome()
+                }
+                
+                UserDefaultManager.shared.removeObject(key: UserDefaultsKey.currentWorkplaceData.rawValue)
+                UserDefaultManager.shared.removeObject(key: UserDefaultsKey.currentShiftData.rawValue)
+                
+                self.coordinator?.showAlert(ac)
+            })
+            .disposed(by: bag)
+        
+        self.viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
                 ProgressHUD.dismiss()
                 let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
                 self.coordinator?.showAlert(errorAc)
-            }, onCompleted: {
             })
             .disposed(by: bag)
     }
@@ -111,7 +136,7 @@ class RegularInViewController: SJSViewController, Storyboarded {
             self.getImage(fromSourceType: .photoLibrary)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        self.present(ac, animated: true, completion: nil)
+        self.coordinator?.showAlert(ac)
     }
     
     private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
@@ -127,13 +152,13 @@ class RegularInViewController: SJSViewController, Storyboarded {
     @objc func postAbsen() {
         guard shiftTextField.text != "" else {
             let alert = OverlayBuilder.createSimpleAlert(title: "Error", message: "Shift harus dipilih")
-            self.present(alert, animated: true)
+            self.coordinator?.showAlert(alert)
             return
         }
 
         guard let currentPhotoImage = currentPhotoImage else {
             let alert = OverlayBuilder.createSimpleAlert(title: "Error", message: "Harus ada foto")
-            self.present(alert, animated: true)
+            self.coordinator?.showAlert(alert)
             return
         }
 
@@ -161,13 +186,21 @@ class RegularInViewController: SJSViewController, Storyboarded {
         df.dateFormat = "HH:mm:ss"
         let time = df.string(from: localeDate)
         
+        var checkInType = "CI"
+        var isCheckIn = true
+        
+        if let isAlreadyAbsen = viewModel?.isAlreadyAbsenRegularIn {
+            checkInType = isAlreadyAbsen ? "CO" : "CI"
+            isCheckIn = !isAlreadyAbsen
+        }
+        
         let param: [String: Any] = ["id_employee": employeeId,
                                     "id_principle": principleId,
                                     "id_outlet": outletId,
                                     "id_shift": shiftId,
                                     "tgl": tanggal,
                                     "time": time,
-                                    "type_ci": "CI",
+                                    "type_ci": checkInType,
                                     "type": absenType,
                                     "id": "0",
                                     "lat": lat,
@@ -176,7 +209,7 @@ class RegularInViewController: SJSViewController, Storyboarded {
                                     ]
         
         ProgressHUD.show()
-        self.viewModel?.postRegularIn(parameters: param, photoData: imageData, imageKeyName: "fotoAbsen", imageFileName: "foto absen \(userData?.value?.name_employee ?? "employee").png")
+        self.viewModel?.postRegularInOut(regularIn: isCheckIn, parameters: param, photoData: imageData, imageKeyName: "fotoAbsen", imageFileName: "foto absen \(userData?.value?.name_employee ?? "employee").png")
     }
 }
 

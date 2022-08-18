@@ -86,6 +86,20 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func goToPromoList() {
+        let vc = PromoListViewController.instantiate(.home)
+        vc.coordinator = self
+        vc.viewModel = PromoViewModel()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToPromoDetail(promoData: Promo) {
+        let vc = PromoDetailViewController.instantiate(.home)
+        vc.coordinator = self
+        vc.promoData = promoData
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }

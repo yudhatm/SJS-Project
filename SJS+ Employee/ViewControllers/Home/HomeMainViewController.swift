@@ -55,6 +55,8 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     @IBOutlet weak var contentCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var newsCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var promoCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var seeAllNewsButton: UIButton!
+    @IBOutlet weak var seeAllPromoButton: UIButton!
     
     private let sectionInsets = UIEdgeInsets(
         top: 8.0,
@@ -75,14 +77,8 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     
     private var bag = DisposeBag()
     
-//    var menuList: [MainMenu] = [MainMenu(image: UIImage(named: "calendar")!, title: "Report Absensi"),
-//                                MainMenu(image: UIImage(named: "to-do-list")!, title: "Pengajuan Sakit/Izin/Cuti"),
-//                                MainMenu(image: UIImage(named: "fileIcon")!, title: "Permintaan Surat"),
-//                                MainMenu(image: UIImage(named: "loan")!, title: "Pengambilan Gaji Dimuka"),
-//                                MainMenu(image: UIImage(named: "training")!, title: "Training"),
-//                                MainMenu(image: UIImage(named: "credit-card")!, title: "Pembukaan Rek Baru")
     var menuList: [MenuItem] = []
-    
+    var beritaList: [News] = []
     var promoList: [Promo] = []
     var totalNotif = 0
     var jamMasuk = ""
@@ -134,6 +130,9 @@ class HomeMainViewController: SJSViewController, Storyboarded {
         absensiButton.disabledColor = UIColor(hexaRGB: "#9E9E9E")
         absensiButton.setTitle("Absensi Selesai", for: .disabled)
         
+        seeAllNewsButton.addTarget(self, action: #selector(openNewsList), for: .touchUpInside)
+        seeAllPromoButton.addTarget(self, action: #selector(openPromoList), for: .touchUpInside)
+        
         if let userData = UserDefaultManager.shared.getUserData() {
             let data = userData.value
             self.userCompanyLabel.text = data?.nama_perusahaan ?? ""
@@ -147,17 +146,6 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     }
     
     func setupRx() {
-//        viewModel?.menuObs
-//            .observe(on: MainScheduler.instance)
-//            .subscribe(onNext: {  menuData in
-//                ProgressHUD.dismiss()
-//                self.totalNotif = menuData.total_notif
-//
-//                self.mainMenuCollectionView.reloadData()
-//                self.adjustCollectionViewsHeight()
-//            })
-//            .disposed(by: bag)
-        
         viewModel?.absenStatusObs
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { statusData in
@@ -185,6 +173,23 @@ class HomeMainViewController: SJSViewController, Storyboarded {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.adjustCollectionViewsHeight()
                 }
+            })
+            .disposed(by: bag)
+        
+        viewModel?.beritaListObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { beritaList in
+                self.beritaList = beritaList
+                self.newsCollectionView.reloadData()
+            })
+            .disposed(by: bag)
+        
+        viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
     }
@@ -221,6 +226,14 @@ class HomeMainViewController: SJSViewController, Storyboarded {
         
         contentCollectionView.reloadData()
     }
+    
+    @objc func openNewsList() {
+        self.tabBarController?.selectedIndex = 2
+    }
+    
+    @objc func openPromoList() {
+        coordinator?.goToPromoList()
+    }
 }
 
 extension HomeMainViewController: UICollectionViewDelegate {
@@ -242,6 +255,11 @@ extension HomeMainViewController: UICollectionViewDelegate {
                 }
             }
         }
+        
+        if collectionView == promoCollectionView {
+            let cell = collectionView.cellForItem(at: indexPath) as! HomePromoCollectionViewCell
+            self.coordinator?.goToPromoDetail(promoData: cell.item)
+        }
     }
 }
 
@@ -260,7 +278,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
         }
         
         if collectionView == newsCollectionView {
-            return 1
+            return beritaList.count
         }
         
         if collectionView == promoCollectionView {
@@ -305,6 +323,9 @@ extension HomeMainViewController: UICollectionViewDataSource {
         if collectionView == newsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeNewsCollectionViewCell.identifier, for: indexPath) as! HomeNewsCollectionViewCell
             
+            let item = beritaList[indexPath.row]
+            cell.item = item
+            
             return cell
         }
         
@@ -312,20 +333,9 @@ extension HomeMainViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePromoCollectionViewCell.identifier, for: indexPath) as! HomePromoCollectionViewCell
             
             let item = promoList[indexPath.row]
+            cell.item = item
+            cell.configureCell()
             
-            cell.titleLabel.text = item.title ?? ""
-            cell.contentLabel.text = item.deskripsi ?? ""
-            cell.promoImage.kf.setImage(with: URL(string: item.image ?? ""))
-            
-            let df = DateFormatter()
-            df.dateFormat = "yyyy-MM-dd hh:mm:ss"
-            df.timeZone = TimeZone(identifier: "id")
-            let date = df.date(from: item.doc ?? "") ?? Date()
-            df.dateFormat = "dd MMMM yyyy"
-            let string = df.string(from: date)
-            
-            cell.expiredLabel.text = "Expired: \(string)"
-                
             return cell
         }
         
@@ -372,7 +382,7 @@ extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
             let paddingSpace = sectionInsets.left * (1 + 1)
             let availableWidth = self.newsCollectionView.frame.width - paddingSpace
             let widthPerItem = availableWidth
-            let heightPerItem = widthPerItem / 1.8
+            let heightPerItem = widthPerItem / 1.25
             return CGSize(width: widthPerItem, height: heightPerItem)
         }
         
@@ -380,7 +390,7 @@ extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
             let paddingSpace = sectionInsets.left * (1 + 1)
             let availableWidth = self.promoCollectionView.frame.width - paddingSpace
             let widthPerItem = availableWidth
-            let heightPerItem = widthPerItem / 1.8
+            let heightPerItem = widthPerItem / 1.35
             return CGSize(width: widthPerItem, height: heightPerItem)
         }
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,35 +20,35 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ePB-eO-rMT" customClass="HomePromoCollectionViewCell" customModule="SJS__Employee" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="259"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gNw-Yh-Ovx">
-                <rect key="frame" x="0.0" y="0.0" width="340" height="259"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIZ-Tq-JMA">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="259"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ojY-TR-KFG">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="Ae6-Ge-GsI"/>
+                                    <constraint firstAttribute="height" constant="140" id="Ae6-Ge-GsI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-82-vB2">
-                                <rect key="frame" x="8" y="152.5" width="272" height="98.5"/>
+                                <rect key="frame" x="16" y="188.5" width="256" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-lc-zwq">
-                                <rect key="frame" x="8" y="122" width="324" height="22.5"/>
+                                <rect key="frame" x="16" y="152" width="308" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nR-ll-mpf">
-                                <rect key="frame" x="300" y="193.5" width="32" height="17"/>
+                                <rect key="frame" x="292" y="195" width="32" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,15 +56,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZLL-lc-zwq" secondAttribute="trailing" constant="8" id="1dI-25-JY7"/>
-                            <constraint firstItem="5sz-82-vB2" firstAttribute="top" secondItem="ZLL-lc-zwq" secondAttribute="bottom" constant="8" id="3if-Rh-Opt"/>
-                            <constraint firstAttribute="bottom" secondItem="5sz-82-vB2" secondAttribute="bottom" constant="8" id="9e3-xM-PAC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLL-lc-zwq" secondAttribute="trailing" constant="16" id="1dI-25-JY7"/>
+                            <constraint firstItem="5sz-82-vB2" firstAttribute="top" secondItem="ZLL-lc-zwq" secondAttribute="bottom" constant="14" id="3if-Rh-Opt"/>
+                            <constraint firstAttribute="bottom" secondItem="5sz-82-vB2" secondAttribute="bottom" constant="22" id="9e3-xM-PAC"/>
                             <constraint firstAttribute="trailing" secondItem="ojY-TR-KFG" secondAttribute="trailing" id="Hbw-Pn-k9W"/>
-                            <constraint firstAttribute="trailing" secondItem="7nR-ll-mpf" secondAttribute="trailing" constant="8" id="Kkw-9S-3ok"/>
-                            <constraint firstItem="5sz-82-vB2" firstAttribute="leading" secondItem="UIZ-Tq-JMA" secondAttribute="leading" constant="8" id="a6b-Cd-5qM"/>
+                            <constraint firstAttribute="trailing" secondItem="7nR-ll-mpf" secondAttribute="trailing" constant="16" id="Kkw-9S-3ok"/>
+                            <constraint firstItem="5sz-82-vB2" firstAttribute="leading" secondItem="UIZ-Tq-JMA" secondAttribute="leading" constant="16" id="a6b-Cd-5qM"/>
                             <constraint firstItem="7nR-ll-mpf" firstAttribute="leading" secondItem="5sz-82-vB2" secondAttribute="trailing" constant="20" id="b7F-Sr-1yY"/>
                             <constraint firstItem="ojY-TR-KFG" firstAttribute="top" secondItem="UIZ-Tq-JMA" secondAttribute="top" id="gBv-ca-STW"/>
-                            <constraint firstItem="ZLL-lc-zwq" firstAttribute="leading" secondItem="UIZ-Tq-JMA" secondAttribute="leading" constant="8" id="gVy-Ls-YdG"/>
+                            <constraint firstItem="ZLL-lc-zwq" firstAttribute="leading" secondItem="UIZ-Tq-JMA" secondAttribute="leading" constant="16" id="gVy-Ls-YdG"/>
                             <constraint firstItem="ojY-TR-KFG" firstAttribute="leading" secondItem="UIZ-Tq-JMA" secondAttribute="leading" id="h4B-4S-3FZ"/>
                             <constraint firstItem="7nR-ll-mpf" firstAttribute="centerY" secondItem="5sz-82-vB2" secondAttribute="centerY" id="ldd-lU-b4A"/>
                             <constraint firstItem="ZLL-lc-zwq" firstAttribute="top" secondItem="ojY-TR-KFG" secondAttribute="bottom" constant="12" id="z97-X4-wxX"/>

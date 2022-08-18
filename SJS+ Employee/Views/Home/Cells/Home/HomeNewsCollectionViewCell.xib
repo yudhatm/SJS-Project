@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,32 +30,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="340" height="259"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-Jb-yOm">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="iIi-7I-tas"/>
+                                    <constraint firstAttribute="height" constant="140" id="iIi-7I-tas"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRr-Kb-Ua1">
-                                <rect key="frame" x="8" y="118" width="25" height="25"/>
+                                <rect key="frame" x="16" y="156" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="BIX-nV-B2v"/>
                                     <constraint firstAttribute="height" constant="25" id="HeU-Hf-R7d"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrK-9m-j2C">
-                                <rect key="frame" x="8" y="151" width="324" height="100"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrK-9m-j2C">
+                                <rect key="frame" x="16" y="193" width="308" height="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twI-Ne-M5g">
-                                <rect key="frame" x="41" y="122" width="251" height="17"/>
+                                <rect key="frame" x="49" y="160" width="235" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-3R-3Rq">
-                                <rect key="frame" x="300" y="122" width="32" height="17"/>
+                                <rect key="frame" x="292" y="160" width="32" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,18 +63,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="OrK-9m-j2C" secondAttribute="bottom" constant="8" id="1ML-aH-4hh"/>
-                            <constraint firstItem="OrK-9m-j2C" firstAttribute="leading" secondItem="VIN-cR-yuM" secondAttribute="leading" constant="8" id="6Kd-Zf-c5M"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OrK-9m-j2C" secondAttribute="bottom" constant="20" id="1ML-aH-4hh"/>
+                            <constraint firstItem="OrK-9m-j2C" firstAttribute="leading" secondItem="VIN-cR-yuM" secondAttribute="leading" constant="16" id="6Kd-Zf-c5M"/>
                             <constraint firstItem="0ay-Jb-yOm" firstAttribute="top" secondItem="VIN-cR-yuM" secondAttribute="top" id="9au-VO-lEn"/>
                             <constraint firstItem="Wun-3R-3Rq" firstAttribute="centerY" secondItem="twI-Ne-M5g" secondAttribute="centerY" id="ACl-W6-KMf"/>
                             <constraint firstAttribute="trailing" secondItem="0ay-Jb-yOm" secondAttribute="trailing" id="Bu6-Bx-FEI"/>
-                            <constraint firstAttribute="trailing" secondItem="Wun-3R-3Rq" secondAttribute="trailing" constant="8" id="IKc-jT-fRM"/>
+                            <constraint firstAttribute="trailing" secondItem="Wun-3R-3Rq" secondAttribute="trailing" constant="16" id="IKc-jT-fRM"/>
                             <constraint firstItem="0ay-Jb-yOm" firstAttribute="leading" secondItem="VIN-cR-yuM" secondAttribute="leading" id="Lij-0g-6DU"/>
                             <constraint firstItem="Wun-3R-3Rq" firstAttribute="leading" secondItem="twI-Ne-M5g" secondAttribute="trailing" constant="8" id="NgF-yg-Wxf"/>
-                            <constraint firstAttribute="trailing" secondItem="OrK-9m-j2C" secondAttribute="trailing" constant="8" id="VKu-5A-7Y9"/>
-                            <constraint firstItem="OrK-9m-j2C" firstAttribute="top" secondItem="KRr-Kb-Ua1" secondAttribute="bottom" constant="8" id="bVE-ho-bil"/>
-                            <constraint firstItem="KRr-Kb-Ua1" firstAttribute="top" secondItem="0ay-Jb-yOm" secondAttribute="bottom" constant="8" id="kMQ-Xs-e8z"/>
-                            <constraint firstItem="KRr-Kb-Ua1" firstAttribute="leading" secondItem="VIN-cR-yuM" secondAttribute="leading" constant="8" id="o58-Rj-jgF"/>
+                            <constraint firstAttribute="trailing" secondItem="OrK-9m-j2C" secondAttribute="trailing" constant="16" id="VKu-5A-7Y9"/>
+                            <constraint firstItem="OrK-9m-j2C" firstAttribute="top" secondItem="KRr-Kb-Ua1" secondAttribute="bottom" constant="12" id="bVE-ho-bil"/>
+                            <constraint firstItem="KRr-Kb-Ua1" firstAttribute="top" secondItem="0ay-Jb-yOm" secondAttribute="bottom" constant="16" id="kMQ-Xs-e8z"/>
+                            <constraint firstItem="KRr-Kb-Ua1" firstAttribute="leading" secondItem="VIN-cR-yuM" secondAttribute="leading" constant="16" id="o58-Rj-jgF"/>
                             <constraint firstItem="twI-Ne-M5g" firstAttribute="centerY" secondItem="KRr-Kb-Ua1" secondAttribute="centerY" id="qPe-Xk-icr"/>
                             <constraint firstItem="twI-Ne-M5g" firstAttribute="leading" secondItem="KRr-Kb-Ua1" secondAttribute="trailing" constant="8" id="s5N-fI-J0f"/>
                         </constraints>
@@ -88,6 +88,13 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="340" height="259"/>
+            <connections>
+                <outlet property="avatarImageView" destination="KRr-Kb-Ua1" id="7LW-C6-WQj"/>
+                <outlet property="newsDescLabel" destination="OrK-9m-j2C" id="a7n-RB-JzD"/>
+                <outlet property="newsImageView" destination="0ay-Jb-yOm" id="ESQ-lW-vd2"/>
+                <outlet property="timeLabel" destination="Wun-3R-3Rq" id="cDl-Kb-G9I"/>
+                <outlet property="userNameLabel" destination="twI-Ne-M5g" id="1Mu-8w-qXL"/>
+            </connections>
             <point key="canvasLocation" x="147.82608695652175" y="132.25446428571428"/>
         </collectionViewCell>
     </objects>

@@ -19,7 +19,8 @@ extension Convertable {
 
         do {
             let encoder = JSONEncoder()
-
+            encoder.outputFormatting = .prettyPrinted
+            
             let data = try encoder.encode(self)
             print("Struct/class converted to data")
 

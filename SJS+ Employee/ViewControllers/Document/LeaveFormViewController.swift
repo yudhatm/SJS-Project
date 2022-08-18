@@ -9,6 +9,7 @@ import UIKit
 import DropDown
 import RxSwift
 import RxCocoa
+import ProgressHUD
 
 class LeaveFormViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
@@ -108,10 +109,20 @@ class LeaveFormViewController: SJSViewController, Storyboarded {
         viewModel?.submitRequestObs
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { data in
+                ProgressHUD.dismiss()
                 let alert = OverlayBuilder.createSimpleAlert(title: "Success", message: "Pengajuan berhasil dibuat") { action in
                     self.navigationController?.popViewController(animated: true)
                 }
-                self.present(alert, animated: true)
+                self.coordinator?.showAlert(alert)
+            })
+            .disposed(by: bag)
+        
+        self.viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
     }
@@ -179,7 +190,7 @@ class LeaveFormViewController: SJSViewController, Storyboarded {
             self.getImage(fromSourceType: .photoLibrary)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        self.present(ac, animated: true, completion: nil)
+        self.coordinator?.showAlert(ac)
     }
     
     private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
@@ -195,14 +206,14 @@ class LeaveFormViewController: SJSViewController, Storyboarded {
     @objc func submitRequest() {
         guard let text = requestTypeTextField.text, !text.isEmpty else {
             let alert = OverlayBuilder.createErrorAlert(message: "Jenis Pengajuan harus dipilih")
-            self.present(alert, animated: true)
+            self.coordinator?.showAlert(alert)
             return
         }
         
         if !cutiKhususContainerView.isHidden {
             guard let text = cutiKhususTextField.text, !text.isEmpty else {
                 let alert = OverlayBuilder.createErrorAlert(message: "Jenis cuti khusus harus diisi")
-                self.present(alert, animated: true)
+                self.coordinator?.showAlert(alert)
                 return
             }
         }
@@ -210,30 +221,60 @@ class LeaveFormViewController: SJSViewController, Storyboarded {
         if !dateContainerView.isHidden {
             guard let text = startDateTextField.text, !text.isEmpty else {
                 let alert = OverlayBuilder.createErrorAlert(message: "Tanggal mulai harus diisi")
-                self.present(alert, animated: true)
+                self.coordinator?.showAlert(alert)
                 return
             }
             
             guard let text = endDateTextField.text, !text.isEmpty else {
                 let alert = OverlayBuilder.createErrorAlert(message: "Tanggal selesai harus diisi")
-                self.present(alert, animated: true)
+                self.coordinator?.showAlert(alert)
                 return
             }
         }
         
         guard currentPhotoImage != nil else {
             let alert = OverlayBuilder.createSimpleAlert(title: "Error", message: "Harus ada foto")
-            self.present(alert, animated: true)
+            self.coordinator?.showAlert(alert)
             return
         }
         
         guard !descTextView.text.isEmpty else {
             let alert = OverlayBuilder.createErrorAlert(message: "Keterangan harus diisi")
-            self.present(alert, animated: true)
+            self.coordinator?.showAlert(alert)
             return
         }
         
-        print("button tapped")
+        let userData = UserDefaultManager.shared.getUserData()
+        let employeeId = userData?.value?.id_employee ?? ""
+        let principleId = "1"
+        let imageData = currentPhotoImage?.jpegData(compressionQuality: 0.5) ?? Data()
+        let type = requestTypeTextField.text ?? ""
+        
+        var startDateString = ""
+        var endDateString = ""
+        
+        if !dateContainerView.isHidden {
+            let df = DateFormatter()
+            df.timeZone = TimeZone(identifier: "id")
+            df.dateFormat = "dd MMM yyyy"
+            let startDate = df.date(from: startDateTextField.text ?? "01 Jan 2000")
+            let endDate = df.date(from: endDateTextField.text ?? "01 Jan 2000")
+            
+            df.dateFormat = "yyyy-MM-dd"
+            startDateString = df.string(from: startDate ?? Date())
+            endDateString = df.string(from: endDate ?? Date())
+        }
+        
+        let param: [String: Any] = ["id_employee": employeeId,
+                                    "id_principle": principleId,
+                                    "type": type,
+                                    "start_date": startDateString,
+                                    "end_date": endDateString
+                                    ]
+        
+        ProgressHUD.show()
+        self.viewModel?.postLeaveRequest(parameters: param, photoData: imageData, imageKeyName: "foto dokumen ijin", imageFileName: "foto dokumen ijin user \(userData?.value?.name_employee ?? "employee").png")
+        
     }
 }
 

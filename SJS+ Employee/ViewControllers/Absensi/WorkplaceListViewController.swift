@@ -59,6 +59,15 @@ class WorkplaceListViewController: SJSViewController, Storyboarded {
             })
             .disposed(by: bag)
         
+        self.viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
+            })
+            .disposed(by: bag)
+        
         searchTextField.rx.text
             .orEmpty
             .subscribe(onNext: { [unowned self] query in
@@ -81,14 +90,28 @@ class WorkplaceListViewController: SJSViewController, Storyboarded {
         listTableView.rx.modelSelected(OutletData.self)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] model in
-                self.viewModel?.lat = Double(model.latitude ?? "0.0") ?? 0.0
-                self.viewModel?.lng = Double(model.longitude ?? "0.0") ?? 0.0
-                self.viewModel?.selectedOutlet = model
-                
-                self.backButtonColor = .white
-                self.coordinator?.goToRegularIn(viewModel: viewModel!)
+                if let workplaceData = UserDefaultManager.shared.getCurrentWorkplaceData() {
+                    if workplaceData.code != model.code {
+                        let alert = OverlayBuilder.createErrorAlert(message: "Lokasi absen harus sama")
+                        self.coordinator?.showAlert(alert)
+                    } else {
+                        proceedToRegularIn(model: model)
+                    }
+                } else {
+                    UserDefaultManager.shared.saveCurrentWorkplaceData(data: model)
+                    proceedToRegularIn(model: model)
+                }
             })
             .disposed(by: bag)
+    }
+    
+    func proceedToRegularIn(model: OutletData) {
+        self.viewModel?.lat = Double(model.latitude ?? "0.0") ?? 0.0
+        self.viewModel?.lng = Double(model.longitude ?? "0.0") ?? 0.0
+        self.viewModel?.selectedOutlet = model
+        
+        self.backButtonColor = .white
+        self.coordinator?.goToRegularIn(viewModel: viewModel!)
     }
     
     func getOutletList() {

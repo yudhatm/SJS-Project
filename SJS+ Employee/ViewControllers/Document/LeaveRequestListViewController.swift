@@ -9,6 +9,7 @@ import UIKit
 import DZNEmptyDataSet
 import RxSwift
 import RxCocoa
+import ProgressHUD
 
 class LeaveRequestListViewController: SJSViewController, Storyboarded {
     var coordinator: HomeCoordinator?
@@ -57,6 +58,15 @@ class LeaveRequestListViewController: SJSViewController, Storyboarded {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { data in
                 self.requestList = data
+            })
+            .disposed(by: bag)
+        
+        self.viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
     }

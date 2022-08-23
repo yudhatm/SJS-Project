@@ -23,6 +23,14 @@ class NewsCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func goToNewsDetail(viewModel: NewsViewModelType, item: News) {
+        let vc = NewsDetailViewController.instantiate(.home)
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        vc.item = item
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }

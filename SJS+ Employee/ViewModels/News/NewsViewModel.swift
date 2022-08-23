@@ -11,6 +11,7 @@ import RxCocoa
 import SwiftyJSON
 
 protocol NewsViewModelType {
+    var beritaListObs: Observable<[News]> { get }
     var errorObs: Observable<Error> { get }
     
     func getListBerita()
@@ -18,14 +19,12 @@ protocol NewsViewModelType {
 
 final class NewsViewModel: NewsViewModelType {
     lazy var errorObs: Observable<Error> = errorSubject.asObservable()
+    lazy var beritaListObs: Observable<[News]> = beritaListSubject.asObservable()
     
+    var beritaListSubject = PublishSubject<[News]>()
     var errorSubject = PublishSubject<Error>()
     
     private var bag = DisposeBag()
-    
-    init() {
-        getListBerita()
-    }
     
     func getListBerita() {
         var url = URLs.listBerita
@@ -39,7 +38,7 @@ final class NewsViewModel: NewsViewModelType {
         let obs: Observable<[News]> = NetworkManager.shared.APIRequest(.get, url: url)
         
         obs.subscribe(onNext: { data in
-            print(data)
+            self.beritaListSubject.onNext(data)
         }, onError: { error in
             self.errorSubject.onNext(error)
         }, onCompleted: {

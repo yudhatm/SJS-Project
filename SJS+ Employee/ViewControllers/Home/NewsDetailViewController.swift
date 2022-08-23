@@ -7,23 +7,39 @@
 
 import UIKit
 
-class NewsDetailViewController: SJSViewController {
+class NewsDetailViewController: SJSViewController, Storyboarded {
+    var coordinator: NewsCoordinator?
+    var viewModel: NewsViewModelType?
+    
+    @IBOutlet weak var avatarIconView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var postDateLabel: UILabel!
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var likeImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    
+    var item: News!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        self.title = "Detail Berita"
+        avatarIconView.layer.cornerRadius = avatarIconView.frame.height / 2
+        
+        guard let item = item else { return }
+        usernameLabel.text = item.namaUser ?? ""
+        postDateLabel.text = SJSDateFormatter.shared.createNewsDateText(dateString: item.doc)
+        descriptionLabel.text = item.description ?? ""
+        likesLabel.text = "\(item.totalLike ?? 0) Suka"
+        
+        if let imageUrl = item.imageUrl, imageUrl != "" {
+            postImageView.kf.setImage(with: URL(string: imageUrl))
+        } else {
+            postImageView.isHidden = true
+        }
     }
-    */
-
 }

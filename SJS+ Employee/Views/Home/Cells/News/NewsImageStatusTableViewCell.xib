@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Bold.ttf">
-            <string>Poppins-Bold</string>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
@@ -32,7 +32,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="px7-q6-0n4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-7x-94N">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-7x-94N">
                                         <rect key="frame" x="12" y="12" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5Gi-YQ-ctc"/>
@@ -40,8 +40,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhY-i9-7T8">
-                                        <rect key="frame" x="50" y="18.5" width="38" height="17"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
+                                        <rect key="frame" x="50" y="18.5" width="37" height="17"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -71,23 +71,48 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7V-3Y-Wmi">
                                 <rect key="frame" x="12" y="259" width="390" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axl-uj-UFG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_heart" translatesAutoresizingMaskIntoConstraints="NO" id="axl-uj-UFG">
                                 <rect key="frame" x="12" y="318" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="RoV-jV-0vn"/>
                                     <constraint firstAttribute="width" constant="20" id="YXx-Bm-5g8"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZY-LG-bMC">
-                                <rect key="frame" x="338.5" y="318" width="67.5" height="20"/>
-                                <color key="tintColor" name="SJSAccentColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title="Edit"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-vS-dYi">
+                                <rect key="frame" x="361" y="318" width="41" height="16"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A81-vh-afy">
+                                        <rect key="frame" x="15" y="0.0" width="26" height="16"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" name="SJSAccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bwt-RO-Mns">
+                                        <rect key="frame" x="0.0" y="2.5" width="11" height="11"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-PH-d3j">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="A81-vh-afy" firstAttribute="top" secondItem="LVV-vS-dYi" secondAttribute="top" id="4N2-gt-m1Y"/>
+                                    <constraint firstItem="PbP-PH-d3j" firstAttribute="top" secondItem="LVV-vS-dYi" secondAttribute="top" id="7iv-Xw-tRC"/>
+                                    <constraint firstItem="bwt-RO-Mns" firstAttribute="leading" secondItem="LVV-vS-dYi" secondAttribute="leading" id="7zW-rF-xOh"/>
+                                    <constraint firstAttribute="bottom" secondItem="PbP-PH-d3j" secondAttribute="bottom" id="DCn-GB-cgz"/>
+                                    <constraint firstItem="PbP-PH-d3j" firstAttribute="leading" secondItem="LVV-vS-dYi" secondAttribute="leading" id="LkG-Sq-tIq"/>
+                                    <constraint firstAttribute="trailing" secondItem="PbP-PH-d3j" secondAttribute="trailing" id="XMg-7c-NM6"/>
+                                    <constraint firstAttribute="trailing" secondItem="A81-vh-afy" secondAttribute="trailing" id="ddR-Ja-5H8"/>
+                                    <constraint firstItem="A81-vh-afy" firstAttribute="leading" secondItem="bwt-RO-Mns" secondAttribute="trailing" constant="4" id="hFM-mL-WlM"/>
+                                    <constraint firstAttribute="bottom" secondItem="A81-vh-afy" secondAttribute="bottom" id="hiZ-EH-HvY"/>
+                                    <constraint firstItem="bwt-RO-Mns" firstAttribute="centerY" secondItem="A81-vh-afy" secondAttribute="centerY" id="sLj-9O-09q"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYC-VP-b0H">
                                 <rect key="frame" x="40" y="321" width="30.5" height="14"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
@@ -99,7 +124,6 @@
                         <constraints>
                             <constraint firstItem="h7V-3Y-Wmi" firstAttribute="leading" secondItem="WPY-iJ-CpJ" secondAttribute="leading" constant="12" id="41A-fA-bEf"/>
                             <constraint firstItem="RYC-VP-b0H" firstAttribute="leading" secondItem="axl-uj-UFG" secondAttribute="trailing" constant="8" id="4uo-Os-eb2"/>
-                            <constraint firstAttribute="trailing" secondItem="2ZY-LG-bMC" secondAttribute="trailing" constant="8" id="5IZ-Ap-dGu"/>
                             <constraint firstAttribute="trailing" secondItem="px7-q6-0n4" secondAttribute="trailing" id="CXK-GA-ubv"/>
                             <constraint firstItem="7ck-xU-ijx" firstAttribute="leading" secondItem="WPY-iJ-CpJ" secondAttribute="leading" id="Hgx-UF-d6O"/>
                             <constraint firstItem="px7-q6-0n4" firstAttribute="top" secondItem="WPY-iJ-CpJ" secondAttribute="top" id="JgN-SG-3Xe"/>
@@ -107,13 +131,14 @@
                             <constraint firstAttribute="trailing" secondItem="h7V-3Y-Wmi" secondAttribute="trailing" constant="12" id="dxa-px-HaS"/>
                             <constraint firstItem="px7-q6-0n4" firstAttribute="leading" secondItem="WPY-iJ-CpJ" secondAttribute="leading" id="eov-iV-ZXn"/>
                             <constraint firstItem="7ck-xU-ijx" firstAttribute="top" secondItem="px7-q6-0n4" secondAttribute="bottom" id="foL-Bw-Rur"/>
+                            <constraint firstAttribute="bottom" secondItem="LVV-vS-dYi" secondAttribute="bottom" constant="16" id="hZF-cZ-4qa"/>
                             <constraint firstItem="axl-uj-UFG" firstAttribute="leading" secondItem="WPY-iJ-CpJ" secondAttribute="leading" constant="12" id="jxk-G2-bQP"/>
                             <constraint firstItem="h7V-3Y-Wmi" firstAttribute="top" secondItem="7ck-xU-ijx" secondAttribute="bottom" constant="12" id="kgw-mn-8b2"/>
+                            <constraint firstItem="LVV-vS-dYi" firstAttribute="top" secondItem="h7V-3Y-Wmi" secondAttribute="bottom" constant="12" id="nQ9-hB-sJS"/>
                             <constraint firstItem="axl-uj-UFG" firstAttribute="top" secondItem="h7V-3Y-Wmi" secondAttribute="bottom" constant="12" id="rXS-tr-bet"/>
                             <constraint firstAttribute="bottom" secondItem="axl-uj-UFG" secondAttribute="bottom" constant="12" id="wSO-Tb-gxt"/>
-                            <constraint firstAttribute="bottom" secondItem="2ZY-LG-bMC" secondAttribute="bottom" constant="12" id="whf-Fz-drg"/>
+                            <constraint firstAttribute="trailing" secondItem="LVV-vS-dYi" secondAttribute="trailing" constant="12" id="xPz-g7-aca"/>
                             <constraint firstItem="RYC-VP-b0H" firstAttribute="centerY" secondItem="axl-uj-UFG" secondAttribute="centerY" id="yrm-rY-LAh"/>
-                            <constraint firstItem="2ZY-LG-bMC" firstAttribute="top" secondItem="h7V-3Y-Wmi" secondAttribute="bottom" constant="12" id="zNC-FV-a73"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -125,11 +150,23 @@
                     <constraint firstAttribute="trailing" secondItem="WPY-iJ-CpJ" secondAttribute="trailing" id="ib2-Kx-YwE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarIconView" destination="h9S-7x-94N" id="eAk-Xa-uSU"/>
+                <outlet property="descriptionLabel" destination="h7V-3Y-Wmi" id="Q0u-in-2lp"/>
+                <outlet property="editButton" destination="PbP-PH-d3j" id="yHY-Iz-pPj"/>
+                <outlet property="likeImageView" destination="axl-uj-UFG" id="pTP-MF-zlA"/>
+                <outlet property="likesLabel" destination="RYC-VP-b0H" id="w8j-57-cJQ"/>
+                <outlet property="postDateLabel" destination="J8I-hg-hAj" id="THR-6Z-yVK"/>
+                <outlet property="postImageView" destination="7ck-xU-ijx" id="x6e-Xs-5nt"/>
+                <outlet property="usernameLabel" destination="IhY-i9-7T8" id="4wg-mq-fCG"/>
+            </connections>
             <point key="canvasLocation" x="124.6376811594203" y="164.73214285714286"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="avatar_placeholder" width="57" height="57"/>
+        <image name="edit_icon" width="11" height="11"/>
+        <image name="empty_heart" width="15" height="15"/>
         <namedColor name="SJSAccentColor">
             <color red="0.94901960784313721" green="0.6588235294117647" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

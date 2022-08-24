@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewsCellDelegate {
+    func likeButtonTapped(likeStatus: Bool, newsId: String)
+}
+
 class NewsImageStatusTableViewCell: UITableViewCell {
     static let identifier = String(describing: NewsImageStatusTableViewCell.self)
     
@@ -21,10 +25,16 @@ class NewsImageStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     
+    var delegate: NewsCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         avatarIconView.layer.cornerRadius = avatarIconView.frame.height / 2
+        likeImageView.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped))
+        likeImageView.addGestureRecognizer(tapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,5 +49,15 @@ class NewsImageStatusTableViewCell: UITableViewCell {
         postImageView.kf.setImage(with: URL(string: item.imageUrl ?? ""))
         descriptionLabel.text = item.description ?? ""
         likesLabel.text = "\(item.totalLike ?? 0) Suka"
+        
+        if let isLikeNews = item.isLikeNews {
+            likeImageView.image = isLikeNews ? ImageAsset.getImage(.likeFilled) : ImageAsset.getImage(.likeEmpty)
+        } else {
+            likeImageView.image = ImageAsset.getImage(.likeEmpty)
+        }
+    }
+    
+    @objc func likeButtonTapped() {
+        delegate?.likeButtonTapped(likeStatus: item.isLikeNews ?? false, newsId: item.id ?? "")
     }
 }

@@ -9,19 +9,24 @@ import Foundation
 import RxSwift
 import RxCocoa
 import SwiftyJSON
+import Alamofire
 
 protocol NewsViewModelType {
     var beritaListObs: Observable<[News]> { get }
+    var likeObs: Observable<JSON> { get }
     var errorObs: Observable<Error> { get }
     
     func getListBerita()
+    func postLikeBerita(newsId: String, likeStatus: Bool)
 }
 
 final class NewsViewModel: NewsViewModelType {
     lazy var errorObs: Observable<Error> = errorSubject.asObservable()
     lazy var beritaListObs: Observable<[News]> = beritaListSubject.asObservable()
+    lazy var likeObs: Observable<JSON> = likeSubject.asObservable()
     
     var beritaListSubject = PublishSubject<[News]>()
+    var likeSubject = PublishSubject<JSON>()
     var errorSubject = PublishSubject<Error>()
     
     private var bag = DisposeBag()
@@ -43,6 +48,29 @@ final class NewsViewModel: NewsViewModelType {
             self.errorSubject.onNext(error)
         }, onCompleted: {
             print("get list berita completed")
+        })
+        .disposed(by: bag)
+    }
+    
+    func postLikeBerita(newsId: String, likeStatus: Bool) {
+        let url = URLs.likeBerita
+        
+        var param: [String: Any] = [:]
+        
+        if let userData = UserDefaultManager.shared.getUserData() {
+            let userId = userData.value?.id_employee
+
+            param = ["id_user": userId ?? "", "id_berita": newsId, "like": likeStatus]
+        }
+        
+        let obs: Observable<JSON> = NetworkManager.shared.APIRequestJSON(.post, encoding: JSONEncoding.default, url: url, parameters: param)
+        
+        obs.subscribe(onNext: { data in
+            self.likeSubject.onNext(data)
+        }, onError: { error in
+            self.errorSubject.onNext(error)
+        }, onCompleted: {
+            print("post like berita completed")
         })
         .disposed(by: bag)
     }

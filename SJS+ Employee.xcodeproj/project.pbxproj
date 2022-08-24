@@ -116,6 +116,7 @@
 		158D95522848AFD800C72218 /* RegularInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95512848AFD700C72218 /* RegularInData.swift */; };
 		158D95542848B25700C72218 /* AbsensiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95532848B25600C72218 /* AbsensiViewModel.swift */; };
 		15C5AC0828B4A8470022E547 /* SJSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */; };
+		15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E5190728B5F4D3009A400A /* ImageAsset.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
@@ -300,6 +301,7 @@
 		158D95512848AFD700C72218 /* RegularInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularInData.swift; sourceTree = "<group>"; };
 		158D95532848B25600C72218 /* AbsensiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiViewModel.swift; sourceTree = "<group>"; };
 		15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSDateFormatter.swift; sourceTree = "<group>"; };
+		15E5190728B5F4D3009A400A /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
 		3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.release.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.release.xcconfig"; sourceTree = "<group>"; };
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -877,6 +879,7 @@
 				05E1B492283E4F0A00D7E7C8 /* DecodeHelper.swift */,
 				72A91B0528573CDA00904ACC /* SJSViewController.swift */,
 				15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */,
+				15E5190728B5F4D3009A400A /* ImageAsset.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				05BDCBD1281BC2070092A8A3 /* OverlayPickerViewController.swift in Sources */,
 				05D2D2F92837ACA5007A82D2 /* SignInViewModel.swift in Sources */,
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
+				15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
 				05C9C813283522640077F71D /* StatsCell.swift in Sources */,

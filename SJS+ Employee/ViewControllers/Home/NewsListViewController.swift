@@ -35,7 +35,6 @@ class NewsListViewController: SJSViewController, Storyboarded {
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Berita"
-        setupView()
         setupRx()
     }
     
@@ -44,18 +43,10 @@ class NewsListViewController: SJSViewController, Storyboarded {
     }
     
     override func viewDidLayoutSubviews() {
-//        let shadowLayer = CAShapeLayer()
-//        shadowLayer.path = UIBezierPath(roundedRect: editContainerView.bounds, cornerRadius: 12).cgPath
-//        shadowLayer.fillColor = UIColor.white.cgColor
-//
-//        shadowLayer.shadowColor = UIColor.darkGray.cgColor
-//        shadowLayer.shadowPath = shadowLayer.path
-//        shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-//        shadowLayer.shadowOpacity = 0.8
-//        shadowLayer.shadowRadius = 2
-//
-//        editContainerView.layer.insertSublayer(shadowLayer, at: 1)
-        
+        setupView()
+    }
+    
+    func setupView() {
         editContainerView.layer.masksToBounds = false
         editContainerView.layer.cornerRadius = editContainerView.frame.height / 2
         editContainerView.layer.shadowColor = UIColor.black.cgColor
@@ -63,10 +54,6 @@ class NewsListViewController: SJSViewController, Storyboarded {
         editContainerView.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         editContainerView.layer.shadowOpacity = 0.3
         editContainerView.layer.shadowRadius = 1.0
-    }
-    
-    func setupView() {
-        
     }
     
     func setupRx() {
@@ -79,6 +66,7 @@ class NewsListViewController: SJSViewController, Storyboarded {
                 } else if let imageUrl = item.imageUrl, imageUrl != "" {
                     let cell = tableView.dequeueReusableCell(withIdentifier: NewsImageStatusTableViewCell.identifier, for: IndexPath(row: row, section: 0)) as! NewsImageStatusTableViewCell
                     cell.item = item
+                    cell.delegate = self
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: NewsTextStatusTableViewCell.identifier, for: IndexPath(row: row, section: 0)) as! NewsTextStatusTableViewCell
@@ -99,6 +87,14 @@ class NewsListViewController: SJSViewController, Storyboarded {
             })
             .disposed(by: bag)
         
+        viewModel?.likeObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { data in
+                ProgressHUD.dismiss()
+                self.viewModel?.getListBerita()
+            })
+            .disposed(by: bag)
+        
         viewModel?.errorObs
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { error in
@@ -107,5 +103,11 @@ class NewsListViewController: SJSViewController, Storyboarded {
                 self.coordinator?.showAlert(errorAc)
             })
             .disposed(by: bag)
+    }
+}
+
+extension NewsListViewController: NewsCellDelegate {
+    func likeButtonTapped(likeStatus: Bool, newsId: String) {
+        viewModel?.postLikeBerita(newsId: newsId, likeStatus: !likeStatus)
     }
 }

@@ -20,10 +20,16 @@ class NewsTextStatusTableViewCell: UITableViewCell {
     
     var item: News! { didSet { configureView() }}
     
+    var delegate: NewsCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         avatarIconView.layer.cornerRadius = avatarIconView.frame.height / 2
+        likeImageView.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped))
+        likeImageView.addGestureRecognizer(tapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,5 +43,9 @@ class NewsTextStatusTableViewCell: UITableViewCell {
         postDateLabel.text = SJSDateFormatter.shared.createNewsDateText(dateString: item.doc)
         descriptionLabel.text = item.description ?? ""
         likesLabel.text = "\(item.totalLike ?? 0) Suka"
+    }
+    
+    @objc func likeButtonTapped() {
+        delegate?.likeButtonTapped(likeStatus: item.isLikeNews ?? false, newsId: item.id ?? "")
     }
 }

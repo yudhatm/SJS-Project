@@ -120,7 +120,7 @@ class HomeMainViewController: SJSViewController, Storyboarded {
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "SJS+"
+        self.navigationItem.title = LocalizeEnum.sjsTitle.rawValue.localized()
     }
     
     func setupView() {

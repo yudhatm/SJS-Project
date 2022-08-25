@@ -115,6 +115,8 @@
 		158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D954F281945BF00C72218 /* NotificationTableViewCell.swift */; };
 		158D95522848AFD800C72218 /* RegularInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95512848AFD700C72218 /* RegularInData.swift */; };
 		158D95542848B25700C72218 /* AbsensiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95532848B25600C72218 /* AbsensiViewModel.swift */; };
+		15BC706B28B73F64003E1AD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15BC706D28B73F64003E1AD8 /* Localizable.strings */; };
+		15BC706F28B74058003E1AD8 /* LocalizeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */; };
 		15C5AC0828B4A8470022E547 /* SJSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */; };
 		15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E5190728B5F4D3009A400A /* ImageAsset.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
@@ -300,6 +302,8 @@
 		158D954F281945BF00C72218 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		158D95512848AFD700C72218 /* RegularInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularInData.swift; sourceTree = "<group>"; };
 		158D95532848B25600C72218 /* AbsensiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiViewModel.swift; sourceTree = "<group>"; };
+		15BC706C28B73F64003E1AD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeEnum.swift; sourceTree = "<group>"; };
 		15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSDateFormatter.swift; sourceTree = "<group>"; };
 		15E5190728B5F4D3009A400A /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
@@ -880,6 +884,7 @@
 				72A91B0528573CDA00904ACC /* SJSViewController.swift */,
 				15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */,
 				15E5190728B5F4D3009A400A /* ImageAsset.swift */,
+				15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -924,6 +929,14 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		15BC706828B73F3D003E1AD8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				15BC706D28B73F64003E1AD8 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		270FC24FC56342678C4102EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -955,6 +968,7 @@
 		5A87860E2783E19F005048D4 /* SJS+ Employee */ = {
 			isa = PBXGroup;
 			children = (
+				15BC706828B73F3D003E1AD8 /* Localization */,
 				7262461528AB859000DE0BCF /* Other Files */,
 				05D2D2E42837869C007A82D2 /* GoogleService-Info.plist */,
 				05D2D2F12837A96B007A82D2 /* Managers */,
@@ -1352,6 +1366,7 @@
 				5A8AD01B278CA0FA003937C2 /* Poppins-Thin.ttf in Resources */,
 				05AB0428282500B600FC523E /* NewsImageStatusTableViewCell.xib in Resources */,
 				05C8BFAD282BB7CC005DB1E4 /* BPJSCardCollectionViewCell.xib in Resources */,
+				15BC706B28B73F64003E1AD8 /* Localizable.strings in Resources */,
 				5A8AD012278CA0FA003937C2 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				5A8AD00E278CA0FA003937C2 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				05C8BFB8282BCDCD005DB1E4 /* PenggajianItemCollectionViewCell.xib in Resources */,
@@ -1549,6 +1564,7 @@
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				158D95522848AFD800C72218 /* RegularInData.swift in Sources */,
 				7262460E28AB786300DE0BCF /* MembershipView.swift in Sources */,
+				15BC706F28B74058003E1AD8 /* LocalizeEnum.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
 				727A8048288BB6D8001205C9 /* Document.swift in Sources */,
@@ -1570,6 +1586,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15BC706D28B73F64003E1AD8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BC706C28B73F64003E1AD8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5A87861E2783E1A1005048D4 /* Debug */ = {

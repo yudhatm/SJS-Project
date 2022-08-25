@@ -22,9 +22,16 @@ class NewsVideoStatusTableViewCell: UITableViewCell {
     
     var item: News! { didSet { configureView() }}
     
+    var delegate: NewsCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatarIconView.layer.cornerRadius = avatarIconView.frame.height / 2
+        likeImageView.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped))
+        likeImageView.addGestureRecognizer(tapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,5 +46,9 @@ class NewsVideoStatusTableViewCell: UITableViewCell {
         postImageView.kf.setImage(with: URL(string: item.imageUrl ?? ""))
         descriptionLabel.text = item.description ?? ""
         likesLabel.text = "\(item.totalLike ?? 0) Suka"
+    }
+    
+    @objc func likeButtonTapped() {
+        delegate?.likeButtonTapped(likeStatus: item.isLikeNews ?? false, newsId: item.id ?? "")
     }
 }

@@ -40,7 +40,7 @@ class PenggajianMainViewController: SJSViewController, Storyboarded {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Penggajian"
+        self.navigationItem.title = LocalizeEnum.penggajianTitle.rawValue.localized()
     }
 }
 

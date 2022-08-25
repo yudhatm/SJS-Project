@@ -12,6 +12,8 @@ struct ImageAsset {
     enum AssetName: String {
         case likeEmpty = "empty_heart"
         case likeFilled = "filled_heart"
+        case videoIcon = "video_icon"
+        case imageIcon = "image_icon"
     }
     
     static func getImage(_ name: AssetName) -> UIImage {

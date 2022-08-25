@@ -103,14 +103,15 @@ extension UINavigationController {
     }
 }
 
-//extension UITableViewCell {
-//    var cellIdentifier: String {
-//        return String(describing: Self.self)
-//    }
-//}
-
 extension NSObject {
     var classIdentifier: String {
         return NSStringFromClass(type(of: self))
+    }
+}
+
+extension String {
+    func localized() -> String {
+      let localizedString = NSLocalizedString(self, comment: "")
+      return localizedString
     }
 }

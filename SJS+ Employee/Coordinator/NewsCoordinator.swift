@@ -23,6 +23,12 @@ class NewsCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func goToCreatePost() {
+        let vc = CreatePostViewController.instantiate(.home)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToNewsDetail(viewModel: NewsViewModelType, item: News) {
         let vc = NewsDetailViewController.instantiate(.home)
         vc.coordinator = self

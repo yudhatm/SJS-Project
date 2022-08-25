@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SJS+ Employee
+
+  Created by Yudha on 25/08/22.
+  
+*/
+
+//MARK: - View Title
+"sjs_title" = "SJS+";
+"home_title" = "Home";
+"penggajian_title" = "Penggajian";
+"berita_title" = "Berita";
+"profile_title" = "Akun";
+"create_post_title" = "Buat Postingan";
+
+//MARK: - Create Post View
+"status_placeholder" = "Ada yang ingin diposting?";
+
+//MARK: - General Text
+"kirim" = "Kirim";

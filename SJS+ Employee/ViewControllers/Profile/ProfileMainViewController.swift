@@ -50,6 +50,7 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
     @IBOutlet weak var listTableViewHeight: NSLayoutConstraint!
     
     private let bag = DisposeBag()
+    private let userData = UserDefaultManager.shared.getUserData()
     
     var menuList: [MenuItem] = []
     var verificationList = ["Verifikasi Data",
@@ -81,8 +82,10 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
     }
     
     func setupView() {
-        self.navigationItem.title = "Akun"
+        self.navigationItem.title = LocalizeEnum.profileTitle.rawValue.localized()
         profileButtonView.layer.cornerRadius = profileButtonView.frame.height / 2
+        
+        self.usernameLabel.text = userData?.value?.name_employee ?? "User"
         
         setupRx()
     }

@@ -34,11 +34,12 @@ class NewsListViewController: SJSViewController, Storyboarded {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Berita"
+        self.navigationItem.title = LocalizeEnum.beritaTitle.rawValue.localized()
         setupRx()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        backButtonColor = .white
         viewModel?.getListBerita()
     }
     
@@ -84,6 +85,14 @@ class NewsListViewController: SJSViewController, Storyboarded {
                 }
 
                 self.coordinator?.goToNewsDetail(viewModel: viewModel, item: model)
+            })
+            .disposed(by: bag)
+        
+        newPostButton.rx.tap
+            .throttle(.seconds(2), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                self?.backButtonColor = .black
+                self?.coordinator?.goToCreatePost()
             })
             .disposed(by: bag)
         

@@ -16,6 +16,7 @@ protocol AbsensiViewModelType {
     var outletListObs: Observable<[OutletData]> { get }
     var regularInObs: Observable<JSON> { get }
     var regularOutObs: Observable<JSON> { get }
+    var reportAbsenObs: Observable<JSON> { get }
     
     var lat: Double { get set }
     var lng: Double { get set }
@@ -25,6 +26,7 @@ protocol AbsensiViewModelType {
     
     func getOutletList()
     func postRegularInOut(regularIn: Bool, parameters: [String: Any], photoData: Data, imageKeyName: String, imageFileName: String)
+    func getAbsenReport()
 }
 
 final class AbsensiViewModel: AbsensiViewModelType {
@@ -32,11 +34,13 @@ final class AbsensiViewModel: AbsensiViewModelType {
     lazy var outletListObs: Observable<[OutletData]> = outletListSubject.asObservable()
     lazy var regularInObs: Observable<JSON> = regularInSubject.asObservable()
     lazy var regularOutObs: Observable<JSON> = regularOutSubject.asObservable()
+    lazy var reportAbsenObs: Observable<JSON> = reportAbsenSubject.asObservable()
     
     var errorSubject = PublishSubject<Error>()
     var outletListSubject = PublishSubject<[OutletData]>()
     var regularInSubject = PublishSubject<JSON>()
     var regularOutSubject = PublishSubject<JSON>()
+    var reportAbsenSubject = PublishSubject<JSON>()
     
     var lat: Double = 0.0
     var lng: Double = 0.0
@@ -93,5 +97,24 @@ final class AbsensiViewModel: AbsensiViewModelType {
             print("post regular in out completed")
         })
         .disposed(by: bag)
+    }
+    
+    func getAbsenReport() {
+        if let userData = UserDefaultManager.shared.getUserData() {
+            let employeeId = userData.value?.id_employee ?? "0"
+            
+            let url = URLs.absenRepost.replacingOccurrences(of: VariableKeys.userId.rawValue, with: employeeId)
+            let obs: Observable<JSON> = NetworkManager.shared.APIRequestJSON(.get, url: url)
+            
+            obs.subscribe(onNext: { data in
+                self.reportAbsenSubject.onNext(data)
+            }, onError: { error in
+                print("error: \(error.localizedDescription)")
+                self.errorSubject.onNext(error)
+            }, onCompleted: {
+                print("get absen report completed")
+            })
+            .disposed(by: bag)
+        }
     }
 }

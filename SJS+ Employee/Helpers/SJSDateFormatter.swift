@@ -43,4 +43,40 @@ class SJSDateFormatter {
         
         return timeText
     }
+    
+    func createSlipGajiMonths() -> [String] {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "id")
+        
+        let diffComponents = Calendar.current.dateComponents([.year], from: Date())
+        let monthsArray = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+        var array: [String] = []
+        
+        for item in monthsArray {
+            array.append("\(item)" + " \(diffComponents.year ?? 1970)")
+        }
+        
+        return array
+    }
+    
+    func createMonthYearString(date: Date) -> String {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "id")
+        df.dateFormat = "MMMM yyyy"
+        
+        return df.string(from: date)
+    }
+    
+    ///Date Format = MMMM yyyy,
+    ///Returns M yyyy
+    func convertMonthYearString(str: String) -> String {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "id")
+        df.dateFormat = "MMMM yyyy"
+        
+        let date = df.date(from: str)
+        
+        df.dateFormat = "M yyyy"
+        return df.string(from: date ?? Date())
+    }
 }

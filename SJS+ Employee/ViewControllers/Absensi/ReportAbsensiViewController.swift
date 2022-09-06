@@ -7,16 +7,21 @@
 
 import UIKit
 import JTAppleCalendar
+import RxSwift
+import RxCocoa
+import ProgressHUD
+import SwiftyJSON
 
 class ReportAbsensiViewController: SJSViewController, Storyboarded {
     weak var coordinator: HomeCoordinator?
+    var viewModel: AbsensiViewModelType?
     
     @IBOutlet weak var calendarView: JTAppleCalendarView! {
         didSet {
             calendarView.ibCalendarDelegate = self
             calendarView.ibCalendarDataSource = self
             
-            calendarView.register(UINib(nibName: "DateCell", bundle: nil), forCellWithReuseIdentifier: DateCell.identifier)
+            calendarView.register(UINib(nibName: DateCell.identifier, bundle: nil), forCellWithReuseIdentifier: DateCell.identifier)
         }
     }
     
@@ -27,7 +32,7 @@ class ReportAbsensiViewController: SJSViewController, Storyboarded {
             statsTableView.estimatedRowHeight = 200
             statsTableView.rowHeight = UITableView.automaticDimension
             
-            statsTableView.register(UINib(nibName: "StatsCell", bundle: nil), forCellReuseIdentifier: StatsCell.identifier)
+            statsTableView.register(UINib(nibName: StatsCell.identifier, bundle: nil), forCellReuseIdentifier: StatsCell.identifier)
         }
     }
     
@@ -35,15 +40,50 @@ class ReportAbsensiViewController: SJSViewController, Storyboarded {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
     
+    var bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.calendarView.scrollToDate(Date())
+        setupView()
+        
+        viewModel?.getAbsenReport()
+    }
+    
+    override func viewDidLayoutSubviews() {
+    }
+    
+    func setupView() {
+        self.title = LocalizeEnum.reportAbsensiTitle.rawValue.localized()
         
         nextButton.addTarget(self, action: #selector(scrollToNextMonth), for: .touchUpInside)
         prevButton.addTarget(self, action: #selector(scrollToPrevMonth), for: .touchUpInside)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.calendarView.scrollToDate(Date())
+    func setupRx() {
+        viewModel?.reportAbsenObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { data in
+                ProgressHUD.dismiss()
+                self.configureView(data: data)
+            })
+            .disposed(by: bag)
+        
+        viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
+            })
+            .disposed(by: bag)
+    }
+    
+    func configureView(data: JSON) {
+        //TODO: Populate data to calendar and others
     }
     
     @objc func scrollToNextMonth() {
@@ -109,11 +149,25 @@ extension ReportAbsensiViewController: UITableViewDelegate {
 
 extension ReportAbsensiViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StatsCell.identifier, for: indexPath) as! StatsCell
+        
+        switch indexPath.row {
+        case 0:
+            cell.titleLabel.text = LocalizeEnum.absensiTerlambat.rawValue.localized()
+            
+        case 1:
+            cell.titleLabel.text = LocalizeEnum.totalJamKerja.rawValue.localized()
+            
+        case 2:
+            cell.titleLabel.text = LocalizeEnum.sisaCuti.rawValue.localized()
+            
+        default:
+            break
+        }
         
         return cell
     }

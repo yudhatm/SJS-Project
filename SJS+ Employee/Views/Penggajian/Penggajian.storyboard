@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -147,6 +147,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardBankNameLabel" destination="0x5-fs-EjY" id="8FZ-Yf-Hvg"/>
+                        <outlet property="cardNumberLabel" destination="9Nw-gR-H9S" id="5Tp-92-aSS"/>
+                        <outlet property="cardOwnerNameLabel" destination="YsN-6x-E5u" id="FsY-x0-bvv"/>
                         <outlet property="itemsCollectionView" destination="lpb-Fe-DOS" id="uq4-xN-SFG"/>
                     </connections>
                 </viewController>
@@ -251,6 +254,11 @@
                             <constraint firstItem="8b8-5U-fx7" firstAttribute="leading" secondItem="G1s-wN-x9E" secondAttribute="leading" constant="20" id="woM-k8-S29"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bulanTextField" destination="IFM-cw-OPQ" id="kEl-9W-2nU"/>
+                        <outlet property="slipGajiImage" destination="NWH-Vw-ByL" id="K4D-qu-F6q"/>
+                        <outlet property="submitButton" destination="ecL-hK-ehl" id="0Cx-f2-2k5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8OE-ux-dFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

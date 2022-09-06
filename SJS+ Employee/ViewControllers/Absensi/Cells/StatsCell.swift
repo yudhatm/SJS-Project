@@ -19,6 +19,8 @@ class StatsCell: UITableViewCell {
     @IBOutlet weak var totalAbsenLabel: UILabel!
     
     let pieLayer = PieLayer()
+    let pieBlueColor = UIColor(hexaRGB: "#5B9BD5")
+    let pieOrangeColor = UIColor(hexaRGB: "#ED8138")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +44,7 @@ class StatsCell: UITableViewCell {
         pieLayer.frame = CGRect(x: 0, y: 0, width: 100.0, height: 100.0)
         self.pieChartView.layer.addSublayer(pieLayer)
         
-        pieLayer.addValues([PieElement(value: 5.0, color: UIColor.red)!,
-                            PieElement(value: 4.0, color: UIColor.blue)!], animated: true)
+        pieLayer.addValues([PieElement(value: 5.0, color: pieBlueColor)!,
+                            PieElement(value: 4.0, color: pieOrangeColor)!], animated: true)
     }
 }

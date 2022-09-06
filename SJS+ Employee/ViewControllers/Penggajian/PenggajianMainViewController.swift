@@ -10,6 +10,9 @@ import UIKit
 class PenggajianMainViewController: SJSViewController, Storyboarded {
     var coordinator: PenggajianCoordinator?
     
+    @IBOutlet weak var cardBankNameLabel: UILabel!
+    @IBOutlet weak var cardNumberLabel: UILabel!
+    @IBOutlet weak var cardOwnerNameLabel: UILabel!
     @IBOutlet weak var itemsCollectionView: UICollectionView! {
         didSet {
             itemsCollectionView.delegate = self
@@ -42,6 +45,18 @@ class PenggajianMainViewController: SJSViewController, Storyboarded {
         // Do any additional setup after loading the view.
         self.navigationItem.title = LocalizeEnum.penggajianTitle.rawValue.localized()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
+    }
+    
+    func setupView() {
+        guard let userData = UserDefaultManager.shared.getUserData() else { return }
+        
+        cardBankNameLabel.text = userData.value?.name_bank ?? ""
+        cardNumberLabel.text = userData.value?.account_number_bank
+        cardOwnerNameLabel.text = userData.value?.name_employee
+    }
 }
 
 extension PenggajianMainViewController: UICollectionViewDelegate {
@@ -61,6 +76,12 @@ extension PenggajianMainViewController: UICollectionViewDataSource {
         cell.menuLabel.text = item.title
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.coordinator?.goToSlipGajiView()
+        }
     }
 }
 

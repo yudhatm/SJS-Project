@@ -25,4 +25,11 @@ class PenggajianCoordinator: Coordinator {
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }
+    
+    func goToSlipGajiView() {
+        let vc = SlipGajiViewController.instantiate(.penggajian)
+        vc.coordinator = self
+        vc.viewModel = PenggajianViewModel()
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

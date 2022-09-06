@@ -53,7 +53,7 @@ class NetworkManager {
                             observer.onCompleted()
                         }
                         else {
-                            observer.onError(NSError(domain: "networkError", code: responseData.response?.statusCode ?? -1, userInfo: nil))
+                            observer.onError(NSError(domain: "networkError", code: responseData.response?.statusCode ?? -1, userInfo: ["data": JSON(value)]))
                         }
                         
                     case .failure(let error):
@@ -89,7 +89,7 @@ class NetworkManager {
                             observer.onCompleted()
                         }
                         else {
-                            observer.onError(NSError(domain: "networkError", code: responseData.response?.statusCode ?? -1, userInfo: nil))
+                            observer.onError(NSError(domain: "networkError", code: responseData.response?.statusCode ?? -1, userInfo: ["data": value]))
                         }
                         
                     case .failure(let error):

@@ -34,17 +34,21 @@ public struct Constants {
         static let newMenuUrl = baseURL + users + "menuapp/home/{{id_customer}}/{{id_user}}"
         static let newProfileMenuUrl = baseURL + users + "menuapp/account/{{id_customer}}/{{id_user}}"
         static let absenRegularIn = baseURL + users + "absen/insert"
+        static let absenRepost = baseURL + users + "absenreport/{{id_user}}"
         static let pengajuan = baseURL + users + "sakit/{{id_user}}"
         static let insertPengajuan = baseURL + users + "sakitinsert"
         static let documents = baseURL + users + "doclist/{{id_user}}"
         static let insertDocument = baseURL + users + "doc"
         static let listBerita = baseURL + users + "berita/{{id_user}}//0"
         static let likeBerita = baseURL + users + "likeberita"
+        static let slipGaji = baseURL + users + "slipgaji/{{id_user}}/{{month}}/{{year}}"
     }
     
     public enum VariableKeys: String {
         case customerId = "{{id_customer}}"
         case userId = "{{id_user}}"
+        case month = "{{month}}"
+        case year = "{{year}}"
     }
     
     public struct ViewSize {

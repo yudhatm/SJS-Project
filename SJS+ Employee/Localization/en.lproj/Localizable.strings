@@ -13,9 +13,19 @@
 "berita_title" = "Berita";
 "profile_title" = "Akun";
 "create_post_title" = "Buat Postingan";
+"slip_gaji_title" = "Slip Gaji";
 
 //MARK: - Create Post View
 "status_placeholder" = "Ada yang ingin diposting?";
+
+//MARK: - Report Absensi
+"report_absensi_title" = "Report Absensi";
+"absensi_terlambat" = "Absensi Terlambat";
+"total_jam_kerja" = "Total Jam Kerja";
+"sisa_cuti" = "Sisa Cuti";
+
+//MARK: - Slip Gaji
+"unduh_slip" = "Unduh Slip";
 
 //MARK: - General Text
 "kirim" = "Kirim";

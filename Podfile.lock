@@ -52,6 +52,7 @@ PODS:
   - IQKeyboardManagerSwift (6.5.10)
   - JTAppleCalendar (7.1.8)
   - Kingfisher (7.2.2)
+  - LTHRadioButton (1.2.3)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -82,6 +83,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - JTAppleCalendar (~> 7.1)
   - Kingfisher (~> 7.0)
+  - LTHRadioButton
   - netfox
   - ProgressHUD
   - PureLayout
@@ -110,6 +112,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - JTAppleCalendar
     - Kingfisher
+    - LTHRadioButton
     - nanopb
     - netfox
     - ProgressHUD
@@ -140,6 +143,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  LTHRadioButton: b20980614572f7911272a6b8aa79ec0fdc9a74d4
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
@@ -151,6 +155,6 @@ SPEC CHECKSUMS:
   Sevruk-PageControl: d2a17eeef35fc18eebd119fc9a3871a9ff347508
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 64472756c752048b072023181a8a2db9c3b7e115
+PODFILE CHECKSUM: 4e1392dbd0c173b0918141003c864927b969c45f
 
 COCOAPODS: 1.11.2

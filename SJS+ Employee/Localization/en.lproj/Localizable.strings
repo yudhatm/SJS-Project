@@ -14,6 +14,7 @@
 "profile_title" = "Akun";
 "create_post_title" = "Buat Postingan";
 "slip_gaji_title" = "Slip Gaji";
+"survey_title" = "Survey";
 
 //MARK: - Create Post View
 "status_placeholder" = "Ada yang ingin diposting?";

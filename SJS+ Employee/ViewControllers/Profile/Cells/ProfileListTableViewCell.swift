@@ -14,6 +14,12 @@ class ProfileListTableViewCell: UITableViewCell {
     @IBOutlet weak var menuIcon: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var item: MenuItem! {
+        didSet {
+            setupView()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,12 +31,12 @@ class ProfileListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(_ menuData: MenuItem) {
-        if let url = URL(string: menuData.icon ?? "") {
+    func setupView() {
+        if let url = URL(string: item.icon ?? "") {
             self.menuIcon.kf.setImage(with: url)
         }
         
-        self.titleLabel.text = menuData.menuName ?? ""
+        self.titleLabel.text = item.menuName ?? ""
     }
 
 }

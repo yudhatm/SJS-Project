@@ -119,6 +119,9 @@
 		15BC706B28B73F64003E1AD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15BC706D28B73F64003E1AD8 /* Localizable.strings */; };
 		15BC706F28B74058003E1AD8 /* LocalizeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */; };
 		15C5AC0828B4A8470022E547 /* SJSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */; };
+		15C7F36628C9B54A00A28EF9 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7F36528C9B54A00A28EF9 /* SurveyViewController.swift */; };
+		15C7F36828C9BDAF00A28EF9 /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7F36728C9BDAF00A28EF9 /* SurveyCell.swift */; };
+		15C7F36A28C9BDDA00A28EF9 /* SurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7F36928C9BDDA00A28EF9 /* SurveyCell.xib */; };
 		15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E5190728B5F4D3009A400A /* ImageAsset.swift */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
@@ -307,6 +310,9 @@
 		15BC706C28B73F64003E1AD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeEnum.swift; sourceTree = "<group>"; };
 		15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSDateFormatter.swift; sourceTree = "<group>"; };
+		15C7F36528C9B54A00A28EF9 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		15C7F36728C9BDAF00A28EF9 /* SurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCell.swift; sourceTree = "<group>"; };
+		15C7F36928C9BDDA00A28EF9 /* SurveyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyCell.xib; sourceTree = "<group>"; };
 		15E5190728B5F4D3009A400A /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
 		3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.release.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.release.xcconfig"; sourceTree = "<group>"; };
@@ -601,6 +607,7 @@
 				05C67767282A4F110060C87B /* ProfileVerificationCollectionViewCell.xib */,
 				05C8BFA6282BAEFA005DB1E4 /* EditProfileTableViewCell.xib */,
 				05C8BFAC282BB7CC005DB1E4 /* BPJSCardCollectionViewCell.xib */,
+				15C7F36928C9BDDA00A28EF9 /* SurveyCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -612,6 +619,7 @@
 				05C6776F282A507E0060C87B /* ProfileMainViewController.swift */,
 				05C8BFA4282BAECC005DB1E4 /* EditProfileViewController.swift */,
 				05C8BFAA282BB256005DB1E4 /* ChangePasswordViewController.swift */,
+				15C7F36528C9B54A00A28EF9 /* SurveyViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -623,6 +631,7 @@
 				05C6776D282A50120060C87B /* ProfileVerificationCollectionViewCell.swift */,
 				05C8BFA8282BAFCB005DB1E4 /* EditProfileTableViewCell.swift */,
 				05C8BFAE282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift */,
+				15C7F36728C9BDAF00A28EF9 /* SurveyCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1359,6 +1368,7 @@
 				05C67763282A42010060C87B /* Profile.storyboard in Resources */,
 				5A8AD017278CA0FA003937C2 /* Poppins-Regular.ttf in Resources */,
 				7262461328AB84EA00DE0BCF /* ConfirmationPaymentView.xib in Resources */,
+				15C7F36A28C9BDDA00A28EF9 /* SurveyCell.xib in Resources */,
 				05BDCBE0281BDE100092A8A3 /* PromoListTableViewCell.xib in Resources */,
 				05DD81B1282D04B1006CC967 /* LeaveRequestListTableViewCell.xib in Resources */,
 				5A8AD00D278CA0FA003937C2 /* Poppins-ThinItalic.ttf in Resources */,
@@ -1493,6 +1503,7 @@
 				15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
 				05AB043528250A0700FC523E /* NewsDetailViewController.swift in Sources */,
+				15C7F36828C9BDAF00A28EF9 /* SurveyCell.swift in Sources */,
 				05C9C813283522640077F71D /* StatsCell.swift in Sources */,
 				05CB89F328339AAA00E917D4 /* InfoPlistParser.swift in Sources */,
 				720AB9FC287552B1005C63B5 /* MenuItem.swift in Sources */,
@@ -1566,6 +1577,7 @@
 				727A804D288BE11E001205C9 /* LeaveRequestViewModel.swift in Sources */,
 				05DD81B3282D0738006CC967 /* LeaveFormViewController.swift in Sources */,
 				05CB89FF2833AADD00E917D4 /* AbsensiKunjunganViewController.swift in Sources */,
+				15C7F36628C9B54A00A28EF9 /* SurveyViewController.swift in Sources */,
 				72A91B1628588E3F00904ACC /* EmbeddedCollectionViewCell.swift in Sources */,
 				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,

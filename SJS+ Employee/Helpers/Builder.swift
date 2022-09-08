@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LTHRadioButton
 
 struct OverlayBuilder {
     static func createOverlayPicker() -> OverlayPickerViewController {
@@ -25,5 +26,11 @@ struct OverlayBuilder {
     
     static func createErrorAlert(message: String) -> UIAlertController {
         return createSimpleAlert(title: "Error", message: message, handler: nil)
+    }
+    
+    static func createRadioButton() -> LTHRadioButton {
+        let radioButton = LTHRadioButton(selectedColor: UIColor.appColor(.sjsOrange), deselectedColor: UIColor.appColor(.sjsTextGrey))
+        
+        return radioButton
     }
 }

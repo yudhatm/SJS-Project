@@ -126,7 +126,13 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
 }
 
 extension ProfileMainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ProfileListTableViewCell else { return }
+        
+        if let name = cell.item.menuName, name.contains("Survey") {
+            self.coordinator?.goToSurvey()
+        }
+    }
 }
 
 extension ProfileMainViewController: UITableViewDataSource {
@@ -138,7 +144,7 @@ extension ProfileMainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileListTableViewCell.identifier) as! ProfileListTableViewCell
         
         let item = menuList[indexPath.row]
-        cell.setup(item)
+        cell.item = item
         
         return cell
     }

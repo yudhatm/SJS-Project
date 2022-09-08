@@ -17,6 +17,7 @@ target 'SJS+ Employee' do
   pod 'IQKeyboardManagerSwift'
   pod 'JTAppleCalendar', '~> 7.1'
   pod 'Kingfisher', '~> 7.0'
+  pod 'LTHRadioButton'
   pod 'netfox'
   pod 'PureLayout'
   pod 'ProgressHUD'

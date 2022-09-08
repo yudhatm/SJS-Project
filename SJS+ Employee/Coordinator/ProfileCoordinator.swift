@@ -26,4 +26,9 @@ class ProfileCoordinator: Coordinator {
     func showAlert(_ controller: UIAlertController) {
         navigationController.present(controller, animated: true, completion: nil)
     }
+    
+    func goToSurvey() {
+        let vc = SurveyViewController.instantiate(.profile)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

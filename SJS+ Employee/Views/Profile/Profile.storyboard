@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -52,7 +52,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhi-9t-EJT">
-                                                <rect key="frame" x="141" y="172.5" width="132" height="40"/>
+                                                <rect key="frame" x="138.5" y="172.5" width="137" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil Saya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiJ-qC-4hz">
                                                         <rect key="frame" x="20" y="10" width="74" height="20"/>
@@ -61,10 +61,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_no_tail_right" translatesAutoresizingMaskIntoConstraints="NO" id="IOX-5G-nnv">
-                                                        <rect key="frame" x="102" y="15" width="10" height="10"/>
+                                                        <rect key="frame" x="102" y="12.5" width="15" height="15"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="Glq-d9-JhM"/>
-                                                            <constraint firstAttribute="width" constant="10" id="I7B-F8-ZhJ"/>
+                                                            <constraint firstAttribute="height" constant="15" id="Glq-d9-JhM"/>
+                                                            <constraint firstAttribute="width" constant="15" id="I7B-F8-ZhJ"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
@@ -309,7 +310,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="KD9-9Y-Cdt">
-                                <rect key="frame" x="158.5" y="252" width="97.5" height="26"/>
+                                <rect key="frame" x="138.5" y="252" width="137.5" height="26"/>
                                 <color key="pageIndicatorTintColor" name="SJSAccentColor"/>
                             </pageControl>
                         </subviews>
@@ -331,6 +332,161 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2N-Cw-NhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-804" y="743"/>
+        </scene>
+        <!--Survey View Controller-->
+        <scene sceneID="QDc-4d-7K3">
+            <objects>
+                <viewController storyboardIdentifier="SurveyViewController" id="9qy-s9-0RI" customClass="SurveyViewController" customModule="SJS__Employee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GOg-dw-2vK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-ll-Jlj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9g-s5-zyY" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="469"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBS-W6-es1">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey Tahap 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ris-Ef-fYE">
+                                                        <rect key="frame" x="20" y="20" width="105.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soal Sudah Diisi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAO-6F-EwD">
+                                                        <rect key="frame" x="20" y="60" width="94.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tIX-31-Gac">
+                                                        <rect key="frame" x="20" y="81" width="374" height="4"/>
+                                                        <color key="tintColor" name="SJSAccentColor"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-pq-zM0">
+                                                        <rect key="frame" x="362" y="60" width="32" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="SJSAccentColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="tIX-31-Gac" secondAttribute="bottom" constant="20" id="1Dp-wU-dOe"/>
+                                                    <constraint firstItem="tIX-31-Gac" firstAttribute="top" secondItem="uAO-6F-EwD" secondAttribute="bottom" constant="4" id="9Pm-R7-Gs7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tIX-31-Gac" secondAttribute="trailing" constant="20" id="JLP-Fz-Aib"/>
+                                                    <constraint firstItem="uAO-6F-EwD" firstAttribute="leading" secondItem="RBS-W6-es1" secondAttribute="leading" constant="20" id="RdR-2Z-cnL"/>
+                                                    <constraint firstItem="ris-Ef-fYE" firstAttribute="top" secondItem="RBS-W6-es1" secondAttribute="top" constant="20" id="S7h-Em-kdv"/>
+                                                    <constraint firstItem="ris-Ef-fYE" firstAttribute="leading" secondItem="RBS-W6-es1" secondAttribute="leading" constant="20" id="XlU-Hk-1aa"/>
+                                                    <constraint firstItem="tIX-31-Gac" firstAttribute="leading" secondItem="RBS-W6-es1" secondAttribute="leading" constant="20" id="dtA-fd-Amc"/>
+                                                    <constraint firstItem="uAO-6F-EwD" firstAttribute="top" secondItem="ris-Ef-fYE" secondAttribute="bottom" constant="20" id="pzJ-oN-SFC"/>
+                                                    <constraint firstItem="tIX-31-Gac" firstAttribute="top" secondItem="gaj-pq-zM0" secondAttribute="bottom" constant="4" id="smd-2U-w4c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gaj-pq-zM0" secondAttribute="trailing" constant="20" id="xxz-8n-n26"/>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P7k-pl-pQq">
+                                                <rect key="frame" x="0.0" y="105" width="414" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="eCQ-HF-wBa"/>
+                                                </constraints>
+                                            </tableView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-Wd-Nkg">
+                                                <rect key="frame" x="20" y="325" width="374" height="124"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJw-QP-jux" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="hJQ-Vc-zfl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Simpan Perubahan"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" name="SJSAccentColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-II-DoV" customClass="SJSButton" customModule="SJS__Employee" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="69" width="374" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="EbC-gv-Z2K"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="SJSAccentColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Kembali"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColors">
+                                                                <color key="value" name="SJSAccentColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="P7k-pl-pQq" secondAttribute="trailing" id="4OW-vK-IsQ"/>
+                                            <constraint firstItem="Zma-Wd-Nkg" firstAttribute="leading" secondItem="p9g-s5-zyY" secondAttribute="leading" constant="20" id="6sd-tj-Eep"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zma-Wd-Nkg" secondAttribute="trailing" constant="20" id="8xZ-EZ-uKh"/>
+                                            <constraint firstItem="Zma-Wd-Nkg" firstAttribute="top" secondItem="P7k-pl-pQq" secondAttribute="bottom" constant="20" id="NEy-iv-LWh"/>
+                                            <constraint firstItem="P7k-pl-pQq" firstAttribute="top" secondItem="RBS-W6-es1" secondAttribute="bottom" id="a3G-7F-cMv"/>
+                                            <constraint firstItem="RBS-W6-es1" firstAttribute="leading" secondItem="p9g-s5-zyY" secondAttribute="leading" id="bPm-Xb-MaO"/>
+                                            <constraint firstAttribute="trailing" secondItem="RBS-W6-es1" secondAttribute="trailing" id="lzf-27-Qfz"/>
+                                            <constraint firstItem="RBS-W6-es1" firstAttribute="top" secondItem="p9g-s5-zyY" secondAttribute="top" id="rCS-RJ-GI6"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zma-Wd-Nkg" secondAttribute="bottom" constant="20" id="rrc-uZ-VvS"/>
+                                            <constraint firstItem="P7k-pl-pQq" firstAttribute="leading" secondItem="p9g-s5-zyY" secondAttribute="leading" id="vq5-cD-WhG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="p9g-s5-zyY" firstAttribute="leading" secondItem="6sc-ll-Jlj" secondAttribute="leading" id="149-Lo-yNG"/>
+                                    <constraint firstAttribute="trailing" secondItem="p9g-s5-zyY" secondAttribute="trailing" id="GcN-v8-U3j"/>
+                                    <constraint firstItem="p9g-s5-zyY" firstAttribute="top" secondItem="6sc-ll-Jlj" secondAttribute="top" id="Wgt-rt-cui"/>
+                                    <constraint firstAttribute="bottom" secondItem="p9g-s5-zyY" secondAttribute="bottom" id="gF3-xj-aQy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="xTw-Ai-ni8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Vt6-kH-dLg"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Sz-N8-w7U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p9g-s5-zyY" firstAttribute="width" secondItem="GOg-dw-2vK" secondAttribute="width" id="6dF-aY-DGH"/>
+                            <constraint firstItem="6sc-ll-Jlj" firstAttribute="leading" secondItem="8Sz-N8-w7U" secondAttribute="leading" id="Oj1-MY-eYa"/>
+                            <constraint firstItem="8Sz-N8-w7U" firstAttribute="trailing" secondItem="6sc-ll-Jlj" secondAttribute="trailing" id="PTh-mu-cM6"/>
+                            <constraint firstItem="6sc-ll-Jlj" firstAttribute="top" secondItem="8Sz-N8-w7U" secondAttribute="top" id="XNb-FZ-5YR"/>
+                            <constraint firstItem="8Sz-N8-w7U" firstAttribute="bottom" secondItem="6sc-ll-Jlj" secondAttribute="bottom" id="aIb-V4-V60"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="SJw-QP-jux" id="jgC-XP-Rjg"/>
+                        <outlet property="previousButton" destination="VL5-II-DoV" id="Jfm-oq-WSH"/>
+                        <outlet property="progressView" destination="tIX-31-Gac" id="j6i-dh-xWz"/>
+                        <outlet property="surveyCounterLabel" destination="gaj-pq-zM0" id="8ac-um-9cS"/>
+                        <outlet property="surveyStepLabel" destination="ris-Ef-fYE" id="1nB-fL-ceG"/>
+                        <outlet property="tableView" destination="P7k-pl-pQq" id="ryT-yd-CE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JW-T5-q1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="742.63392857142856"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="Xd0-s9-Ukt">
@@ -590,8 +746,14 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="SJw-QP-jux">
+            <size key="intrinsicContentSize" width="178" height="26"/>
+        </designable>
+        <designable name="VL5-II-DoV">
+            <size key="intrinsicContentSize" width="77" height="26"/>
+        </designable>
         <designable name="hLT-dy-B6O">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="178" height="26"/>
         </designable>
     </designables>
     <resources>

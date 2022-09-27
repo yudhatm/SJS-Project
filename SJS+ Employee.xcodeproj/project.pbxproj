@@ -96,6 +96,8 @@
 		05E1B48E283E3C0400D7E7C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E1B48D283E3C0400D7E7C8 /* HomeViewModel.swift */; };
 		05E1B491283E441B00D7E7C8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E1B490283E441B00D7E7C8 /* Menu.swift */; };
 		05E1B493283E4F0A00D7E7C8 /* DecodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E1B492283E4F0A00D7E7C8 /* DecodeHelper.swift */; };
+		1503940428E3048900CA8E30 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940328E3048800CA8E30 /* SurveyQuestion.swift */; };
+		1503940628E3081400CA8E30 /* SurveyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940528E3081400CA8E30 /* SurveyData.swift */; };
 		15389CAA28C71D6800A441ED /* PenggajianViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15389CA928C71D6800A441ED /* PenggajianViewModel.swift */; };
 		158D95282813E23700C72218 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158D95272813E23700C72218 /* Onboarding.storyboard */; };
 		158D952A2813E56100C72218 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */; };
@@ -118,6 +120,7 @@
 		158D95542848B25700C72218 /* AbsensiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D95532848B25600C72218 /* AbsensiViewModel.swift */; };
 		15B132B728DC48A100E34AB1 /* ChoiceRadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B132B628DC48A000E34AB1 /* ChoiceRadioView.xib */; };
 		15B132B928DC496900E34AB1 /* ChoiceRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B132B828DC496900E34AB1 /* ChoiceRadioView.swift */; };
+		15B132BB28E2F22200E34AB1 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B132BA28E2F22200E34AB1 /* SurveyViewModel.swift */; };
 		15BC706B28B73F64003E1AD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15BC706D28B73F64003E1AD8 /* Localizable.strings */; };
 		15BC706F28B74058003E1AD8 /* LocalizeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */; };
 		15C5AC0828B4A8470022E547 /* SJSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */; };
@@ -289,6 +292,8 @@
 		05E1B48D283E3C0400D7E7C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		05E1B490283E441B00D7E7C8 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		05E1B492283E4F0A00D7E7C8 /* DecodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeHelper.swift; sourceTree = "<group>"; };
+		1503940328E3048800CA8E30 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
+		1503940528E3081400CA8E30 /* SurveyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyData.swift; sourceTree = "<group>"; };
 		15389CA928C71D6800A441ED /* PenggajianViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianViewModel.swift; sourceTree = "<group>"; };
 		158D95272813E23700C72218 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -311,6 +316,7 @@
 		158D95532848B25600C72218 /* AbsensiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsensiViewModel.swift; sourceTree = "<group>"; };
 		15B132B628DC48A000E34AB1 /* ChoiceRadioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceRadioView.xib; sourceTree = "<group>"; };
 		15B132B828DC496900E34AB1 /* ChoiceRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceRadioView.swift; sourceTree = "<group>"; };
+		15B132BA28E2F22200E34AB1 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 		15BC706C28B73F64003E1AD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeEnum.swift; sourceTree = "<group>"; };
 		15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSDateFormatter.swift; sourceTree = "<group>"; };
@@ -484,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				05B205602840EA5400564615 /* ProfileMainViewModel.swift */,
+				15B132BA28E2F22200E34AB1 /* SurveyViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -846,6 +853,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		1503940228E3046F00CA8E30 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				1503940528E3081400CA8E30 /* SurveyData.swift */,
+				1503940328E3048800CA8E30 /* SurveyQuestion.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
 		15389CA828C71D5700A441ED /* Penggajian */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +905,7 @@
 				05B2055E2840EA2B00564615 /* Profile */,
 				05E1B48F283E440F00D7E7C8 /* Home */,
 				05D2D2FA2837AFC9007A82D2 /* Authentication */,
+				1503940228E3046F00CA8E30 /* Survey */,
 				158D95302813E7C400C72218 /* OnboardingSlide.swift */,
 				05A6B9F928167CA600EEFBF4 /* MainMenu.swift */,
 				720AB9FB287552B1005C63B5 /* MenuItem.swift */,
@@ -1506,6 +1523,7 @@
 				158D9550281945BF00C72218 /* NotificationTableViewCell.swift in Sources */,
 				05BDCBD1281BC2070092A8A3 /* OverlayPickerViewController.swift in Sources */,
 				05D2D2F92837ACA5007A82D2 /* SignInViewModel.swift in Sources */,
+				1503940428E3048900CA8E30 /* SurveyQuestion.swift in Sources */,
 				05A6B9FA28167CA600EEFBF4 /* MainMenu.swift in Sources */,
 				15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */,
 				158D952E2813E6A600C72218 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -1529,6 +1547,7 @@
 				05BDCBDA281BD42D0092A8A3 /* HomeDetailNotificationViewController.swift in Sources */,
 				05C8BFB5282BCCDF005DB1E4 /* PenggajianMainViewController.swift in Sources */,
 				72A91B1828598D7600904ACC /* PenggajianMenuSectionController.swift in Sources */,
+				1503940628E3081400CA8E30 /* SurveyData.swift in Sources */,
 				727A804F288BE1C1001205C9 /* LeaveRequest.swift in Sources */,
 				7262461428AB84EA00DE0BCF /* ConfirmationPaymentView.swift in Sources */,
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
@@ -1561,6 +1580,7 @@
 				05C6776E282A50120060C87B /* ProfileVerificationCollectionViewCell.swift in Sources */,
 				05CB89F928339F2A00E917D4 /* AbsensiMainViewController.swift in Sources */,
 				05BD27FA28127D8F00B06463 /* Coordinator.swift in Sources */,
+				15B132BB28E2F22200E34AB1 /* SurveyViewModel.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				05D2D2EF28378F4A007A82D2 /* NSMutableArray+pieEx.m in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,

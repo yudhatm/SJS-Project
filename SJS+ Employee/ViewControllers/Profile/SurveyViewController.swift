@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import ProgressHUD
 
 class SurveyViewController: SJSViewController, Storyboarded {
-
+    var coordinator: ProfileCoordinator?
+    var viewModel: SurveyViewModelType?
+    
     @IBOutlet weak var surveyStepLabel: UILabel!
     @IBOutlet weak var surveyCounterLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
@@ -25,12 +29,24 @@ class SurveyViewController: SJSViewController, Storyboarded {
             tableView.register(surveyCell, forCellReuseIdentifier: SurveyCell.identifier)
         }
     }
+    
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var nextButton: SJSButton!
     @IBOutlet weak var previousButton: SJSButton!
     
-    var answerList = [["1", "2", "3"], ["One", "Two", "Three"]]
+    var bag = DisposeBag()
+    var currentPage = 1
+    
+    var surveyQuestions: [SurveyQuestion] = [] {
+        didSet {
+            tableView.reloadData()
+            self.adjustViewsHeight()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.adjustViewsHeight()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +56,8 @@ class SurveyViewController: SJSViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         setupView()
+        setupRx()
+        viewModel?.getSurveyData(page: currentPage)
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,8 +70,27 @@ class SurveyViewController: SJSViewController, Storyboarded {
     
     func adjustViewsHeight() {
         let height = tableView.contentSize.height
-        tableViewHeight.constant = height
+        tableViewHeight.constant = height + 8
         self.view.layoutSubviews()
+    }
+    
+    func setupRx() {
+        viewModel?.surveyDataObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { data in
+                ProgressHUD.dismiss()
+                self.surveyQuestions = data.pertanyaan
+            })
+            .disposed(by: bag)
+        
+        viewModel?.errorObs
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { error in
+                ProgressHUD.dismiss()
+                let errorAc = OverlayBuilder.createErrorAlert(message: error.localizedDescription)
+                self.coordinator?.showAlert(errorAc)
+            })
+            .disposed(by: bag)
     }
 }
 
@@ -63,14 +100,15 @@ extension SurveyViewController: UITableViewDelegate {
 
 extension SurveyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return answerList.count
+        return surveyQuestions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SurveyCell.identifier, for: indexPath) as! SurveyCell
         
-        let list = answerList[indexPath.row]
-        cell.answerList = list
+        let list = surveyQuestions[indexPath.row]
+        cell.questionLabel.text = "\(indexPath.row + 1). \(list.pertanyaan ?? "")"
+        cell.answerList = list.jawaban ?? []
         cell.setupCell()
         
         return cell

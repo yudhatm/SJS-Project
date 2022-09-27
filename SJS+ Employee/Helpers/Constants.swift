@@ -42,6 +42,7 @@ public struct Constants {
         static let listBerita = baseURL + users + "berita/{{id_user}}//0"
         static let likeBerita = baseURL + users + "likeberita"
         static let slipGaji = baseURL + users + "slipgaji/{{id_user}}/{{month}}/{{year}}"
+        static let surveyPage = baseURL + "survey/tahap{{page}}"
     }
     
     public enum VariableKeys: String {
@@ -49,6 +50,7 @@ public struct Constants {
         case userId = "{{id_user}}"
         case month = "{{month}}"
         case year = "{{year}}"
+        case page = "{{page}}"
     }
     
     public struct ViewSize {

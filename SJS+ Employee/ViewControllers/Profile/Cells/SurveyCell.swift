@@ -14,7 +14,7 @@ class SurveyCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    var answerList: [String] = []
+    var answerList: [SurveyAnswer] = []
     var radioButtonList: [LTHRadioButton] = []
     
     override func awakeFromNib() {
@@ -33,11 +33,13 @@ class SurveyCell: UITableViewCell {
             let choiceView: ChoiceRadioView = .fromNib()
             stackView.addArrangedSubview(choiceView)
             choiceView.setupRadioButton()
-            choiceView.questionLabel.text = item
+            choiceView.questionLabel.text = item.jawabanText ?? ""
             choiceView.delegate = self
             choiceView.radioButton.tag = index
             radioButtonList.append(choiceView.radioButton)
         }
+        
+        stackView.sizeToFit()
     }
 }
 

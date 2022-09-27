@@ -29,6 +29,8 @@ class ProfileCoordinator: Coordinator {
     
     func goToSurvey() {
         let vc = SurveyViewController.instantiate(.profile)
+        vc.coordinator = self
+        vc.viewModel = SurveyViewModel()
         navigationController.pushViewController(vc, animated: true)
     }
 }

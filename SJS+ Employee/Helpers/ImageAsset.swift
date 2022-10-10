@@ -16,6 +16,7 @@ struct ImageAsset {
         case imageIcon = "image_icon"
         case triangleLeft = "arrow_triangle_left"
         case triangleRight = "arrow_triangle_right"
+        case infoIcon = "info_icon"
     }
     
     static func getImage(_ name: AssetName) -> UIImage {

@@ -33,4 +33,10 @@ class ProfileCoordinator: Coordinator {
         vc.viewModel = SurveyViewModel()
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func goToValidasiDataList() {
+        let vc = ValidasiDataViewController.instantiate(.profile)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

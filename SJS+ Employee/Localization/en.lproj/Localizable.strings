@@ -15,6 +15,10 @@
 "create_post_title" = "Buat Postingan";
 "slip_gaji_title" = "Slip Gaji";
 "survey_title" = "Survey";
+"validasi_data_title" = "Validasi Data";
+"verifikasi_ktp_title" = "Verifikasi KTP";
+"home_check_title" = "Home Checking";
+
 
 //MARK: - Create Post View
 "status_placeholder" = "Ada yang ingin diposting?";

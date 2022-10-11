@@ -99,6 +99,11 @@
 		1503940428E3048900CA8E30 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940328E3048800CA8E30 /* SurveyQuestion.swift */; };
 		1503940628E3081400CA8E30 /* SurveyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940528E3081400CA8E30 /* SurveyData.swift */; };
 		1503940828F4150900CA8E30 /* ValidasiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940728F4150900CA8E30 /* ValidasiDataViewController.swift */; };
+		1503940A28F54E6300CA8E30 /* ValidasiDataDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940928F54E6300CA8E30 /* ValidasiDataDescViewController.swift */; };
+		1503940C28F5538000CA8E30 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940B28F5538000CA8E30 /* Helper.swift */; };
+		1503940E28F5548200CA8E30 /* VerifikasiKTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940D28F5548200CA8E30 /* VerifikasiKTPViewController.swift */; };
+		1503941028F5632100CA8E30 /* HomeCheckingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503940F28F5632100CA8E30 /* HomeCheckingViewController.swift */; };
+		1503941228F57FB400CA8E30 /* ReferenceCheckingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503941128F57FB400CA8E30 /* ReferenceCheckingViewController.swift */; };
 		15389CAA28C71D6800A441ED /* PenggajianViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15389CA928C71D6800A441ED /* PenggajianViewModel.swift */; };
 		158D95282813E23700C72218 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158D95272813E23700C72218 /* Onboarding.storyboard */; };
 		158D952A2813E56100C72218 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */; };
@@ -296,6 +301,11 @@
 		1503940328E3048800CA8E30 /* SurveyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
 		1503940528E3081400CA8E30 /* SurveyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyData.swift; sourceTree = "<group>"; };
 		1503940728F4150900CA8E30 /* ValidasiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidasiDataViewController.swift; sourceTree = "<group>"; };
+		1503940928F54E6300CA8E30 /* ValidasiDataDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidasiDataDescViewController.swift; sourceTree = "<group>"; };
+		1503940B28F5538000CA8E30 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		1503940D28F5548200CA8E30 /* VerifikasiKTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifikasiKTPViewController.swift; sourceTree = "<group>"; };
+		1503940F28F5632100CA8E30 /* HomeCheckingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCheckingViewController.swift; sourceTree = "<group>"; };
+		1503941128F57FB400CA8E30 /* ReferenceCheckingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCheckingViewController.swift; sourceTree = "<group>"; };
 		15389CA928C71D6800A441ED /* PenggajianViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenggajianViewModel.swift; sourceTree = "<group>"; };
 		158D95272813E23700C72218 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		158D95292813E56100C72218 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -636,6 +646,10 @@
 				15C7F36528C9B54A00A28EF9 /* SurveyViewController.swift */,
 				15B132B828DC496900E34AB1 /* ChoiceRadioView.swift */,
 				1503940728F4150900CA8E30 /* ValidasiDataViewController.swift */,
+				1503940928F54E6300CA8E30 /* ValidasiDataDescViewController.swift */,
+				1503940D28F5548200CA8E30 /* VerifikasiKTPViewController.swift */,
+				1503940F28F5632100CA8E30 /* HomeCheckingViewController.swift */,
+				1503941128F57FB400CA8E30 /* ReferenceCheckingViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -931,6 +945,7 @@
 				15C5AC0728B4A8470022E547 /* SJSDateFormatter.swift */,
 				15E5190728B5F4D3009A400A /* ImageAsset.swift */,
 				15BC706E28B74058003E1AD8 /* LocalizeEnum.swift */,
+				1503940B28F5538000CA8E30 /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1557,6 +1572,7 @@
 				05E1B489283E350D00D7E7C8 /* UserDefaultManager.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
 				72A91B0628573CDA00904ACC /* SJSViewController.swift in Sources */,
+				1503941228F57FB400CA8E30 /* ReferenceCheckingViewController.swift in Sources */,
 				05B205612840EA5400564615 /* ProfileMainViewModel.swift in Sources */,
 				05D2D2FC2837AFD3007A82D2 /* User.swift in Sources */,
 				05A6B9FC28167D3100EEFBF4 /* HomeMainViewController.swift in Sources */,
@@ -1570,6 +1586,7 @@
 				72A91B0B285884DE00904ACC /* CardSectionController.swift in Sources */,
 				7262460F28AB786300DE0BCF /* MembershipContentView.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
+				1503940E28F5548200CA8E30 /* VerifikasiKTPViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
 				05BDCBE5281BED5B0092A8A3 /* PromoDetailViewController.swift in Sources */,
 				05D2D2EE28378F4A007A82D2 /* PieElement.m in Sources */,
@@ -1587,6 +1604,7 @@
 				15B132BB28E2F22200E34AB1 /* SurveyViewModel.swift in Sources */,
 				5AD30E7A280DB700002A1D20 /* AuthenticationSignInViewController.swift in Sources */,
 				05D2D2EF28378F4A007A82D2 /* NSMutableArray+pieEx.m in Sources */,
+				1503940A28F54E6300CA8E30 /* ValidasiDataDescViewController.swift in Sources */,
 				5AD30E8A280DC308002A1D20 /* AuthenticationForgotRequestViewController.swift in Sources */,
 				05777EEF28362BC800B01C42 /* TabMainViewController.swift in Sources */,
 				7290ED42286C7F80000315B2 /* OutletListCell.swift in Sources */,
@@ -1603,6 +1621,7 @@
 				05DD81B8282D0823006CC967 /* LeaveDetailTableViewCell.swift in Sources */,
 				158D954228192CE600C72218 /* HomeNewsCollectionViewCell.swift in Sources */,
 				05BD27FC28127DC200B06463 /* Storyboarded.swift in Sources */,
+				1503941028F5632100CA8E30 /* HomeCheckingViewController.swift in Sources */,
 				05BDCBCA281BBC010092A8A3 /* HomeCoordinator.swift in Sources */,
 				05C8BFAF282BB8BF005DB1E4 /* BPJSCardCollectionViewCell.swift in Sources */,
 				727A804D288BE11E001205C9 /* LeaveRequestViewModel.swift in Sources */,
@@ -1611,6 +1630,7 @@
 				15C7F36628C9B54A00A28EF9 /* SurveyViewController.swift in Sources */,
 				72A91B1628588E3F00904ACC /* EmbeddedCollectionViewCell.swift in Sources */,
 				05B2055B2840C77A00564615 /* AbsenStatus.swift in Sources */,
+				1503940C28F5538000CA8E30 /* Helper.swift in Sources */,
 				158D953E2819120800C72218 /* HomeAbsenCollectionViewCell.swift in Sources */,
 				727A8046288BB138001205C9 /* DocumentViewModel.swift in Sources */,
 				7262461728AB869A00DE0BCF /* Reachability.swift in Sources */,

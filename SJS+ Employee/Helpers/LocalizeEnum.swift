@@ -17,6 +17,9 @@ enum LocalizeEnum: String {
     case createPostTitle = "create_post_title"
     case slipGajiTitle = "slip_gaji_title"
     case surveyTitle = "survey_title"
+    case validasiDataTitle = "validasi_data_title"
+    case verifikasiKTPTitle = "verifikasi_ktp_title"
+    case homeCheckingTitle = "home_check_title"
     
     //MARK: - Create Post View
     case statusPlaceholder = "status_placeholder"

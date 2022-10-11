@@ -53,7 +53,7 @@ class ProfileMainViewController: SJSViewController, Storyboarded {
     private let userData = UserDefaultManager.shared.getUserData()
     
     var menuList: [MenuItem] = []
-    var verificationList = ["Verifikasi Data",
+    var verificationList = ["Verifikasi KTP",
                             "Home Check",
                             "Ref Check"
                             ]
@@ -132,6 +132,10 @@ extension ProfileMainViewController: UITableViewDelegate {
         if let name = cell.item.menuName, name.contains("Survey") {
             self.coordinator?.goToSurvey()
         }
+        
+        if let name = cell.item.menuName, name.lowercased().contains("validasi data") {
+            self.coordinator?.goToValidasiDataList()
+        }
     }
 }
 
@@ -151,7 +155,9 @@ extension ProfileMainViewController: UITableViewDataSource {
 }
 
 extension ProfileMainViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        coordinator?.goToValidasiDataList()
+    }
 }
 
 extension ProfileMainViewController: UICollectionViewDataSource {

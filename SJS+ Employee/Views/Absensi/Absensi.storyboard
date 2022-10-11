@@ -693,16 +693,16 @@
     </scenes>
     <designables>
         <designable name="rXh-0t-CZa">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="93" height="26"/>
         </designable>
         <designable name="rnS-Ec-rlM">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="164" height="26"/>
         </designable>
         <designable name="x59-JE-cSb">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="178" height="26"/>
         </designable>
         <designable name="xti-vi-EeW">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="178" height="26"/>
         </designable>
     </designables>
     <resources>

@@ -39,11 +39,33 @@ class ValidasiDataViewController: SJSViewController, Storyboarded {
     }
     
     func setupView() {
+        self.title = LocalizeEnum.validasiDataTitle.rawValue.localized()
+        
         let infoButton = UIBarButtonItem(image: ImageAsset.getImage(.infoIcon), style: .plain, target: self, action: #selector(infoButtonTapped))
-        self.navigationController?.navigationItem.rightBarButtonItem = infoButton
+        self.navigationItem.rightBarButtonItem = infoButton
+        
+        verifikasiKTPButton.addTarget(self, action: #selector(verifikasiKTPTapped), for: .touchUpInside)
+        homeCheckingButton.addTarget(self, action: #selector(homeCheckTapped), for: .touchUpInside)
+        refCheckingButton.addTarget(self, action: #selector(refCheckTapped), for: .touchUpInside)
     }
     
     @objc func infoButtonTapped() {
-        //TODO: Open Validasi Data Description View
+        //Open Validasi Data Description View
+        coordinator?.showValidasiDataDesc()
+    }
+    
+    @objc func verifikasiKTPTapped() {
+        //Open Verifikasi KTP View
+        coordinator?.goToVerifikasiKTP()
+    }
+    
+    @objc func homeCheckTapped() {
+        //Open Home Check View
+        coordinator?.goToHomeChecking()
+    }
+    
+    @objc func refCheckTapped() {
+        //Open Ref Check View
+        coordinator?.goToReferenceChecking()
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -570,22 +570,28 @@
     </scenes>
     <designables>
         <designable name="6xi-7K-N62">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="49" height="26"/>
         </designable>
         <designable name="Ciq-UX-dws">
-            <size key="intrinsicContentSize" width="32" height="41.5"/>
+            <size key="intrinsicContentSize" width="48" height="34"/>
         </designable>
         <designable name="DJU-uL-XOe">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="178" height="26"/>
+        </designable>
+        <designable name="OBZ-ay-TXq">
+            <size key="intrinsicContentSize" width="52" height="34"/>
         </designable>
         <designable name="RKR-kg-5kX">
-            <size key="intrinsicContentSize" width="32" height="41.5"/>
+            <size key="intrinsicContentSize" width="48" height="34"/>
         </designable>
         <designable name="Tgt-W0-QVE">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="194" height="26"/>
+        </designable>
+        <designable name="kgg-65-zUP">
+            <size key="intrinsicContentSize" width="52" height="34"/>
         </designable>
         <designable name="wO3-Bg-0V2">
-            <size key="intrinsicContentSize" width="30" height="38"/>
+            <size key="intrinsicContentSize" width="171" height="26"/>
         </designable>
     </designables>
     <resources>

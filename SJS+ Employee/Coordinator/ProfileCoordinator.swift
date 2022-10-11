@@ -39,4 +39,27 @@ class ProfileCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func showValidasiDataDesc() {
+        let vc = ValidasiDataDescViewController.instantiate(.profile)
+        navigationController.present(vc, animated: true, completion: nil)
+    }
+    
+    func goToVerifikasiKTP() {
+        let vc = VerifikasiKTPViewController.instantiate(.profile)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToHomeChecking() {
+        let vc = HomeCheckingViewController.instantiate(.profile)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToReferenceChecking() {
+        let vc = ReferenceCheckingViewController.instantiate(.profile)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

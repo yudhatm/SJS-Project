@@ -134,6 +134,7 @@
 		15C7F36828C9BDAF00A28EF9 /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7F36728C9BDAF00A28EF9 /* SurveyCell.swift */; };
 		15C7F36A28C9BDDA00A28EF9 /* SurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C7F36928C9BDDA00A28EF9 /* SurveyCell.xib */; };
 		15E5190828B5F4D3009A400A /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E5190728B5F4D3009A400A /* ImageAsset.swift */; };
+		2E20C39E296D51F300594D77 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E20C39D296D51F300594D77 /* README.md */; };
 		5A1C2929278C8D990015B245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C2928278C8D990015B245 /* Main.storyboard */; };
 		5A1C292B278C8DC70015B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */; };
 		5A1C292E278C90A60015B245 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C292C278C90A60015B245 /* .gitignore */; };
@@ -330,6 +331,7 @@
 		15C7F36928C9BDDA00A28EF9 /* SurveyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyCell.xib; sourceTree = "<group>"; };
 		15E5190728B5F4D3009A400A /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		196CE1C724AC388A901DFC44 /* Pods-SJS+ Employee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.debug.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.debug.xcconfig"; sourceTree = "<group>"; };
+		2E20C39D296D51F300594D77 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3CECF7D8A23CFDA54821194D /* Pods-SJS+ Employee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJS+ Employee.release.xcconfig"; path = "Target Support Files/Pods-SJS+ Employee/Pods-SJS+ Employee.release.xcconfig"; sourceTree = "<group>"; };
 		5A1C2928278C8D990015B245 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5A1C292A278C8DC70015B245 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -995,6 +997,7 @@
 		5A8786032783E19F005048D4 = {
 			isa = PBXGroup;
 			children = (
+				2E20C39D296D51F300594D77 /* README.md */,
 				5A1C292D278C90A60015B245 /* .gitattributes */,
 				5A1C292C278C90A60015B245 /* .gitignore */,
 				5A87860E2783E19F005048D4 /* SJS+ Employee */,
@@ -1375,6 +1378,7 @@
 				5A8AD019278CA0FA003937C2 /* Poppins-Bold.ttf in Resources */,
 				05C8BFB2282BC526005DB1E4 /* Penggajian.storyboard in Resources */,
 				05A6B9F528167BD200EEFBF4 /* HomeMainMenuCollectionViewCell.xib in Resources */,
+				2E20C39E296D51F300594D77 /* README.md in Resources */,
 				05CB89F628339CA000E917D4 /* Absensi.storyboard in Resources */,
 				5A8AD01E278CA0FA003937C2 /* Poppins-MediumItalic.ttf in Resources */,
 				05C67766282A4E4C0060C87B /* ProfileListTableViewCell.xib in Resources */,

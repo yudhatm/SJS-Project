@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Coordinator for Home Navigation section
 class HomeCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController

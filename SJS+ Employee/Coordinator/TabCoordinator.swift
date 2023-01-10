@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Coordinator for Tab Navigation section
 class TabCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Coordinator for Login Navigation section
 class LoginCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController

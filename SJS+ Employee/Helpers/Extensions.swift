@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyJSON
 
+/// Collections of Assets Color. Add more enum case if you add more colors in the Assets
 enum AssetsColor {
     case sjsOrange
     case sjsBlue
@@ -15,6 +16,7 @@ enum AssetsColor {
 }
 
 extension UIColor {
+    /// Color list from Assets folder
     static func appColor(_ name: AssetsColor) -> UIColor {
         switch name {
         case .sjsOrange:

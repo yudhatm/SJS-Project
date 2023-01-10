@@ -175,13 +175,6 @@
 		720AB9FE2875535B005C63B5 /* HomeMenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720AB9FD2875535B005C63B5 /* HomeMenuResponse.swift */; };
 		725B3D9528929D0E009DA54F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B3D9428929D0E009DA54F /* NewsViewModel.swift */; };
 		725B3D982892A032009DA54F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B3D972892A032009DA54F /* News.swift */; };
-		7262460B28AB786300DE0BCF /* MembershipContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7262460628AB786300DE0BCF /* MembershipContentView.xib */; };
-		7262460C28AB786300DE0BCF /* MembershipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262460728AB786300DE0BCF /* MembershipViewModel.swift */; };
-		7262460D28AB786300DE0BCF /* MembershipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7262460828AB786300DE0BCF /* MembershipView.xib */; };
-		7262460E28AB786300DE0BCF /* MembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262460928AB786300DE0BCF /* MembershipView.swift */; };
-		7262460F28AB786300DE0BCF /* MembershipContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262460A28AB786300DE0BCF /* MembershipContentView.swift */; };
-		7262461328AB84EA00DE0BCF /* ConfirmationPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7262461128AB84EA00DE0BCF /* ConfirmationPaymentView.xib */; };
-		7262461428AB84EA00DE0BCF /* ConfirmationPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262461228AB84EA00DE0BCF /* ConfirmationPaymentView.swift */; };
 		7262461728AB869A00DE0BCF /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262461628AB869A00DE0BCF /* Reachability.swift */; };
 		7262461928ADDFD600DE0BCF /* PromoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7262461828ADDFD600DE0BCF /* PromoViewModel.swift */; };
 		727A8046288BB138001205C9 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A8045288BB138001205C9 /* DocumentViewModel.swift */; };
@@ -343,7 +336,7 @@
 		5A1C292C278C90A60015B245 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5A1C292D278C90A60015B245 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		5A26D6C827B2E2E600AD6423 /* SJSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSButton.swift; sourceTree = "<group>"; };
-		5A87860C2783E19F005048D4 /* SJS+ Employee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SJS+ Employee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A87860C2783E19F005048D4 /* SJS Employee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SJS Employee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A87860F2783E19F005048D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8786112783E19F005048D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5A8786132783E19F005048D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -381,13 +374,6 @@
 		720AB9FD2875535B005C63B5 /* HomeMenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuResponse.swift; sourceTree = "<group>"; };
 		725B3D9428929D0E009DA54F /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		725B3D972892A032009DA54F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		7262460628AB786300DE0BCF /* MembershipContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipContentView.xib; sourceTree = "<group>"; };
-		7262460728AB786300DE0BCF /* MembershipViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipViewModel.swift; sourceTree = "<group>"; };
-		7262460828AB786300DE0BCF /* MembershipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipView.xib; sourceTree = "<group>"; };
-		7262460928AB786300DE0BCF /* MembershipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipView.swift; sourceTree = "<group>"; };
-		7262460A28AB786300DE0BCF /* MembershipContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipContentView.swift; sourceTree = "<group>"; };
-		7262461128AB84EA00DE0BCF /* ConfirmationPaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmationPaymentView.xib; sourceTree = "<group>"; };
-		7262461228AB84EA00DE0BCF /* ConfirmationPaymentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationPaymentView.swift; sourceTree = "<group>"; };
 		7262461628AB869A00DE0BCF /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7262461828ADDFD600DE0BCF /* PromoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewModel.swift; sourceTree = "<group>"; };
 		727A8045288BB138001205C9 /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
@@ -1021,7 +1007,7 @@
 		5A87860D2783E19F005048D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A87860C2783E19F005048D4 /* SJS+ Employee.app */,
+				5A87860C2783E19F005048D4 /* SJS Employee.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1030,7 +1016,6 @@
 			isa = PBXGroup;
 			children = (
 				15BC706828B73F3D003E1AD8 /* Localization */,
-				7262461528AB859000DE0BCF /* Other Files */,
 				05D2D2E42837869C007A82D2 /* GoogleService-Info.plist */,
 				05D2D2F12837A96B007A82D2 /* Managers */,
 				158D952F2813E7B500C72218 /* Models */,
@@ -1252,36 +1237,6 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		7262460528AB784600DE0BCF /* Membership */ = {
-			isa = PBXGroup;
-			children = (
-				7262460A28AB786300DE0BCF /* MembershipContentView.swift */,
-				7262460628AB786300DE0BCF /* MembershipContentView.xib */,
-				7262460928AB786300DE0BCF /* MembershipView.swift */,
-				7262460828AB786300DE0BCF /* MembershipView.xib */,
-				7262460728AB786300DE0BCF /* MembershipViewModel.swift */,
-			);
-			path = Membership;
-			sourceTree = "<group>";
-		};
-		7262461028AB848400DE0BCF /* Confirmation Payment */ = {
-			isa = PBXGroup;
-			children = (
-				7262461228AB84EA00DE0BCF /* ConfirmationPaymentView.swift */,
-				7262461128AB84EA00DE0BCF /* ConfirmationPaymentView.xib */,
-			);
-			path = "Confirmation Payment";
-			sourceTree = "<group>";
-		};
-		7262461528AB859000DE0BCF /* Other Files */ = {
-			isa = PBXGroup;
-			children = (
-				7262461028AB848400DE0BCF /* Confirmation Payment */,
-				7262460528AB784600DE0BCF /* Membership */,
-			);
-			path = "Other Files";
-			sourceTree = "<group>";
-		};
 		727A8044288BB12C001205C9 /* Document */ = {
 			isa = PBXGroup;
 			children = (
@@ -1354,7 +1309,7 @@
 			);
 			name = "SJS+ Employee";
 			productName = "SJS+ Employee";
-			productReference = 5A87860C2783E19F005048D4 /* SJS+ Employee.app */;
+			productReference = 5A87860C2783E19F005048D4 /* SJS Employee.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1408,7 +1363,6 @@
 				5A8AD01A278CA0FA003937C2 /* Poppins-Black.ttf in Resources */,
 				05C67763282A42010060C87B /* Profile.storyboard in Resources */,
 				5A8AD017278CA0FA003937C2 /* Poppins-Regular.ttf in Resources */,
-				7262461328AB84EA00DE0BCF /* ConfirmationPaymentView.xib in Resources */,
 				15C7F36A28C9BDDA00A28EF9 /* SurveyCell.xib in Resources */,
 				05BDCBE0281BDE100092A8A3 /* PromoListTableViewCell.xib in Resources */,
 				05DD81B1282D04B1006CC967 /* LeaveRequestListTableViewCell.xib in Resources */,
@@ -1417,7 +1371,6 @@
 				05AB042A282507ED00FC523E /* NewsTextStatusTableViewCell.xib in Resources */,
 				158D953828190F0A00C72218 /* HomeContentReuseableHeader.xib in Resources */,
 				5A8AD018278CA0FA003937C2 /* Poppins-LightItalic.ttf in Resources */,
-				7262460D28AB786300DE0BCF /* MembershipView.xib in Resources */,
 				5A1C292F278C90A60015B245 /* .gitattributes in Resources */,
 				5A8AD019278CA0FA003937C2 /* Poppins-Bold.ttf in Resources */,
 				05C8BFB2282BC526005DB1E4 /* Penggajian.storyboard in Resources */,
@@ -1437,7 +1390,6 @@
 				15B132B728DC48A100E34AB1 /* ChoiceRadioView.xib in Resources */,
 				5AD30E92280DC4BC002A1D20 /* AuthenticationForgotSuccessViewController.xib in Resources */,
 				5AE67805280F098F00882520 /* AuthenticationOTPViewController.xib in Resources */,
-				7262460B28AB786300DE0BCF /* MembershipContentView.xib in Resources */,
 				05A6B9F12816789300EEFBF4 /* Home.storyboard in Resources */,
 				158D9544281937C000C72218 /* HomePromoCollectionViewCell.xib in Resources */,
 				5AD30E7B280DB700002A1D20 /* AuthenticationSignInViewController.xib in Resources */,
@@ -1567,7 +1519,6 @@
 				72A91B1828598D7600904ACC /* PenggajianMenuSectionController.swift in Sources */,
 				1503940628E3081400CA8E30 /* SurveyData.swift in Sources */,
 				727A804F288BE1C1001205C9 /* LeaveRequest.swift in Sources */,
-				7262461428AB84EA00DE0BCF /* ConfirmationPaymentView.swift in Sources */,
 				05C8BFA9282BAFCB005DB1E4 /* EditProfileTableViewCell.swift in Sources */,
 				05E1B489283E350D00D7E7C8 /* UserDefaultManager.swift in Sources */,
 				05AB043728250FA700FC523E /* CreatePostViewController.swift in Sources */,
@@ -1584,7 +1535,6 @@
 				05AB0433282508AC00FC523E /* NewsVideoStatusTableViewCell.swift in Sources */,
 				1503940828F4150900CA8E30 /* ValidasiDataViewController.swift in Sources */,
 				72A91B0B285884DE00904ACC /* CardSectionController.swift in Sources */,
-				7262460F28AB786300DE0BCF /* MembershipContentView.swift in Sources */,
 				5A8786142783E19F005048D4 /* MainViewController.swift in Sources */,
 				1503940E28F5548200CA8E30 /* VerifikasiKTPViewController.swift in Sources */,
 				5AE67804280F098F00882520 /* AuthenticationOTPViewController.swift in Sources */,
@@ -1637,7 +1587,6 @@
 				05B2055D2840DC6500564615 /* Promo.swift in Sources */,
 				05BDCBD4281BC36D0092A8A3 /* OverlayPickerPresentationController.swift in Sources */,
 				158D95522848AFD800C72218 /* RegularInData.swift in Sources */,
-				7262460E28AB786300DE0BCF /* MembershipView.swift in Sources */,
 				15BC706F28B74058003E1AD8 /* LocalizeEnum.swift in Sources */,
 				5A8786102783E19F005048D4 /* AppDelegate.swift in Sources */,
 				05C67770282A507E0060C87B /* ProfileMainViewController.swift in Sources */,
@@ -1656,7 +1605,6 @@
 				5A8786122783E19F005048D4 /* SceneDelegate.swift in Sources */,
 				15389CAA28C71D6800A441ED /* PenggajianViewModel.swift in Sources */,
 				5AD30E83280DBFA5002A1D20 /* AuthenticationRegistrationViewController.swift in Sources */,
-				7262460C28AB786300DE0BCF /* MembershipViewModel.swift in Sources */,
 				720AB9FE2875535B005C63B5 /* HomeMenuResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1802,9 +1750,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DR6XQ5SU54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SJS Employee";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1820,7 +1769,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjs.employee;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SJS Employee";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJS+ Employee/SJS+ Employee-Bridging-Header.h";
@@ -1839,9 +1788,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DR6XQ5SU54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SJS+ Employee/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SJS Employee";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi ini membutuhkan izin anda untuk mengakses lokasi untuk kepentingan absensi";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1857,7 +1807,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjs.employee;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SJS Employee";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SJS+ Employee/SJS+ Employee-Bridging-Header.h";

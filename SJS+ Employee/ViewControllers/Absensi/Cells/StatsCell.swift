@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Cell class for Absensi Stats
 class StatsCell: UITableViewCell {
     static let identifier = String(describing: StatsCell.self)
 

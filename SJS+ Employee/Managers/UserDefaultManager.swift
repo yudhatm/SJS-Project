@@ -8,6 +8,7 @@
 import Foundation
 import SwiftyJSON
 
+/// Manager class that simplifies User Default functions.
 class UserDefaultManager {
     static var shared = UserDefaultManager()
     

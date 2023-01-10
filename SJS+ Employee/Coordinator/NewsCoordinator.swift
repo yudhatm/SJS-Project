@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Coordinator for News Navigation section
 class NewsCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController

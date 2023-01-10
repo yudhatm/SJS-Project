@@ -10,7 +10,7 @@ import Foundation
 class SJSDateFormatter {
     static let shared = SJSDateFormatter()
     
-    ///News date string format must be "yyyy-MM-dd hh:mm:ss"
+    ///News date string format: "yyyy-MM-dd hh:mm:ss"
     func createNewsDateText(dateString: String?) -> String {
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "id")
@@ -59,6 +59,7 @@ class SJSDateFormatter {
         return array
     }
     
+    ///Date format: "MMMM yyyy".
     func createMonthYearString(date: Date) -> String {
         let df = DateFormatter()
         df.locale = Locale(identifier: "id")
@@ -67,8 +68,8 @@ class SJSDateFormatter {
         return df.string(from: date)
     }
     
-    ///Date Format = MMMM yyyy,
-    ///Returns M yyyy
+    ///Date Format: "MMMM yyyy".
+    ///Returns M yyyy.
     func convertMonthYearString(str: String) -> String {
         let df = DateFormatter()
         df.locale = Locale(identifier: "id")

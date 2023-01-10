@@ -12,6 +12,7 @@ import RxCocoa
 import Network
 import SwiftyJSON
 
+/// Helper Class that handle network requests. Uses Alamofire and RxSwift.
 class NetworkManager {
     static var shared = NetworkManager()
     
@@ -29,14 +30,14 @@ class NetworkManager {
         self.monitor.start(queue: queue)
     }
     
-    //Set headers
     private func setHeaders() -> HTTPHeaders {
         header = [
             "Authorization": "Basic bmFuYS5udXJ3YW5kYUBnbWFpbC5jb206a2VyamErc2pzKzIwMjE="
         ]
         return header
     }
-    
+
+    /// Handles API Request. Returns Observable with Codable type.
     func APIRequest<T: Codable> (_ methodType: HTTPMethod, encoding: ParameterEncoding = URLEncoding.default, url: String = "", parameters: [String: Any] = [:]) -> Observable<T> {
         return Observable<T>.create { observer in
             let request = AF.request(url, method: methodType, parameters: parameters, encoding: encoding, headers: self.setHeaders(), interceptor: nil)
@@ -73,6 +74,7 @@ class NetworkManager {
         }
     }
     
+    /// Handles API Request. Returns Observable with JSON type.
     func APIRequestJSON(_ methodType: HTTPMethod, encoding: ParameterEncoding = URLEncoding.default, url: String = "", parameters: [String: Any] = [:]) -> Observable<JSON> {
         return Observable<JSON>.create { observer in
             let request = AF.request(url, method: methodType, parameters: parameters, encoding: encoding, headers: self.setHeaders(), interceptor: nil)
@@ -109,6 +111,7 @@ class NetworkManager {
         }
     }
     
+    /// Handles API Upload Request. Returns Observable with JSON type.
     func APIUploadRequest(_ methodType: HTTPMethod, encoding: ParameterEncoding = URLEncoding.default, url: String = "", parameters: [String: Any] = [:], uploadData: Data, imageName: String, imageKeyName: String) -> Observable<JSON> {
         return Observable<JSON>.create { observer in
             let request = AF.upload(multipartFormData: { multipartData in
@@ -155,6 +158,7 @@ class NetworkManager {
         }
     }
     
+    /// Check if network is working or not.
     func startNetworkMonitoring() {
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {

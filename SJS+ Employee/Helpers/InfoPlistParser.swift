@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Get data from Info.plist
 struct InfoPlistParser {
     static func getStringValue(forKey key: String) -> String {
         guard let value = Bundle.main.infoDictionary?[key] as? String else {

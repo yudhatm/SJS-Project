@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Coordinator for Penggajian Navigation section
 class PenggajianCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController

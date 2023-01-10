@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+///Helper class for managing Image Assets
 struct ImageAsset {
     enum AssetName: String {
         case likeEmpty = "empty_heart"

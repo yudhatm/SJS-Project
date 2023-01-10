@@ -12,6 +12,7 @@ enum IconPosition {
     case left, right
 }
 
+/// Custom made button for SJS use.
 @IBDesignable class SJSButton: UIButton {
     
     // MARK: - Properties

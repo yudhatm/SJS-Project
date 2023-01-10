@@ -8,6 +8,7 @@
 import Foundation
 import JTAppleCalendar
 
+/// Cell class for Absensi Calendar
 class DateCell: JTAppleCell {
     static let identifier = String(describing: DateCell.self)
     

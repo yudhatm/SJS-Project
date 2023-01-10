@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Helper enum for getting Localize string.
 enum LocalizeEnum: String {
     //MARK: - View Title
     case sjsTitle = "sjs_title"

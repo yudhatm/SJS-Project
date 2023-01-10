@@ -68,7 +68,6 @@ class AbsensiMainViewController: SJSViewController, Storyboarded {
         // A default location to use when location permission is not granted.
         let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
         
-        // Create a map.
         var zoomLevel: Float = 0
         
         if #available(iOS 14.0, *) {

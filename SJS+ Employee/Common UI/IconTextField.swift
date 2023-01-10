@@ -12,8 +12,8 @@ protocol IconTextFieldDelegate: UITextFieldDelegate {
     func textFieldIconClicked(btn:UIButton)
 }
 
-@IBDesignable
-class IconTextField: UITextField {
+/// Text Field with editable icon. Icon can be set on the either side of the TextField.
+@IBDesignable class IconTextField: UITextField {
 
     //Delegate when image/icon is tapped.
     private var myDelegate: IconTextFieldDelegate? {

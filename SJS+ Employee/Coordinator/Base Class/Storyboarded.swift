@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Collection of our storyboard
+///Collection of our storyboard. Don't forget to add new enum case if you make new Storyboard.
 enum Storyboards: String {
     case login = "Login"
     case onboarding = "Onboarding"
@@ -18,7 +18,11 @@ enum Storyboards: String {
     case absensi = "Absensi"
 }
 
+/// This protocol simplifies getting view controllers from Storyboards
 protocol Storyboarded {
+    /// Instantiate available view controllers from the list of Storyboards
+    /// - Parameter storyboard: Accept input from Storyboards enum.
+    /// - Returns: The instantiated View Controller
     static func instantiate(_ storyboard: Storyboards) -> Self
 }
 

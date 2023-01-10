@@ -16,6 +16,16 @@ public typealias UserDefaultsKey = Constants.UserDefaultsKey
 public typealias VariableKeys = Constants.VariableKeys
 
 public struct Constants {
+    /**
+     Contains strings needed for making URLs for API calls.
+     Use **VariableKeys** to replace the "{{example}}" strings.
+     
+     ## Examples ##
+     ````
+     let customerId = userData.value?.id_customer`
+     url = url.replacingOccurrences(of: Constants.VariableKeys.customerId.rawValue, with: customerId ?? "")
+     ````
+     */
     public struct URLs {
 //        #if DEBUG
 //            static let baseURL = "https://dev-api-employee.kerjaplus.id/public/"
@@ -53,12 +63,14 @@ public struct Constants {
         case page = "{{page}}"
     }
     
+    /// Used in Overlay view size calculation
     public struct ViewSize {
         static let threeQuarterScreen = 0.75
         static let halfScreen = 0.5
         static let oneQuarterScreen = 0.25
     }
     
+    /// Used for common constraints
     public struct Constraints {
         static let margin8: CGFloat = 8
         static let margin12: CGFloat = 12
@@ -67,6 +79,7 @@ public struct Constants {
         static let margin24: CGFloat = 24
     }
     
+    /// Used for common corner radius
     public struct CornerRadius {
         static let radius8: CGFloat = 8
         static let radius12: CGFloat = 12

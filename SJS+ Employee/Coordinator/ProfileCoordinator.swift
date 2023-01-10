@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Coordinator for Profile Navigation section
 class ProfileCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
